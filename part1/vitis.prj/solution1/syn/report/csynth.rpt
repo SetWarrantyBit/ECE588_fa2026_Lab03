@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'matmul'
 ================================================================
 + General Information: 
-    * Date:           Fri Oct  2 16:18:38 2026
+    * Date:           Fri Oct  2 16:46:23 2026
     * Version:        2022.2 (Build 3670227 on Oct 13 2022)
     * Project:        vitis.prj
     * Solution:       solution1 (Vivado IP Flow Target)
@@ -15,23 +15,23 @@
 + Performance & Resource Estimates: 
     
     PS: '+' for module; 'o' for loop; '*' for dataflow
-    +------------------------------------------------------+------+------+---------+-----------+----------+---------+-------+----------+----------+---------+-----------+------------+-----+
-    |                        Modules                       | Issue|      | Latency |  Latency  | Iteration|         |  Trip |          |          |         |           |            |     |
-    |                        & Loops                       | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count | Pipelined|   BRAM   |   DSP   |     FF    |     LUT    | URAM|
-    +------------------------------------------------------+------+------+---------+-----------+----------+---------+-------+----------+----------+---------+-----------+------------+-----+
-    |+ matmul                                              |     -|  0.00|  3290154|  3.290e+07|         -|  3290155|      -|        no|  80 (28%)|   6 (2%)|  2772 (2%)|  5533 (10%)|    -|
-    | + matmul_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_21_2    |     -|  0.00|    15004|  1.500e+05|         -|    15004|      -|        no|         -|  1 (~0%)|   70 (~0%)|   171 (~0%)|    -|
-    |  o VITIS_LOOP_19_1_VITIS_LOOP_21_2                   |     -|  7.30|    15002|  1.500e+05|         4|        1|  15000|       yes|         -|        -|          -|           -|    -|
-    | + matmul_Pipeline_VITIS_LOOP_28_3_VITIS_LOOP_30_4    |     -|  0.00|    30004|  3.000e+05|         -|    30004|      -|        no|         -|  1 (~0%)|   72 (~0%)|   176 (~0%)|    -|
-    |  o VITIS_LOOP_28_3_VITIS_LOOP_30_4                   |     -|  7.30|    30002|  3.000e+05|         4|        1|  30000|       yes|         -|        -|          -|           -|    -|
-    | + matmul_Pipeline_VITIS_LOOP_37_5_VITIS_LOOP_39_6    |     -|  1.00|    20004|  2.000e+05|         -|    20004|      -|        no|         -|  1 (~0%)|   53 (~0%)|   161 (~0%)|    -|
-    |  o VITIS_LOOP_37_5_VITIS_LOOP_39_6                   |     -|  7.30|    20002|  2.000e+05|         4|        1|  20000|       yes|         -|        -|          -|           -|    -|
-    | + matmul_Pipeline_VITIS_LOOP_61_10_VITIS_LOOP_63_11  |     -|  0.00|    20006|  2.001e+05|         -|    20006|      -|        no|         -|  1 (~0%)|  138 (~0%)|   204 (~0%)|    -|
-    |  o VITIS_LOOP_61_10_VITIS_LOOP_63_11                 |     -|  7.30|    20004|  2.000e+05|         6|        1|  20000|       yes|         -|        -|          -|           -|    -|
-    | o VITIS_LOOP_49_7_VITIS_LOOP_51_8                    |     -|  7.30|  3240000|  3.240e+07|       162|        -|  20000|        no|         -|        -|          -|           -|    -|
-    |  + matmul_Pipeline_VITIS_LOOP_53_9                   |     -|  1.95|      155|  1.550e+03|         -|      155|      -|        no|         -|  1 (~0%)|  208 (~0%)|   232 (~0%)|    -|
-    |   o VITIS_LOOP_53_9                                  |     -|  7.30|      153|  1.530e+03|         5|        1|    150|       yes|         -|        -|          -|           -|    -|
-    +------------------------------------------------------+------+------+---------+-----------+----------+---------+-------+----------+----------+---------+-----------+------------+-----+
+    +------------------------------------------------------+------+------+---------+-----------+----------+---------+-------+----------+----------+--------+-----------+------------+-----+
+    |                        Modules                       | Issue|      | Latency |  Latency  | Iteration|         |  Trip |          |          |        |           |            |     |
+    |                        & Loops                       | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count | Pipelined|   BRAM   |   DSP  |     FF    |     LUT    | URAM|
+    +------------------------------------------------------+------+------+---------+-----------+----------+---------+-------+----------+----------+--------+-----------+------------+-----+
+    |+ matmul                                              |     -|  0.00|  1870151|  1.870e+07|         -|  1870152|      -|        no|  80 (28%)|  5 (2%)|  2819 (2%)|  6048 (11%)|    -|
+    | + matmul_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_21_2    |     -|  0.00|    15003|  1.500e+05|         -|    15003|      -|        no|         -|       -|   86 (~0%)|   282 (~0%)|    -|
+    |  o VITIS_LOOP_19_1_VITIS_LOOP_21_2                   |    II|  7.30|    15001|  1.500e+05|         4|        2|   7500|       yes|         -|       -|          -|           -|    -|
+    | + matmul_Pipeline_VITIS_LOOP_30_3_VITIS_LOOP_32_4    |     -|  0.00|    30003|  3.000e+05|         -|    30003|      -|        no|         -|       -|   98 (~0%)|   311 (~0%)|    -|
+    |  o VITIS_LOOP_30_3_VITIS_LOOP_32_4                   |    II|  7.30|    30001|  3.000e+05|         4|        2|  15000|       yes|         -|       -|          -|           -|    -|
+    | + matmul_Pipeline_VITIS_LOOP_41_5_VITIS_LOOP_43_6    |     -|  0.09|    10002|  1.000e+05|         -|    10002|      -|        no|         -|       -|   55 (~0%)|   257 (~0%)|    -|
+    |  o VITIS_LOOP_41_5_VITIS_LOOP_43_6                   |     -|  7.30|    10000|  1.000e+05|         2|        1|  10000|       yes|         -|       -|          -|           -|    -|
+    | + matmul_Pipeline_VITIS_LOOP_69_10_VITIS_LOOP_71_11  |     -|  0.00|    20004|  2.000e+05|         -|    20004|      -|        no|         -|       -|   92 (~0%)|   325 (~0%)|    -|
+    |  o VITIS_LOOP_69_10_VITIS_LOOP_71_11                 |    II|  7.30|    20002|  2.000e+05|         5|        2|  10000|       yes|         -|       -|          -|           -|    -|
+    | o VITIS_LOOP_55_7_VITIS_LOOP_57_8                    |     -|  7.30|  1820000|  1.820e+07|        91|        -|  20000|        no|         -|       -|          -|           -|    -|
+    |  + matmul_Pipeline_VITIS_LOOP_59_9                   |     -|  1.54|       84|    840.000|         -|       84|      -|        no|         -|  4 (1%)|  257 (~0%)|   234 (~0%)|    -|
+    |   o VITIS_LOOP_59_9                                  |     -|  7.30|       82|    820.000|         9|        1|     75|       yes|         -|       -|          -|           -|    -|
+    +------------------------------------------------------+------+------+---------+-----------+----------+---------+-------+----------+----------+--------+-----------+------------+-----+
 
 
 ================================================================
@@ -118,16 +118,16 @@
 | HW Interface | Loop             | Direction | Length | Width | Location         |
 +--------------+------------------+-----------+--------+-------+------------------+
 | m_axi_mem1   | VITIS_LOOP_19_1  | read      | 15000  | 16    | matmul.cpp:19:22 |
-| m_axi_mem2   | VITIS_LOOP_28_3  | read      | 30000  | 16    | matmul.cpp:28:22 |
-| m_axi_mem1   | VITIS_LOOP_61_10 | write     | 20000  | 16    | matmul.cpp:61:23 |
+| m_axi_mem2   | VITIS_LOOP_30_3  | read      | 30000  | 16    | matmul.cpp:30:22 |
+| m_axi_mem1   | VITIS_LOOP_69_10 | write     | 20000  | 16    | matmul.cpp:69:23 |
 +--------------+------------------+-----------+--------+-------+------------------+
 
 * Inferred Bursts and Widening Missed
 +--------------+---------------+------------------+-------------------------------------------------------------------------------------------------------+------------+------------------+
 | HW Interface | Variable      | Loop             | Problem                                                                                               | Resolution | Location         |
 +--------------+---------------+------------------+-------------------------------------------------------------------------------------------------------+------------+------------------+
-| m_axi_mem1   | Matrix_C_DRAM | VITIS_LOOP_63_11 | Could not widen since type i16 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | matmul.cpp:63:27 |
-| m_axi_mem2   | Matrix_B_DRAM | VITIS_LOOP_30_4  | Could not widen since type i16 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | matmul.cpp:30:26 |
+| m_axi_mem1   | Matrix_C_DRAM | VITIS_LOOP_71_11 | Could not widen since type i16 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | matmul.cpp:71:27 |
+| m_axi_mem2   | Matrix_B_DRAM | VITIS_LOOP_32_4  | Could not widen since type i16 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | matmul.cpp:32:26 |
 | m_axi_mem1   | Matrix_A_DRAM | VITIS_LOOP_21_2  | Could not widen since type i16 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | matmul.cpp:21:26 |
 +--------------+---------------+------------------+-------------------------------------------------------------------------------------------------------+------------+------------------+
 
@@ -139,44 +139,53 @@
 +------------------------------------------------------+-----+--------+-------------+-----+--------+---------+
 | Name                                                 | DSP | Pragma | Variable    | Op  | Impl   | Latency |
 +------------------------------------------------------+-----+--------+-------------+-----+--------+---------+
-| + matmul                                             | 6   |        |             |     |        |         |
-|   add_ln49_1_fu_294_p2                               | -   |        | add_ln49_1  | add | fabric | 0       |
-|   add_ln49_fu_306_p2                                 | -   |        | add_ln49    | add | fabric | 0       |
-|   mul_7ns_9ns_14_1_1_U27                             | -   |        | mul_ln186   | mul | auto   | 0       |
-|   mac_muladd_7ns_8ns_8ns_15_4_1_U28                  | 1   |        | empty_26    | mul | dsp48  | 3       |
-|   mac_muladd_7ns_8ns_8ns_15_4_1_U28                  | 1   |        | empty_27    | add | dsp48  | 3       |
-|   add_ln51_fu_338_p2                                 | -   |        | add_ln51    | add | fabric | 0       |
-|  + matmul_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_21_2   | 1   |        |             |     |        |         |
-|    add_ln19_1_fu_130_p2                              | -   |        | add_ln19_1  | add | fabric | 0       |
-|    add_ln19_fu_142_p2                                | -   |        | add_ln19    | add | fabric | 0       |
-|    mac_muladd_7ns_8ns_8ns_14_4_1_U1                  | 1   |        | mul_ln23    | mul | dsp48  | 3       |
-|    mac_muladd_7ns_8ns_8ns_14_4_1_U1                  | 1   |        | add_ln23    | add | dsp48  | 3       |
-|    add_ln21_fu_174_p2                                | -   |        | add_ln21    | add | fabric | 0       |
-|  + matmul_Pipeline_VITIS_LOOP_28_3_VITIS_LOOP_30_4   | 1   |        |             |     |        |         |
-|    add_ln28_1_fu_126_p2                              | -   |        | add_ln28_1  | add | fabric | 0       |
-|    add_ln28_fu_138_p2                                | -   |        | add_ln28    | add | fabric | 0       |
-|    mac_muladd_8ns_8ns_8ns_15_4_1_U6                  | 1   |        | mul_ln32    | mul | dsp48  | 3       |
-|    mac_muladd_8ns_8ns_8ns_15_4_1_U6                  | 1   |        | add_ln32    | add | dsp48  | 3       |
-|    add_ln30_fu_170_p2                                | -   |        | add_ln30    | add | fabric | 0       |
-|  + matmul_Pipeline_VITIS_LOOP_37_5_VITIS_LOOP_39_6   | 1   |        |             |     |        |         |
-|    add_ln37_1_fu_94_p2                               | -   |        | add_ln37_1  | add | fabric | 0       |
-|    add_ln37_fu_106_p2                                | -   |        | add_ln37    | add | fabric | 0       |
-|    mac_muladd_7ns_8ns_8ns_15_4_1_U11                 | 1   |        | mul_ln41    | mul | dsp48  | 3       |
-|    mac_muladd_7ns_8ns_8ns_15_4_1_U11                 | 1   |        | add_ln41    | add | dsp48  | 3       |
-|    add_ln39_fu_138_p2                                | -   |        | add_ln39    | add | fabric | 0       |
-|  + matmul_Pipeline_VITIS_LOOP_53_9                   | 1   |        |             |     |        |         |
-|    add_ln53_fu_158_p2                                | -   |        | add_ln53    | add | fabric | 0       |
-|    add_ln186_fu_171_p2                               | -   |        | add_ln186   | add | fabric | 0       |
-|    add_ln186_2_fu_182_p2                             | -   |        | add_ln186_2 | add | fabric | 0       |
-|    add_ln186_1_fu_188_p2                             | -   |        | add_ln186_1 | add | fabric | 0       |
-|    mac_muladd_16s_16s_16ns_16_4_1_U14                | 1   |        | mul_ln840   | mul | dsp48  | 3       |
-|    mac_muladd_16s_16s_16ns_16_4_1_U14                | 1   |        | add_ln840   | add | dsp48  | 3       |
-|  + matmul_Pipeline_VITIS_LOOP_61_10_VITIS_LOOP_63_11 | 1   |        |             |     |        |         |
-|    add_ln61_1_fu_135_p2                              | -   |        | add_ln61_1  | add | fabric | 0       |
-|    add_ln61_fu_147_p2                                | -   |        | add_ln61    | add | fabric | 0       |
-|    mac_muladd_7ns_8ns_8ns_15_4_1_U23                 | 1   |        | mul_ln65    | mul | dsp48  | 3       |
-|    mac_muladd_7ns_8ns_8ns_15_4_1_U23                 | 1   |        | add_ln65    | add | dsp48  | 3       |
-|    add_ln63_fu_179_p2                                | -   |        | add_ln63    | add | fabric | 0       |
+| + matmul                                             | 5   |        |             |     |        |         |
+|   add_ln55_1_fu_298_p2                               | -   |        | add_ln55_1  | add | fabric | 0       |
+|   add_ln55_fu_310_p2                                 | -   |        | add_ln55    | add | fabric | 0       |
+|   mul_7ns_9ns_14_1_1_U31                             | -   |        | mul_ln186   | mul | auto   | 0       |
+|   mac_muladd_7ns_8ns_8ns_15_4_1_U32                  | 1   |        | empty_25    | mul | dsp48  | 3       |
+|   mac_muladd_7ns_8ns_8ns_15_4_1_U32                  | 1   |        | empty_26    | add | dsp48  | 3       |
+|   add_ln57_fu_342_p2                                 | -   |        | add_ln57    | add | fabric | 0       |
+|  + matmul_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_21_2   | 0   |        |             |     |        |         |
+|    add_ln19_1_fu_149_p2                              | -   |        | add_ln19_1  | add | fabric | 0       |
+|    add_ln19_fu_166_p2                                | -   |        | add_ln19    | add | fabric | 0       |
+|    mul_7ns_9ns_14_1_1_U1                             | -   |        | mul_ln21    | mul | auto   | 0       |
+|    add_ln25_fu_223_p2                                | -   |        | add_ln25    | add | fabric | 0       |
+|    add_ln25_1_fu_242_p2                              | -   |        | add_ln25_1  | add | fabric | 0       |
+|    add_ln21_fu_204_p2                                | -   |        | add_ln21    | add | fabric | 0       |
+|  + matmul_Pipeline_VITIS_LOOP_30_3_VITIS_LOOP_32_4   | 0   |        |             |     |        |         |
+|    add_ln30_1_fu_145_p2                              | -   |        | add_ln30_1  | add | fabric | 0       |
+|    add_ln30_fu_157_p2                                | -   |        | add_ln30    | add | fabric | 0       |
+|    mul_8ns_9ns_15_1_1_U6                             | -   |        | mul_ln32    | mul | auto   | 0       |
+|    add_ln36_fu_218_p2                                | -   |        | add_ln36    | add | fabric | 0       |
+|    add_ln36_1_fu_237_p2                              | -   |        | add_ln36_1  | add | fabric | 0       |
+|    add_ln32_fu_185_p2                                | -   |        | add_ln32    | add | fabric | 0       |
+|  + matmul_Pipeline_VITIS_LOOP_41_5_VITIS_LOOP_43_6   | 0   |        |             |     |        |         |
+|    add_ln41_1_fu_107_p2                              | -   |        | add_ln41_1  | add | fabric | 0       |
+|    add_ln41_fu_119_p2                                | -   |        | add_ln41    | add | fabric | 0       |
+|    mul_7ns_9ns_15_1_1_U11                            | -   |        | mul_ln47    | mul | auto   | 0       |
+|    add_ln47_fu_181_p2                                | -   |        | add_ln47    | add | fabric | 0       |
+|    add_ln47_1_fu_200_p2                              | -   |        | add_ln47_1  | add | fabric | 0       |
+|    add_ln43_fu_157_p2                                | -   |        | add_ln43    | add | fabric | 0       |
+|  + matmul_Pipeline_VITIS_LOOP_59_9                   | 4   |        |             |     |        |         |
+|    add_ln186_fu_198_p2                               | -   |        | add_ln186   | add | fabric | 0       |
+|    mac_muladd_8ns_8ns_8ns_15_4_1_U15                 | 1   |        | mul_ln186_1 | mul | dsp48  | 3       |
+|    mac_muladd_8ns_8ns_8ns_15_4_1_U15                 | 1   |        | add_ln186_1 | add | dsp48  | 3       |
+|    mac_muladd_16s_16s_16ns_16_4_1_U17                | 1   |        | mul_ln840   | mul | dsp48  | 3       |
+|    add_ln186_2_fu_181_p2                             | -   |        | add_ln186_2 | add | fabric | 0       |
+|    mac_muladd_8ns_8ns_8ns_15_4_1_U14                 | 1   |        | mul_ln186_2 | mul | dsp48  | 3       |
+|    mac_muladd_8ns_8ns_8ns_15_4_1_U14                 | 1   |        | add_ln186_3 | add | dsp48  | 3       |
+|    mul_mul_16s_16s_16_4_1_U16                        | 1   |        | mul_ln840_1 | mul | dsp48  | 3       |
+|    mac_muladd_16s_16s_16ns_16_4_1_U17                | 1   |        | add_ln840   | add | dsp48  | 3       |
+|    add_ln840_1_fu_215_p2                             | -   |        | add_ln840_1 | add | fabric | 0       |
+|    add_ln59_fu_164_p2                                | -   |        | add_ln59    | add | fabric | 0       |
+|  + matmul_Pipeline_VITIS_LOOP_69_10_VITIS_LOOP_71_11 | 0   |        |             |     |        |         |
+|    add_ln69_1_fu_161_p2                              | -   |        | add_ln69_1  | add | fabric | 0       |
+|    add_ln69_fu_173_p2                                | -   |        | add_ln69    | add | fabric | 0       |
+|    mul_7ns_9ns_15_1_1_U27                            | -   |        | mul_ln75    | mul | auto   | 0       |
+|    add_ln75_fu_235_p2                                | -   |        | add_ln75    | add | fabric | 0       |
+|    add_ln75_1_fu_254_p2                              | -   |        | add_ln75_1  | add | fabric | 0       |
+|    add_ln71_fu_211_p2                                | -   |        | add_ln71    | add | fabric | 0       |
 +------------------------------------------------------+-----+--------+-------------+-----+--------+---------+
 
 
@@ -187,9 +196,9 @@
 | Name                | BRAM | URAM | Pragma | Variable        | Storage | Impl | Latency |
 +---------------------+------+------+--------+-----------------+---------+------+---------+
 | + matmul            | 80   | 0    |        |                 |         |      |         |
-|   Matrix_A_BRAM_V_U | 16   | -    |        | Matrix_A_BRAM_V | ram_1p  | auto | 1       |
-|   Matrix_B_BRAM_V_U | 32   | -    |        | Matrix_B_BRAM_V | ram_1p  | auto | 1       |
-|   Matrix_C_BRAM_V_U | 32   | -    |        | Matrix_C_BRAM_V | ram_1p  | auto | 1       |
+|   Matrix_A_BRAM_V_U | 16   | -    |        | Matrix_A_BRAM_V | ram_s2p | auto | 1       |
+|   Matrix_B_BRAM_V_U | 32   | -    |        | Matrix_B_BRAM_V | ram_s2p | auto | 1       |
+|   Matrix_C_BRAM_V_U | 32   | -    |        | Matrix_C_BRAM_V | ram_t2p | auto | 1       |
 +---------------------+------+------+--------+-----------------+---------+------+---------+
 
 
@@ -204,6 +213,16 @@
 | interface | mode = m_axi depth = 1 port = Matrix_B_DRAM offset = slave bundle = mem2 | matmul.cpp:10 in matmul |
 | interface | mode = m_axi depth = 1 port = Matrix_C_DRAM offset = slave bundle = mem1 | matmul.cpp:11 in matmul |
 | interface | mode = s_axilite port = return                                           | matmul.cpp:12 in matmul |
+| pipeline  | II = 1                                                                   | matmul.cpp:23 in matmul |
+| unroll    | factor = 2                                                               | matmul.cpp:24 in matmul |
+| pipeline  | II = 1                                                                   | matmul.cpp:34 in matmul |
+| unroll    | factor = 2                                                               | matmul.cpp:35 in matmul |
+| pipeline  | II = 1                                                                   | matmul.cpp:45 in matmul |
+| unroll    | factor = 2                                                               | matmul.cpp:46 in matmul |
+| pipeline  | II = 1                                                                   | matmul.cpp:61 in matmul |
+| unroll    | factor = 2                                                               | matmul.cpp:62 in matmul |
+| pipeline  | II = 1                                                                   | matmul.cpp:73 in matmul |
+| unroll    | factor = 2                                                               | matmul.cpp:74 in matmul |
 +-----------+--------------------------------------------------------------------------+-------------------------+
 
 

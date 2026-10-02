@@ -20,6 +20,8 @@ void matmul(
     {
         for (int c = 0; c < N; c++)
         {
+            #pragma HLS PIPELINE II = 1
+            #pragma HLS UNROLL factor = 2
             Matrix_A_BRAM[r][c] = Matrix_A_DRAM[r][c];
         }
     }
@@ -29,6 +31,8 @@ void matmul(
     {
         for (int c = 0; c < K; c++)
         {
+            #pragma HLS PIPELINE II = 1
+            #pragma HLS UNROLL factor = 2
             Matrix_B_BRAM[r][c] = Matrix_B_DRAM[r][c];
         }
     }
@@ -38,6 +42,8 @@ void matmul(
     {
         for (int c = 0; c < K; c++)
         {
+            #pragma HLS PIPELINE II = 1
+            #pragma HLS UNROLL factor = 2
             Matrix_C_BRAM[r][c] = 0;
         }
     }
@@ -52,6 +58,8 @@ void matmul(
         {
             for (int dot = 0; dot < N; dot++)
             {
+                #pragma HLS PIPELINE II = 1
+                #pragma HLS UNROLL factor = 2
                 Matrix_C_BRAM[r][c] += Matrix_A_BRAM[r][dot] * Matrix_B_BRAM[dot][c];
             }
         }
@@ -62,6 +70,8 @@ void matmul(
     {
         for (int c = 0; c < K; c++)
         {
+            #pragma HLS PIPELINE II = 1
+            #pragma HLS UNROLL factor = 2
             Matrix_C_DRAM[r][c] = Matrix_C_BRAM[r][c];
         }
     }

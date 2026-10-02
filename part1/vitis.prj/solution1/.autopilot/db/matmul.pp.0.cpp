@@ -7997,25 +7997,31 @@ __attribute__((sdx_kernel("matmul", 0))) void matmul(
     {
         VITIS_LOOP_21_2: for (int c = 0; c < 150; c++)
         {
-            Matrix_A_BRAM[r][c] = Matrix_A_DRAM[r][c];
+#pragma HLS PIPELINE II = 1
+#pragma HLS UNROLL factor = 2
+ Matrix_A_BRAM[r][c] = Matrix_A_DRAM[r][c];
         }
     }
 
 
-    VITIS_LOOP_28_3: for (int r = 0; r < 150; r++)
+    VITIS_LOOP_30_3: for (int r = 0; r < 150; r++)
     {
-        VITIS_LOOP_30_4: for (int c = 0; c < 200; c++)
+        VITIS_LOOP_32_4: for (int c = 0; c < 200; c++)
         {
-            Matrix_B_BRAM[r][c] = Matrix_B_DRAM[r][c];
+#pragma HLS PIPELINE II = 1
+#pragma HLS UNROLL factor = 2
+ Matrix_B_BRAM[r][c] = Matrix_B_DRAM[r][c];
         }
     }
 
 
-    VITIS_LOOP_37_5: for (int r = 0; r < 100; r++)
+    VITIS_LOOP_41_5: for (int r = 0; r < 100; r++)
     {
-        VITIS_LOOP_39_6: for (int c = 0; c < 200; c++)
+        VITIS_LOOP_43_6: for (int c = 0; c < 200; c++)
         {
-            Matrix_C_BRAM[r][c] = 0;
+#pragma HLS PIPELINE II = 1
+#pragma HLS UNROLL factor = 2
+ Matrix_C_BRAM[r][c] = 0;
         }
     }
 
@@ -8023,23 +8029,27 @@ __attribute__((sdx_kernel("matmul", 0))) void matmul(
 
 
 
-    VITIS_LOOP_49_7: for (int r = 0; r < 100; r++)
+    VITIS_LOOP_55_7: for (int r = 0; r < 100; r++)
     {
-        VITIS_LOOP_51_8: for (int c = 0; c < 200; c++)
+        VITIS_LOOP_57_8: for (int c = 0; c < 200; c++)
         {
-            VITIS_LOOP_53_9: for (int dot = 0; dot < 150; dot++)
+            VITIS_LOOP_59_9: for (int dot = 0; dot < 150; dot++)
             {
-                Matrix_C_BRAM[r][c] += Matrix_A_BRAM[r][dot] * Matrix_B_BRAM[dot][c];
+#pragma HLS PIPELINE II = 1
+#pragma HLS UNROLL factor = 2
+ Matrix_C_BRAM[r][c] += Matrix_A_BRAM[r][dot] * Matrix_B_BRAM[dot][c];
             }
         }
     }
 
 
-    VITIS_LOOP_61_10: for (int r = 0; r < 100; r++)
+    VITIS_LOOP_69_10: for (int r = 0; r < 100; r++)
     {
-        VITIS_LOOP_63_11: for (int c = 0; c < 200; c++)
+        VITIS_LOOP_71_11: for (int c = 0; c < 200; c++)
         {
-            Matrix_C_DRAM[r][c] = Matrix_C_BRAM[r][c];
+#pragma HLS PIPELINE II = 1
+#pragma HLS UNROLL factor = 2
+ Matrix_C_DRAM[r][c] = Matrix_C_BRAM[r][c];
         }
     }
 }

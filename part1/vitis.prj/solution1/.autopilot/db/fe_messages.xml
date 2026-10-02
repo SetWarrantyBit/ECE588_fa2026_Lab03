@@ -23,5 +23,50 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="matmul.cpp:12:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode = s_axilite port = return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="matmul.cpp:23:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="II = 1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="matmul.cpp:24:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor = 2" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="matmul.cpp:34:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="II = 1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="matmul.cpp:35:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor = 2" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="matmul.cpp:45:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="II = 1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="matmul.cpp:46:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor = 2" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="matmul.cpp:61:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="II = 1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="matmul.cpp:62:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor = 2" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="matmul.cpp:73:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="II = 1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="matmul.cpp:74:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor = 2" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-188" msg_severity="INFO" msg_loc="matmul.cpp:7:0" msg_body="Unrolling loop 'VITIS_LOOP_71_11' (matmul.cpp:71:27) in function 'matmul' partially with a factor of 2">
+        <args Factor="2" LoopLoc="matmul.cpp:71:27" LoopName="VITIS_LOOP_71_11"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-188" msg_severity="INFO" msg_loc="matmul.cpp:7:0" msg_body="Unrolling loop 'VITIS_LOOP_59_9' (matmul.cpp:59:30) in function 'matmul' partially with a factor of 2">
+        <args Factor="2" LoopLoc="matmul.cpp:59:30" LoopName="VITIS_LOOP_59_9"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-188" msg_severity="INFO" msg_loc="matmul.cpp:7:0" msg_body="Unrolling loop 'VITIS_LOOP_43_6' (matmul.cpp:43:26) in function 'matmul' partially with a factor of 2">
+        <args Factor="2" LoopLoc="matmul.cpp:43:26" LoopName="VITIS_LOOP_43_6"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-188" msg_severity="INFO" msg_loc="matmul.cpp:7:0" msg_body="Unrolling loop 'VITIS_LOOP_32_4' (matmul.cpp:32:26) in function 'matmul' partially with a factor of 2">
+        <args Factor="2" LoopLoc="matmul.cpp:32:26" LoopName="VITIS_LOOP_32_4"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-188" msg_severity="INFO" msg_loc="matmul.cpp:7:0" msg_body="Unrolling loop 'VITIS_LOOP_21_2' (matmul.cpp:21:26) in function 'matmul' partially with a factor of 2">
+        <args Factor="2" LoopLoc="matmul.cpp:21:26" LoopName="VITIS_LOOP_21_2"/>
+    </msg>
 </xilinx:hls_fe_msgs>
 

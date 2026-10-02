@@ -22,22 +22,22 @@
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>15004</Best-caseLatency>
-<Average-caseLatency>15004</Average-caseLatency>
-<Worst-caseLatency>15004</Worst-caseLatency>
+<Best-caseLatency>15003</Best-caseLatency>
+<Average-caseLatency>15003</Average-caseLatency>
+<Worst-caseLatency>15003</Worst-caseLatency>
 <Best-caseRealTimeLatency>0.150 ms</Best-caseRealTimeLatency>
 <Average-caseRealTimeLatency>0.150 ms</Average-caseRealTimeLatency>
 <Worst-caseRealTimeLatency>0.150 ms</Worst-caseRealTimeLatency>
-<Interval-min>15004</Interval-min>
-<Interval-max>15004</Interval-max>
+<Interval-min>15003</Interval-min>
+<Interval-max>15003</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <VITIS_LOOP_19_1_VITIS_LOOP_21_2>
 <Slack>7.30</Slack>
-<TripCount>15000</TripCount>
-<Latency>15002</Latency>
-<AbsoluteTimeLatency>150020</AbsoluteTimeLatency>
-<PipelineII>1</PipelineII>
+<TripCount>7500</TripCount>
+<Latency>15001</Latency>
+<AbsoluteTimeLatency>150010</AbsoluteTimeLatency>
+<PipelineII>2</PipelineII>
 <PipelineDepth>4</PipelineDepth>
 <InstanceList>
 </InstanceList>
@@ -47,9 +47,9 @@
 
 <AreaEstimates>
 <Resources>
-<DSP>1</DSP>
-<FF>70</FF>
-<LUT>171</LUT>
+<DSP>0</DSP>
+<FF>86</FF>
+<LUT>282</LUT>
 <BRAM_18K>0</BRAM_18K>
 <URAM>0</URAM>
 </Resources>

@@ -1,0 +1,170 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vivado' configuration: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: config_interface -m_axi_latency 64 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 10.02 seconds; current allocated memory: 269.660 MB.
+INFO: [HLS 200-10] Analyzing design file 'matmul.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 4.23 seconds. CPU system time: 0.68 seconds. Elapsed time: 4.9 seconds; current allocated memory: 269.660 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-241] Aggregating maxi variable 'Matrix_C_DRAM' with compact=none mode in 16-bits
+INFO: [HLS 214-241] Aggregating maxi variable 'Matrix_B_DRAM' with compact=none mode in 16-bits
+INFO: [HLS 214-241] Aggregating maxi variable 'Matrix_A_DRAM' with compact=none mode in 16-bits
+INFO: [HLS 214-115] Multiple burst reads of length 15000 and bit width 16 in loop 'VITIS_LOOP_19_1'(matmul.cpp:19:22) has been inferred on bundle 'mem1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (matmul.cpp:19:22)
+INFO: [HLS 214-115] Multiple burst reads of length 30000 and bit width 16 in loop 'VITIS_LOOP_28_3'(matmul.cpp:28:22) has been inferred on bundle 'mem2'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (matmul.cpp:28:22)
+INFO: [HLS 214-115] Multiple burst writes of length 20000 and bit width 16 in loop 'VITIS_LOOP_61_10'(matmul.cpp:61:23) has been inferred on bundle 'mem1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (matmul.cpp:61:23)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 4.65 seconds. CPU system time: 0.74 seconds. Elapsed time: 5.39 seconds; current allocated memory: 269.660 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 269.660 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 269.660 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 269.660 MB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_21_2' (matmul.cpp:21) in function 'matmul' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_30_4' (matmul.cpp:30) in function 'matmul' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_39_6' (matmul.cpp:39) in function 'matmul' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_53_9' (matmul.cpp:53) in function 'matmul' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_63_11' (matmul.cpp:63) in function 'matmul' automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.13 seconds; current allocated memory: 333.660 MB.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_19_1' (matmul.cpp:19:31) in function 'matmul'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_28_3' (matmul.cpp:28:31) in function 'matmul'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_37_5' (matmul.cpp:37:31) in function 'matmul'.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_51_8' (matmul.cpp:51:35) in function 'matmul' the outer loop is not a perfect loop.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_49_7' (matmul.cpp:49:31) in function 'matmul'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_61_10' (matmul.cpp:61:32) in function 'matmul'.
+INFO: [HLS 200-472] Inferring partial write operation for 'Matrix_A_BRAM.V' (matmul.cpp:23:33)
+INFO: [HLS 200-472] Inferring partial write operation for 'Matrix_B_BRAM.V' (matmul.cpp:32:33)
+INFO: [HLS 200-472] Inferring partial write operation for 'Matrix_C_BRAM.V' (matmul.cpp:41:33)
+INFO: [HLS 200-472] Inferring partial write operation for 'Matrix_C_BRAM.V' 
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 397.660 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'matmul' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matmul_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_21_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln23) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_19_1_VITIS_LOOP_21_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 4, loop 'VITIS_LOOP_19_1_VITIS_LOOP_21_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.09 seconds; current allocated memory: 397.660 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 397.660 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matmul_Pipeline_VITIS_LOOP_28_3_VITIS_LOOP_30_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln32) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_28_3_VITIS_LOOP_30_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 4, loop 'VITIS_LOOP_28_3_VITIS_LOOP_30_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 397.660 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 397.660 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matmul_Pipeline_VITIS_LOOP_37_5_VITIS_LOOP_39_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln41) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_37_5_VITIS_LOOP_39_6'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 4, loop 'VITIS_LOOP_37_5_VITIS_LOOP_39_6'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 397.660 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 397.660 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matmul_Pipeline_VITIS_LOOP_53_9' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_53_9'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 5, loop 'VITIS_LOOP_53_9'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 397.660 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 397.660 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matmul_Pipeline_VITIS_LOOP_61_10_VITIS_LOOP_63_11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln65) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_61_10_VITIS_LOOP_63_11'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 6, loop 'VITIS_LOOP_61_10_VITIS_LOOP_63_11'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 397.660 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 397.660 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matmul' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=empty_26) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.35 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.35 seconds; current allocated memory: 397.660 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.77 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.78 seconds; current allocated memory: 397.660 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matmul_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_21_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'matmul_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_21_2' pipeline 'VITIS_LOOP_19_1_VITIS_LOOP_21_2' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_21_2/m_axi_mem1_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_21_2/m_axi_mem1_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_21_2/m_axi_mem1_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_21_2/m_axi_mem1_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_21_2/m_axi_mem1_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_21_2/m_axi_mem1_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_21_2/m_axi_mem1_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_21_2/m_axi_mem1_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_21_2/m_axi_mem1_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_21_2/m_axi_mem1_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_21_2/m_axi_mem1_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_21_2/m_axi_mem1_ARUSER' to 0.
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_7ns_8ns_8ns_14_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matmul_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_21_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.29 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.29 seconds; current allocated memory: 397.660 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matmul_Pipeline_VITIS_LOOP_28_3_VITIS_LOOP_30_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'matmul_Pipeline_VITIS_LOOP_28_3_VITIS_LOOP_30_4' pipeline 'VITIS_LOOP_28_3_VITIS_LOOP_30_4' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_Pipeline_VITIS_LOOP_28_3_VITIS_LOOP_30_4/m_axi_mem2_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_Pipeline_VITIS_LOOP_28_3_VITIS_LOOP_30_4/m_axi_mem2_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_Pipeline_VITIS_LOOP_28_3_VITIS_LOOP_30_4/m_axi_mem2_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_Pipeline_VITIS_LOOP_28_3_VITIS_LOOP_30_4/m_axi_mem2_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_Pipeline_VITIS_LOOP_28_3_VITIS_LOOP_30_4/m_axi_mem2_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_Pipeline_VITIS_LOOP_28_3_VITIS_LOOP_30_4/m_axi_mem2_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_Pipeline_VITIS_LOOP_28_3_VITIS_LOOP_30_4/m_axi_mem2_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_Pipeline_VITIS_LOOP_28_3_VITIS_LOOP_30_4/m_axi_mem2_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_Pipeline_VITIS_LOOP_28_3_VITIS_LOOP_30_4/m_axi_mem2_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_Pipeline_VITIS_LOOP_28_3_VITIS_LOOP_30_4/m_axi_mem2_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_Pipeline_VITIS_LOOP_28_3_VITIS_LOOP_30_4/m_axi_mem2_ARREGION' to 0.

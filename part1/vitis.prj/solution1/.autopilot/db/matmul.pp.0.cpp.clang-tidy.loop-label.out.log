@@ -33,48 +33,48 @@
         ^~~
         VITIS_LOOP_21_2: 
 /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part1/vitis.prj/solution1/.autopilot/db/matmul.pp.0.cpp:7998:9: note: FIX-IT applied suggested code changes
-/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part1/vitis.prj/solution1/.autopilot/db/matmul.pp.0.cpp:8005:5: warning: Added loop label VITIS_LOOP_28_3:   [xilinx-label-all-loops]
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part1/vitis.prj/solution1/.autopilot/db/matmul.pp.0.cpp:8007:5: warning: Added loop label VITIS_LOOP_30_3:   [xilinx-label-all-loops]
     for (int r = 0; r < 150; r++)
     ^~~
-    VITIS_LOOP_28_3: 
-/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part1/vitis.prj/solution1/.autopilot/db/matmul.pp.0.cpp:8005:5: note: FIX-IT applied suggested code changes
-/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part1/vitis.prj/solution1/.autopilot/db/matmul.pp.0.cpp:8007:9: warning: Added loop label VITIS_LOOP_30_4:   [xilinx-label-all-loops]
+    VITIS_LOOP_30_3: 
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part1/vitis.prj/solution1/.autopilot/db/matmul.pp.0.cpp:8007:5: note: FIX-IT applied suggested code changes
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part1/vitis.prj/solution1/.autopilot/db/matmul.pp.0.cpp:8009:9: warning: Added loop label VITIS_LOOP_32_4:   [xilinx-label-all-loops]
         for (int c = 0; c < 200; c++)
         ^~~
-        VITIS_LOOP_30_4: 
-/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part1/vitis.prj/solution1/.autopilot/db/matmul.pp.0.cpp:8007:9: note: FIX-IT applied suggested code changes
-/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part1/vitis.prj/solution1/.autopilot/db/matmul.pp.0.cpp:8014:5: warning: Added loop label VITIS_LOOP_37_5:   [xilinx-label-all-loops]
+        VITIS_LOOP_32_4: 
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part1/vitis.prj/solution1/.autopilot/db/matmul.pp.0.cpp:8009:9: note: FIX-IT applied suggested code changes
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part1/vitis.prj/solution1/.autopilot/db/matmul.pp.0.cpp:8018:5: warning: Added loop label VITIS_LOOP_41_5:   [xilinx-label-all-loops]
     for (int r = 0; r < 100; r++)
     ^~~
-    VITIS_LOOP_37_5: 
-/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part1/vitis.prj/solution1/.autopilot/db/matmul.pp.0.cpp:8014:5: note: FIX-IT applied suggested code changes
-/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part1/vitis.prj/solution1/.autopilot/db/matmul.pp.0.cpp:8016:9: warning: Added loop label VITIS_LOOP_39_6:   [xilinx-label-all-loops]
+    VITIS_LOOP_41_5: 
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part1/vitis.prj/solution1/.autopilot/db/matmul.pp.0.cpp:8018:5: note: FIX-IT applied suggested code changes
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part1/vitis.prj/solution1/.autopilot/db/matmul.pp.0.cpp:8020:9: warning: Added loop label VITIS_LOOP_43_6:   [xilinx-label-all-loops]
         for (int c = 0; c < 200; c++)
         ^~~
-        VITIS_LOOP_39_6: 
-/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part1/vitis.prj/solution1/.autopilot/db/matmul.pp.0.cpp:8016:9: note: FIX-IT applied suggested code changes
-/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part1/vitis.prj/solution1/.autopilot/db/matmul.pp.0.cpp:8026:5: warning: Added loop label VITIS_LOOP_49_7:   [xilinx-label-all-loops]
+        VITIS_LOOP_43_6: 
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part1/vitis.prj/solution1/.autopilot/db/matmul.pp.0.cpp:8020:9: note: FIX-IT applied suggested code changes
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part1/vitis.prj/solution1/.autopilot/db/matmul.pp.0.cpp:8032:5: warning: Added loop label VITIS_LOOP_55_7:   [xilinx-label-all-loops]
     for (int r = 0; r < 100; r++)
     ^~~
-    VITIS_LOOP_49_7: 
-/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part1/vitis.prj/solution1/.autopilot/db/matmul.pp.0.cpp:8026:5: note: FIX-IT applied suggested code changes
-/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part1/vitis.prj/solution1/.autopilot/db/matmul.pp.0.cpp:8028:9: warning: Added loop label VITIS_LOOP_51_8:   [xilinx-label-all-loops]
+    VITIS_LOOP_55_7: 
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part1/vitis.prj/solution1/.autopilot/db/matmul.pp.0.cpp:8032:5: note: FIX-IT applied suggested code changes
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part1/vitis.prj/solution1/.autopilot/db/matmul.pp.0.cpp:8034:9: warning: Added loop label VITIS_LOOP_57_8:   [xilinx-label-all-loops]
         for (int c = 0; c < 200; c++)
         ^~~
-        VITIS_LOOP_51_8: 
-/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part1/vitis.prj/solution1/.autopilot/db/matmul.pp.0.cpp:8028:9: note: FIX-IT applied suggested code changes
-/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part1/vitis.prj/solution1/.autopilot/db/matmul.pp.0.cpp:8030:13: warning: Added loop label VITIS_LOOP_53_9:   [xilinx-label-all-loops]
+        VITIS_LOOP_57_8: 
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part1/vitis.prj/solution1/.autopilot/db/matmul.pp.0.cpp:8034:9: note: FIX-IT applied suggested code changes
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part1/vitis.prj/solution1/.autopilot/db/matmul.pp.0.cpp:8036:13: warning: Added loop label VITIS_LOOP_59_9:   [xilinx-label-all-loops]
             for (int dot = 0; dot < 150; dot++)
             ^~~
-            VITIS_LOOP_53_9: 
-/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part1/vitis.prj/solution1/.autopilot/db/matmul.pp.0.cpp:8030:13: note: FIX-IT applied suggested code changes
-/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part1/vitis.prj/solution1/.autopilot/db/matmul.pp.0.cpp:8038:5: warning: Added loop label VITIS_LOOP_61_10:   [xilinx-label-all-loops]
+            VITIS_LOOP_59_9: 
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part1/vitis.prj/solution1/.autopilot/db/matmul.pp.0.cpp:8036:13: note: FIX-IT applied suggested code changes
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part1/vitis.prj/solution1/.autopilot/db/matmul.pp.0.cpp:8046:5: warning: Added loop label VITIS_LOOP_69_10:   [xilinx-label-all-loops]
     for (int r = 0; r < 100; r++)
     ^~~
-    VITIS_LOOP_61_10: 
-/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part1/vitis.prj/solution1/.autopilot/db/matmul.pp.0.cpp:8038:5: note: FIX-IT applied suggested code changes
-/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part1/vitis.prj/solution1/.autopilot/db/matmul.pp.0.cpp:8040:9: warning: Added loop label VITIS_LOOP_63_11:   [xilinx-label-all-loops]
+    VITIS_LOOP_69_10: 
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part1/vitis.prj/solution1/.autopilot/db/matmul.pp.0.cpp:8046:5: note: FIX-IT applied suggested code changes
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part1/vitis.prj/solution1/.autopilot/db/matmul.pp.0.cpp:8048:9: warning: Added loop label VITIS_LOOP_71_11:   [xilinx-label-all-loops]
         for (int c = 0; c < 200; c++)
         ^~~
-        VITIS_LOOP_63_11: 
-/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part1/vitis.prj/solution1/.autopilot/db/matmul.pp.0.cpp:8040:9: note: FIX-IT applied suggested code changes
+        VITIS_LOOP_71_11: 
+/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part1/vitis.prj/solution1/.autopilot/db/matmul.pp.0.cpp:8048:9: note: FIX-IT applied suggested code changes

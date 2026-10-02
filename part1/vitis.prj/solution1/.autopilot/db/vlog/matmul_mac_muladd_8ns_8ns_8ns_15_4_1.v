@@ -5,7 +5,7 @@
 // ==============================================================
 `timescale 1 ns / 1 ps
 
-(* use_dsp = "yes" *) module matmul_mac_muladd_8ns_8ns_8ns_15_4_1_DSP48_1(
+(* use_dsp = "yes" *) module matmul_mac_muladd_8ns_8ns_8ns_15_4_1_DSP48_0(
     input clk,
     input rst,
     input ce,
@@ -69,7 +69,7 @@ output[dout_WIDTH - 1:0] dout;
 
 
 
-matmul_mac_muladd_8ns_8ns_8ns_15_4_1_DSP48_1 matmul_mac_muladd_8ns_8ns_8ns_15_4_1_DSP48_1_U(
+matmul_mac_muladd_8ns_8ns_8ns_15_4_1_DSP48_0 matmul_mac_muladd_8ns_8ns_8ns_15_4_1_DSP48_0_U(
     .clk( clk ),
     .rst( reset ),
     .ce( ce ),

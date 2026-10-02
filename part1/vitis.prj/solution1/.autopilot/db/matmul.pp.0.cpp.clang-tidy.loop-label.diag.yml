@@ -65,84 +65,84 @@ Diagnostics:
         Length:          0
         ReplacementText: 'VITIS_LOOP_21_2: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_28_3:  '
-    FileOffset:      28
-    FilePath:        matmul.cpp
-    Replacements:    
-      - FilePath:        /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part1/vitis.prj/solution1/.autopilot/db/matmul.pp.0.cpp
-        Offset:          913970
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_28_3: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_30_4:  '
+    Message:         'Added loop label VITIS_LOOP_30_3:  '
     FileOffset:      30
     FilePath:        matmul.cpp
     Replacements:    
       - FilePath:        /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part1/vitis.prj/solution1/.autopilot/db/matmul.pp.0.cpp
-        Offset:          914014
+        Offset:          914017
         Length:          0
-        ReplacementText: 'VITIS_LOOP_30_4: '
+        ReplacementText: 'VITIS_LOOP_30_3: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_37_5:  '
-    FileOffset:      37
+    Message:         'Added loop label VITIS_LOOP_32_4:  '
+    FileOffset:      32
     FilePath:        matmul.cpp
     Replacements:    
       - FilePath:        /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part1/vitis.prj/solution1/.autopilot/db/matmul.pp.0.cpp
-        Offset:          914131
+        Offset:          914061
         Length:          0
-        ReplacementText: 'VITIS_LOOP_37_5: '
+        ReplacementText: 'VITIS_LOOP_32_4: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_39_6:  '
-    FileOffset:      39
+    Message:         'Added loop label VITIS_LOOP_41_5:  '
+    FileOffset:      41
     FilePath:        matmul.cpp
     Replacements:    
       - FilePath:        /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part1/vitis.prj/solution1/.autopilot/db/matmul.pp.0.cpp
-        Offset:          914175
+        Offset:          914225
         Length:          0
-        ReplacementText: 'VITIS_LOOP_39_6: '
+        ReplacementText: 'VITIS_LOOP_41_5: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_49_7:  '
-    FileOffset:      49
+    Message:         'Added loop label VITIS_LOOP_43_6:  '
+    FileOffset:      43
     FilePath:        matmul.cpp
     Replacements:    
       - FilePath:        /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part1/vitis.prj/solution1/.autopilot/db/matmul.pp.0.cpp
-        Offset:          914277
+        Offset:          914269
         Length:          0
-        ReplacementText: 'VITIS_LOOP_49_7: '
+        ReplacementText: 'VITIS_LOOP_43_6: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_51_8:  '
-    FileOffset:      51
+    Message:         'Added loop label VITIS_LOOP_55_7:  '
+    FileOffset:      55
     FilePath:        matmul.cpp
     Replacements:    
       - FilePath:        /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part1/vitis.prj/solution1/.autopilot/db/matmul.pp.0.cpp
-        Offset:          914321
+        Offset:          914418
         Length:          0
-        ReplacementText: 'VITIS_LOOP_51_8: '
+        ReplacementText: 'VITIS_LOOP_55_7: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_53_9:  '
-    FileOffset:      53
+    Message:         'Added loop label VITIS_LOOP_57_8:  '
+    FileOffset:      57
     FilePath:        matmul.cpp
     Replacements:    
       - FilePath:        /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part1/vitis.prj/solution1/.autopilot/db/matmul.pp.0.cpp
-        Offset:          914373
+        Offset:          914462
         Length:          0
-        ReplacementText: 'VITIS_LOOP_53_9: '
+        ReplacementText: 'VITIS_LOOP_57_8: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_61_10:  '
-    FileOffset:      61
+    Message:         'Added loop label VITIS_LOOP_59_9:  '
+    FileOffset:      59
     FilePath:        matmul.cpp
     Replacements:    
       - FilePath:        /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part1/vitis.prj/solution1/.autopilot/db/matmul.pp.0.cpp
-        Offset:          914545
+        Offset:          914514
         Length:          0
-        ReplacementText: 'VITIS_LOOP_61_10: '
+        ReplacementText: 'VITIS_LOOP_59_9: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_63_11:  '
-    FileOffset:      63
+    Message:         'Added loop label VITIS_LOOP_69_10:  '
+    FileOffset:      69
     FilePath:        matmul.cpp
     Replacements:    
       - FilePath:        /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part1/vitis.prj/solution1/.autopilot/db/matmul.pp.0.cpp
-        Offset:          914589
+        Offset:          914729
         Length:          0
-        ReplacementText: 'VITIS_LOOP_63_11: '
+        ReplacementText: 'VITIS_LOOP_69_10: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_71_11:  '
+    FileOffset:      71
+    FilePath:        matmul.cpp
+    Replacements:    
+      - FilePath:        /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part1/vitis.prj/solution1/.autopilot/db/matmul.pp.0.cpp
+        Offset:          914773
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_71_11: '
 ...
