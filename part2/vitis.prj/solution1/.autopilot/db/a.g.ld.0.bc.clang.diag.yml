@@ -1,0 +1,92 @@
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartiallyUnroll
+DebugLoc:        { File: conv.cpp, Line: 9, Column: 0 }
+Function:        _Z4convPA226_A226_fPA3_A11_A11_fPfPA55_A55_f
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_53_12
+  - String:          ''' ('
+  - LoopLoc:         'conv.cpp:53:31'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv
+  - String:          ''' partially '
+  - String:          ''
+  - String:          'with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartiallyUnroll
+DebugLoc:        { File: conv.cpp, Line: 9, Column: 0 }
+Function:        _Z4convPA226_A226_fPA3_A11_A11_fPfPA55_A55_f
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_32_7
+  - String:          ''' ('
+  - LoopLoc:         'conv.cpp:32:34'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv
+  - String:          ''' partially '
+  - String:          ''
+  - String:          'with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartiallyUnroll
+DebugLoc:        { File: conv.cpp, Line: 9, Column: 0 }
+Function:        _Z4convPA226_A226_fPA3_A11_A11_fPfPA55_A55_f
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_20_3
+  - String:          ''' ('
+  - LoopLoc:         'conv.cpp:20:30'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv
+  - String:          ''' partially '
+  - String:          ''
+  - String:          'with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: conv.cpp, Line: 9, Column: 0 }
+Function:        _Z4convPA226_A226_fPA3_A11_A11_fPfPA55_A55_f
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          input_fm
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '11'
+  - String:          ' on dimension '
+  - Dim:             '3'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: conv.cpp, Line: 9, Column: 0 }
+Function:        _Z4convPA226_A226_fPA3_A11_A11_fPfPA55_A55_f
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          weights
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '4'
+  - String:          .
+...

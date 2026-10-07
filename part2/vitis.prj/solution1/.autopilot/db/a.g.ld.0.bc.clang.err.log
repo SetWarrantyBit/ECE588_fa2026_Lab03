@@ -1,0 +1,5 @@
+remark: conv.cpp:9:0: Unrolling loop 'VITIS_LOOP_53_12' (conv.cpp:53:31) in function 'conv' partially with a factor of 5
+remark: conv.cpp:9:0: Unrolling loop 'VITIS_LOOP_32_7' (conv.cpp:32:34) in function 'conv' partially with a factor of 5
+remark: conv.cpp:9:0: Unrolling loop 'VITIS_LOOP_20_3' (conv.cpp:20:30) in function 'conv' partially with a factor of 5
+remark: conv.cpp:9:0: Applying array_partition to 'input_fm': Cyclic partitioning with factor 11 on dimension 3.
+remark: conv.cpp:9:0: Applying array_partition to 'weights': Complete partitioning on dimension 4.

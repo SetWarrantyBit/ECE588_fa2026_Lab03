@@ -8,8 +8,8 @@ void conv(
     fm_t output_fm[N][O][O])
 {
     // Perform 11X11 Convolution
-    //#pragma HLS ARRAY_PARTITION variable=weights complete dim=4
-    //#pragma HLS ARRAY_PARTITION variable=input_fm cyclic factor=11 dim=3
+    #pragma HLS ARRAY_PARTITION variable=weights complete dim=4
+    #pragma HLS ARRAY_PARTITION variable=input_fm cyclic factor=11 dim=3
     //stride
     const int stride = 4;
 
@@ -18,6 +18,7 @@ void conv(
     for (x = 0; x < F; x++){
         for (y = 0; y < O; y++){
             for (z = 0; z < O; z++){
+                #pragma HLS UNROLL factor = 5
                 output_fm[x][y][z] = biases[x];
             }
         }
@@ -30,7 +31,7 @@ void conv(
                 r = (i - (K/2 - 1))/stride;
                 for(a = K/2 - 1; a < I - K/2; a = a + stride){
                     //#pragma HLS PIPELINE II=1
-                    //#pragma HLS UNROLL factor = 4
+                    #pragma HLS UNROLL factor = 5
                     c = (a -(K/2 - 1))/stride;
                     for (j = 0; j < K; j++){
                         for (k = 0; k < K; k++){
@@ -50,6 +51,7 @@ void conv(
     for (x = 0; x < F; x++){
         for (y = 0; y < O; y++){
             for (z = 0; z < O; z++){
+                #pragma HLS UNROLL factor = 5
                 if (output_fm[x][y][z] < 0) output_fm[x][y][z] = 0;
             }
         }

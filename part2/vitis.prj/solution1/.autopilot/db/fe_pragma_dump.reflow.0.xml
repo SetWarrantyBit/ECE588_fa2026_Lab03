@@ -1,2 +1,7 @@
 <pragmas>
+<pragma file="conv.cpp" line="54" pragmaType="unroll" parentfunction="conv" factor="5" skip_exit_check="0"/>
+<pragma file="conv.cpp" line="34" pragmaType="unroll" parentfunction="conv" factor="5" skip_exit_check="0"/>
+<pragma file="conv.cpp" line="21" pragmaType="unroll" parentfunction="conv" factor="5" skip_exit_check="0"/>
+<pragma file="conv.cpp" line="11" pragmaType="array_partition" parentfunction="conv" dim="4" factor="0" mode="complete" dynamic="0" variable="weights"/>
+<pragma file="conv.cpp" line="12" pragmaType="array_partition" parentfunction="conv" dim="3" factor="11" mode="cyclic" dynamic="0" variable="input_fm"/>
 </pragmas>

@@ -181,32 +181,33 @@ __attribute__((sdx_kernel("conv", 0))) void conv(
 # 9 "conv.cpp"
 
 
+#pragma HLS ARRAY_PARTITION variable=weights complete dim=4
+#pragma HLS ARRAY_PARTITION variable=input_fm cyclic factor=11 dim=3
 
-
-
-    const int stride = 4;
+ const int stride = 4;
 
 
     int x, y, z;
     VITIS_LOOP_18_1: for (x = 0; x < 64; x++){
         VITIS_LOOP_19_2: for (y = 0; y < 55; y++){
             VITIS_LOOP_20_3: for (z = 0; z < 55; z++){
-                output_fm[x][y][z] = biases[x];
+#pragma HLS UNROLL factor = 5
+ output_fm[x][y][z] = biases[x];
             }
         }
     }
 
     int f, m, i, a, j, k, r, c;
-    VITIS_LOOP_27_4: for (f = 0; f < 64; f++){
-        VITIS_LOOP_28_5: for (m = 0; m < 3; m++){
-            VITIS_LOOP_29_6: for (i = 11/2 -1; i < 226 - 11/2; i = i + stride){
+    VITIS_LOOP_28_4: for (f = 0; f < 64; f++){
+        VITIS_LOOP_29_5: for (m = 0; m < 3; m++){
+            VITIS_LOOP_30_6: for (i = 11/2 -1; i < 226 - 11/2; i = i + stride){
                 r = (i - (11/2 - 1))/stride;
-                VITIS_LOOP_31_7: for(a = 11/2 - 1; a < 226 - 11/2; a = a + stride){
+                VITIS_LOOP_32_7: for(a = 11/2 - 1; a < 226 - 11/2; a = a + stride){
 
-
-                    c = (a -(11/2 - 1))/stride;
-                    VITIS_LOOP_35_8: for (j = 0; j < 11; j++){
-                        VITIS_LOOP_36_9: for (k = 0; k < 11; k++){
+#pragma HLS UNROLL factor = 5
+ c = (a -(11/2 - 1))/stride;
+                    VITIS_LOOP_36_8: for (j = 0; j < 11; j++){
+                        VITIS_LOOP_37_9: for (k = 0; k < 11; k++){
 
                             int row = i - 11/2 + j;
                             int col = a - 11/2 + k;
@@ -220,10 +221,11 @@ __attribute__((sdx_kernel("conv", 0))) void conv(
         }
     }
 
-    VITIS_LOOP_50_10: for (x = 0; x < 64; x++){
-        VITIS_LOOP_51_11: for (y = 0; y < 55; y++){
-            VITIS_LOOP_52_12: for (z = 0; z < 55; z++){
-                if (output_fm[x][y][z] < 0) output_fm[x][y][z] = 0;
+    VITIS_LOOP_51_10: for (x = 0; x < 64; x++){
+        VITIS_LOOP_52_11: for (y = 0; y < 55; y++){
+            VITIS_LOOP_53_12: for (z = 0; z < 55; z++){
+#pragma HLS UNROLL factor = 5
+ if (output_fm[x][y][z] < 0) output_fm[x][y][z] = 0;
             }
         }
     }

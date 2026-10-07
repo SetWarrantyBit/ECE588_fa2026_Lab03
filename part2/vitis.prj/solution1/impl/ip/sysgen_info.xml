@@ -17,17 +17,167 @@
         <fractionWidth>24</fractionWidth>
       </RtlPort>
       <RtlPort>
-        <name>input_fm_address0</name>
+        <name>input_fm_0_address0</name>
         <type>Unsigned</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
-        <name>input_fm_ce0</name>
+        <name>input_fm_0_ce0</name>
         <type>bool</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
-        <name>input_fm_q0</name>
+        <name>input_fm_0_q0</name>
+        <type>Floating-point</type>
+        <fractionWidth>24</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>input_fm_1_address0</name>
+        <type>Unsigned</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>input_fm_1_ce0</name>
+        <type>bool</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>input_fm_1_q0</name>
+        <type>Floating-point</type>
+        <fractionWidth>24</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>input_fm_2_address0</name>
+        <type>Unsigned</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>input_fm_2_ce0</name>
+        <type>bool</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>input_fm_2_q0</name>
+        <type>Floating-point</type>
+        <fractionWidth>24</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>input_fm_3_address0</name>
+        <type>Unsigned</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>input_fm_3_ce0</name>
+        <type>bool</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>input_fm_3_q0</name>
+        <type>Floating-point</type>
+        <fractionWidth>24</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>input_fm_4_address0</name>
+        <type>Unsigned</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>input_fm_4_ce0</name>
+        <type>bool</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>input_fm_4_q0</name>
+        <type>Floating-point</type>
+        <fractionWidth>24</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>input_fm_5_address0</name>
+        <type>Unsigned</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>input_fm_5_ce0</name>
+        <type>bool</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>input_fm_5_q0</name>
+        <type>Floating-point</type>
+        <fractionWidth>24</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>input_fm_6_address0</name>
+        <type>Unsigned</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>input_fm_6_ce0</name>
+        <type>bool</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>input_fm_6_q0</name>
+        <type>Floating-point</type>
+        <fractionWidth>24</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>input_fm_7_address0</name>
+        <type>Unsigned</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>input_fm_7_ce0</name>
+        <type>bool</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>input_fm_7_q0</name>
+        <type>Floating-point</type>
+        <fractionWidth>24</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>input_fm_8_address0</name>
+        <type>Unsigned</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>input_fm_8_ce0</name>
+        <type>bool</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>input_fm_8_q0</name>
+        <type>Floating-point</type>
+        <fractionWidth>24</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>input_fm_9_address0</name>
+        <type>Unsigned</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>input_fm_9_ce0</name>
+        <type>bool</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>input_fm_9_q0</name>
+        <type>Floating-point</type>
+        <fractionWidth>24</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>input_fm_10_address0</name>
+        <type>Unsigned</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>input_fm_10_ce0</name>
+        <type>bool</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>input_fm_10_q0</name>
         <type>Floating-point</type>
         <fractionWidth>24</fractionWidth>
       </RtlPort>
@@ -57,6 +207,11 @@
         <fractionWidth>24</fractionWidth>
       </RtlPort>
       <RtlPort>
+        <name>output_fm_d1</name>
+        <type>Floating-point</type>
+        <fractionWidth>24</fractionWidth>
+      </RtlPort>
+      <RtlPort>
         <name>output_fm_q0</name>
         <type>Floating-point</type>
         <fractionWidth>24</fractionWidth>
@@ -72,17 +227,172 @@
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
-        <name>weights_address0</name>
-        <type>Unsigned</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>weights_ce0</name>
+        <name>output_fm_we1</name>
         <type>bool</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
-        <name>weights_q0</name>
+        <name>weights_0_address0</name>
+        <type>Unsigned</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>weights_0_ce0</name>
+        <type>bool</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>weights_0_q0</name>
+        <type>Floating-point</type>
+        <fractionWidth>24</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>weights_1_address0</name>
+        <type>Unsigned</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>weights_1_ce0</name>
+        <type>bool</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>weights_1_q0</name>
+        <type>Floating-point</type>
+        <fractionWidth>24</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>weights_2_address0</name>
+        <type>Unsigned</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>weights_2_ce0</name>
+        <type>bool</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>weights_2_q0</name>
+        <type>Floating-point</type>
+        <fractionWidth>24</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>weights_3_address0</name>
+        <type>Unsigned</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>weights_3_ce0</name>
+        <type>bool</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>weights_3_q0</name>
+        <type>Floating-point</type>
+        <fractionWidth>24</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>weights_4_address0</name>
+        <type>Unsigned</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>weights_4_ce0</name>
+        <type>bool</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>weights_4_q0</name>
+        <type>Floating-point</type>
+        <fractionWidth>24</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>weights_5_address0</name>
+        <type>Unsigned</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>weights_5_ce0</name>
+        <type>bool</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>weights_5_q0</name>
+        <type>Floating-point</type>
+        <fractionWidth>24</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>weights_6_address0</name>
+        <type>Unsigned</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>weights_6_ce0</name>
+        <type>bool</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>weights_6_q0</name>
+        <type>Floating-point</type>
+        <fractionWidth>24</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>weights_7_address0</name>
+        <type>Unsigned</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>weights_7_ce0</name>
+        <type>bool</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>weights_7_q0</name>
+        <type>Floating-point</type>
+        <fractionWidth>24</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>weights_8_address0</name>
+        <type>Unsigned</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>weights_8_ce0</name>
+        <type>bool</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>weights_8_q0</name>
+        <type>Floating-point</type>
+        <fractionWidth>24</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>weights_9_address0</name>
+        <type>Unsigned</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>weights_9_ce0</name>
+        <type>bool</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>weights_9_q0</name>
+        <type>Floating-point</type>
+        <fractionWidth>24</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>weights_10_address0</name>
+        <type>Unsigned</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>weights_10_ce0</name>
+        <type>bool</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>weights_10_q0</name>
         <type>Floating-point</type>
         <fractionWidth>24</fractionWidth>
       </RtlPort>
@@ -93,7 +403,7 @@
   <Machine>64</Machine>
   <modelParameters>
     <combinational>0</combinational>
-    <latency>562601631</latency>
-    <II>562601632</II>
+    <latency>573791704</latency>
+    <II>573791705</II>
   </modelParameters>
 </AdditionalInfo>

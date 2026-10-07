@@ -11,143 +11,319 @@ INFO: [HLS 200-1510] Running: create_clock -period 10 -name default
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 INFO: [HLS 200-1510] Running: config_interface -m_axi_latency 64 
 INFO: [HLS 200-1510] Running: csynth_design 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 10.03 seconds; current allocated memory: 317.656 MB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 10.02 seconds; current allocated memory: 281.535 MB.
 INFO: [HLS 200-10] Analyzing design file 'conv.cpp' ... 
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.45 seconds. CPU system time: 0.45 seconds. Elapsed time: 0.89 seconds; current allocated memory: 317.656 MB.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.49 seconds. CPU system time: 0.41 seconds. Elapsed time: 0.91 seconds; current allocated memory: 281.535 MB.
 INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 4.49 seconds. CPU system time: 0.67 seconds. Elapsed time: 5.16 seconds; current allocated memory: 317.656 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 317.656 MB.
+INFO: [HLS 214-188] Unrolling loop 'VITIS_LOOP_53_12' (conv.cpp:53:31) in function 'conv' partially with a factor of 5 (conv.cpp:9:0)
+INFO: [HLS 214-188] Unrolling loop 'VITIS_LOOP_32_7' (conv.cpp:32:34) in function 'conv' partially with a factor of 5 (conv.cpp:9:0)
+INFO: [HLS 214-188] Unrolling loop 'VITIS_LOOP_20_3' (conv.cpp:20:30) in function 'conv' partially with a factor of 5 (conv.cpp:9:0)
+INFO: [HLS 214-248] Applying array_partition to 'input_fm': Cyclic partitioning with factor 11 on dimension 3. (conv.cpp:9:0)
+INFO: [HLS 214-248] Applying array_partition to 'weights': Complete partitioning on dimension 4. (conv.cpp:9:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 4.76 seconds. CPU system time: 0.65 seconds. Elapsed time: 5.42 seconds; current allocated memory: 281.535 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 281.535 MB.
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 317.656 MB.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 281.535 MB.
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 317.656 MB.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 281.535 MB.
 INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_20_3' (conv.cpp:17) in function 'conv' automatically.
-INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_36_9' (conv.cpp:26) in function 'conv' automatically.
-INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_52_12' (conv.cpp:17) in function 'conv' automatically.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.09 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 317.656 MB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_37_9' (conv.cpp:27) in function 'conv' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_37_9' (conv.cpp:27) in function 'conv' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_37_9' (conv.cpp:27) in function 'conv' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_37_9' (conv.cpp:27) in function 'conv' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_37_9' (conv.cpp:27) in function 'conv' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_53_12' (conv.cpp:17) in function 'conv' automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.31 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.31 seconds; current allocated memory: 288.660 MB.
 INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_19_2' (conv.cpp:17:12) in function 'conv'.
 INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_18_1' (conv.cpp:17:9) in function 'conv'.
-INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_35_8' (conv.cpp:26:21) in function 'conv'.
-INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_31_7' (conv.cpp:26:18) in function 'conv'.
-INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_29_6' (conv.cpp:26:15) in function 'conv'.
-INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_28_5' (conv.cpp:26:12) in function 'conv'.
-INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_27_4' (conv.cpp:26:9) in function 'conv'.
-INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_51_11' (conv.cpp:17:12) in function 'conv'.
-INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_50_10' (conv.cpp:17:9) in function 'conv'.
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 317.656 MB.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_36_8' (conv.cpp:27:21) in function 'conv'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_36_8' (conv.cpp:27:21) in function 'conv'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_36_8' (conv.cpp:27:21) in function 'conv'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_36_8' (conv.cpp:27:21) in function 'conv'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_36_8' (conv.cpp:27:21) in function 'conv'.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_32_7' (conv.cpp:27:18) in function 'conv' more than one sub loop.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_30_6' (conv.cpp:27:15) in function 'conv'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_29_5' (conv.cpp:27:12) in function 'conv'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_28_4' (conv.cpp:27:9) in function 'conv'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_52_11' (conv.cpp:17:12) in function 'conv'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_51_10' (conv.cpp:17:9) in function 'conv'.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.3 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.34 seconds; current allocated memory: 416.660 MB.
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'conv' ...
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'conv_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_20_3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln21) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln22_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln22) to 3 in order to utilize available DSP registers.
 INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_20_3'.
-INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 6, loop 'VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_20_3'
+WARNING: [HLS 200-885] The II Violation in module 'conv_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_20_3' (loop 'VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_20_3'): Unable to schedule 'store' operation ('output_fm_addr_1_write_ln22', conv.cpp:22) of variable 'biases_load', conv.cpp:18 on array 'output_fm' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'output_fm'.
+WARNING: [HLS 200-885] The II Violation in module 'conv_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_20_3' (loop 'VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_20_3'): Unable to schedule 'store' operation ('output_fm_addr_3_write_ln22', conv.cpp:22) of variable 'biases_load', conv.cpp:18 on array 'output_fm' due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array 'output_fm'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 3, Depth = 11, loop 'VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_20_3'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.11 seconds; current allocated memory: 317.656 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.17 seconds; current allocated memory: 416.660 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 317.656 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 416.660 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'conv_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_29_6_VITIS_LOOP_35_8_VITIS_LOOP_36_9' 
+INFO: [HLS 200-42] -- Implementing module 'conv_Pipeline_VITIS_LOOP_36_8_VITIS_LOOP_37_9' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [HLS 200-486] Changing DSP latency (root=mul_ln41_5) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=mul_ln41_4) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=mul_ln41_1) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=mul_ln28) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln41_1) to 3 in order to utilize available DSP registers.
-INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_27_4_VITIS_LOOP_29_6_VITIS_LOOP_35_8_VITIS_LOOP_36_9'.
-WARNING: [HLS 200-880] The II Violation in module 'conv_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_29_6_VITIS_LOOP_35_8_VITIS_LOOP_36_9' (loop 'VITIS_LOOP_27_4_VITIS_LOOP_29_6_VITIS_LOOP_35_8_VITIS_LOOP_36_9'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'store' operation ('output_fm_addr_write_ln41', conv.cpp:41) of variable 'bitcast_ln41_3', conv.cpp:41 on array 'output_fm' and 'load' operation ('output_fm_load', conv.cpp:41) on array 'output_fm'.
-WARNING: [HLS 200-880] The II Violation in module 'conv_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_29_6_VITIS_LOOP_35_8_VITIS_LOOP_36_9' (loop 'VITIS_LOOP_27_4_VITIS_LOOP_29_6_VITIS_LOOP_35_8_VITIS_LOOP_36_9'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'store' operation ('output_fm_addr_write_ln41', conv.cpp:41) of variable 'bitcast_ln41_3', conv.cpp:41 on array 'output_fm' and 'load' operation ('output_fm_load', conv.cpp:41) on array 'output_fm'.
-WARNING: [HLS 200-880] The II Violation in module 'conv_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_29_6_VITIS_LOOP_35_8_VITIS_LOOP_36_9' (loop 'VITIS_LOOP_27_4_VITIS_LOOP_29_6_VITIS_LOOP_35_8_VITIS_LOOP_36_9'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'store' operation ('output_fm_addr_write_ln41', conv.cpp:41) of variable 'bitcast_ln41_3', conv.cpp:41 on array 'output_fm' and 'load' operation ('output_fm_load', conv.cpp:41) on array 'output_fm'.
-WARNING: [HLS 200-880] The II Violation in module 'conv_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_29_6_VITIS_LOOP_35_8_VITIS_LOOP_36_9' (loop 'VITIS_LOOP_27_4_VITIS_LOOP_29_6_VITIS_LOOP_35_8_VITIS_LOOP_36_9'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'store' operation ('output_fm_addr_write_ln41', conv.cpp:41) of variable 'bitcast_ln41_3', conv.cpp:41 on array 'output_fm' and 'load' operation ('output_fm_load', conv.cpp:41) on array 'output_fm'.
-WARNING: [HLS 200-880] The II Violation in module 'conv_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_29_6_VITIS_LOOP_35_8_VITIS_LOOP_36_9' (loop 'VITIS_LOOP_27_4_VITIS_LOOP_29_6_VITIS_LOOP_35_8_VITIS_LOOP_36_9'): Unable to enforce a carried dependence constraint (II = 7, distance = 1, offset = 1) between 'store' operation ('output_fm_addr_write_ln41', conv.cpp:41) of variable 'bitcast_ln41_3', conv.cpp:41 on array 'output_fm' and 'load' operation ('output_fm_load', conv.cpp:41) on array 'output_fm'.
-INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 8, Depth = 20, loop 'VITIS_LOOP_27_4_VITIS_LOOP_29_6_VITIS_LOOP_35_8_VITIS_LOOP_36_9'
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln42_4) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_36_8_VITIS_LOOP_37_9'.
+WARNING: [HLS 200-880] The II Violation in module 'conv_Pipeline_VITIS_LOOP_36_8_VITIS_LOOP_37_9' (loop 'VITIS_LOOP_36_8_VITIS_LOOP_37_9'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'store' operation ('output_fm_addr_write_ln42', conv.cpp:42) of variable 'bitcast_ln42_12', conv.cpp:42 on array 'output_fm' and 'load' operation ('output_fm_load', conv.cpp:42) on array 'output_fm'.
+WARNING: [HLS 200-880] The II Violation in module 'conv_Pipeline_VITIS_LOOP_36_8_VITIS_LOOP_37_9' (loop 'VITIS_LOOP_36_8_VITIS_LOOP_37_9'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'store' operation ('output_fm_addr_write_ln42', conv.cpp:42) of variable 'bitcast_ln42_12', conv.cpp:42 on array 'output_fm' and 'load' operation ('output_fm_load', conv.cpp:42) on array 'output_fm'.
+WARNING: [HLS 200-880] The II Violation in module 'conv_Pipeline_VITIS_LOOP_36_8_VITIS_LOOP_37_9' (loop 'VITIS_LOOP_36_8_VITIS_LOOP_37_9'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'store' operation ('output_fm_addr_write_ln42', conv.cpp:42) of variable 'bitcast_ln42_12', conv.cpp:42 on array 'output_fm' and 'load' operation ('output_fm_load', conv.cpp:42) on array 'output_fm'.
+WARNING: [HLS 200-880] The II Violation in module 'conv_Pipeline_VITIS_LOOP_36_8_VITIS_LOOP_37_9' (loop 'VITIS_LOOP_36_8_VITIS_LOOP_37_9'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'store' operation ('output_fm_addr_write_ln42', conv.cpp:42) of variable 'bitcast_ln42_12', conv.cpp:42 on array 'output_fm' and 'load' operation ('output_fm_load', conv.cpp:42) on array 'output_fm'.
+WARNING: [HLS 200-880] The II Violation in module 'conv_Pipeline_VITIS_LOOP_36_8_VITIS_LOOP_37_9' (loop 'VITIS_LOOP_36_8_VITIS_LOOP_37_9'): Unable to enforce a carried dependence constraint (II = 7, distance = 1, offset = 1) between 'store' operation ('output_fm_addr_write_ln42', conv.cpp:42) of variable 'bitcast_ln42_12', conv.cpp:42 on array 'output_fm' and 'load' operation ('output_fm_load', conv.cpp:42) on array 'output_fm'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 8, Depth = 23, loop 'VITIS_LOOP_36_8_VITIS_LOOP_37_9'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.42 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.43 seconds; current allocated memory: 317.656 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.32 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.34 seconds; current allocated memory: 416.660 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.29 seconds. CPU system time: 0 seconds. Elapsed time: 0.3 seconds; current allocated memory: 317.656 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.2 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.22 seconds; current allocated memory: 416.660 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'conv_Pipeline_VITIS_LOOP_50_10_VITIS_LOOP_51_11_VITIS_LOOP_52_12' 
+INFO: [HLS 200-42] -- Implementing module 'conv_Pipeline_VITIS_LOOP_36_8_VITIS_LOOP_37_91' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln53) to 3 in order to utilize available DSP registers.
-INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_50_10_VITIS_LOOP_51_11_VITIS_LOOP_52_12'.
-INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 10, loop 'VITIS_LOOP_50_10_VITIS_LOOP_51_11_VITIS_LOOP_52_12'
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln42_6) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_36_8_VITIS_LOOP_37_9'.
+WARNING: [HLS 200-880] The II Violation in module 'conv_Pipeline_VITIS_LOOP_36_8_VITIS_LOOP_37_91' (loop 'VITIS_LOOP_36_8_VITIS_LOOP_37_9'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'store' operation ('output_fm_addr_write_ln42', conv.cpp:42) of variable 'bitcast_ln42_25', conv.cpp:42 on array 'output_fm' and 'load' operation ('output_fm_load', conv.cpp:42) on array 'output_fm'.
+WARNING: [HLS 200-880] The II Violation in module 'conv_Pipeline_VITIS_LOOP_36_8_VITIS_LOOP_37_91' (loop 'VITIS_LOOP_36_8_VITIS_LOOP_37_9'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'store' operation ('output_fm_addr_write_ln42', conv.cpp:42) of variable 'bitcast_ln42_25', conv.cpp:42 on array 'output_fm' and 'load' operation ('output_fm_load', conv.cpp:42) on array 'output_fm'.
+WARNING: [HLS 200-880] The II Violation in module 'conv_Pipeline_VITIS_LOOP_36_8_VITIS_LOOP_37_91' (loop 'VITIS_LOOP_36_8_VITIS_LOOP_37_9'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'store' operation ('output_fm_addr_write_ln42', conv.cpp:42) of variable 'bitcast_ln42_25', conv.cpp:42 on array 'output_fm' and 'load' operation ('output_fm_load', conv.cpp:42) on array 'output_fm'.
+WARNING: [HLS 200-880] The II Violation in module 'conv_Pipeline_VITIS_LOOP_36_8_VITIS_LOOP_37_91' (loop 'VITIS_LOOP_36_8_VITIS_LOOP_37_9'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'store' operation ('output_fm_addr_write_ln42', conv.cpp:42) of variable 'bitcast_ln42_25', conv.cpp:42 on array 'output_fm' and 'load' operation ('output_fm_load', conv.cpp:42) on array 'output_fm'.
+WARNING: [HLS 200-880] The II Violation in module 'conv_Pipeline_VITIS_LOOP_36_8_VITIS_LOOP_37_91' (loop 'VITIS_LOOP_36_8_VITIS_LOOP_37_9'): Unable to enforce a carried dependence constraint (II = 7, distance = 1, offset = 1) between 'store' operation ('output_fm_addr_write_ln42', conv.cpp:42) of variable 'bitcast_ln42_25', conv.cpp:42 on array 'output_fm' and 'load' operation ('output_fm_load', conv.cpp:42) on array 'output_fm'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 8, Depth = 23, loop 'VITIS_LOOP_36_8_VITIS_LOOP_37_9'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.48 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.49 seconds; current allocated memory: 317.656 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.38 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.39 seconds; current allocated memory: 416.660 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 317.656 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.2 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.21 seconds; current allocated memory: 416.660 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_Pipeline_VITIS_LOOP_36_8_VITIS_LOOP_37_92' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln42_8) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln42) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_36_8_VITIS_LOOP_37_9'.
+WARNING: [HLS 200-880] The II Violation in module 'conv_Pipeline_VITIS_LOOP_36_8_VITIS_LOOP_37_92' (loop 'VITIS_LOOP_36_8_VITIS_LOOP_37_9'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'store' operation ('output_fm_addr_write_ln42', conv.cpp:42) of variable 'bitcast_ln42_36', conv.cpp:42 on array 'output_fm' and 'load' operation ('output_fm_load', conv.cpp:42) on array 'output_fm'.
+WARNING: [HLS 200-880] The II Violation in module 'conv_Pipeline_VITIS_LOOP_36_8_VITIS_LOOP_37_92' (loop 'VITIS_LOOP_36_8_VITIS_LOOP_37_9'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'store' operation ('output_fm_addr_write_ln42', conv.cpp:42) of variable 'bitcast_ln42_36', conv.cpp:42 on array 'output_fm' and 'load' operation ('output_fm_load', conv.cpp:42) on array 'output_fm'.
+WARNING: [HLS 200-880] The II Violation in module 'conv_Pipeline_VITIS_LOOP_36_8_VITIS_LOOP_37_92' (loop 'VITIS_LOOP_36_8_VITIS_LOOP_37_9'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'store' operation ('output_fm_addr_write_ln42', conv.cpp:42) of variable 'bitcast_ln42_36', conv.cpp:42 on array 'output_fm' and 'load' operation ('output_fm_load', conv.cpp:42) on array 'output_fm'.
+WARNING: [HLS 200-880] The II Violation in module 'conv_Pipeline_VITIS_LOOP_36_8_VITIS_LOOP_37_92' (loop 'VITIS_LOOP_36_8_VITIS_LOOP_37_9'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'store' operation ('output_fm_addr_write_ln42', conv.cpp:42) of variable 'bitcast_ln42_36', conv.cpp:42 on array 'output_fm' and 'load' operation ('output_fm_load', conv.cpp:42) on array 'output_fm'.
+WARNING: [HLS 200-880] The II Violation in module 'conv_Pipeline_VITIS_LOOP_36_8_VITIS_LOOP_37_92' (loop 'VITIS_LOOP_36_8_VITIS_LOOP_37_9'): Unable to enforce a carried dependence constraint (II = 7, distance = 1, offset = 1) between 'store' operation ('output_fm_addr_write_ln42', conv.cpp:42) of variable 'bitcast_ln42_36', conv.cpp:42 on array 'output_fm' and 'load' operation ('output_fm_load', conv.cpp:42) on array 'output_fm'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 8, Depth = 24, loop 'VITIS_LOOP_36_8_VITIS_LOOP_37_9'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.35 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.37 seconds; current allocated memory: 416.660 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.21 seconds. CPU system time: 0 seconds. Elapsed time: 0.21 seconds; current allocated memory: 416.660 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_Pipeline_VITIS_LOOP_36_8_VITIS_LOOP_37_93' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln42_10) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_36_8_VITIS_LOOP_37_9'.
+WARNING: [HLS 200-880] The II Violation in module 'conv_Pipeline_VITIS_LOOP_36_8_VITIS_LOOP_37_93' (loop 'VITIS_LOOP_36_8_VITIS_LOOP_37_9'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'store' operation ('output_fm_addr_write_ln42', conv.cpp:42) of variable 'bitcast_ln42_24', conv.cpp:42 on array 'output_fm' and 'load' operation ('output_fm_load', conv.cpp:42) on array 'output_fm'.
+WARNING: [HLS 200-880] The II Violation in module 'conv_Pipeline_VITIS_LOOP_36_8_VITIS_LOOP_37_93' (loop 'VITIS_LOOP_36_8_VITIS_LOOP_37_9'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'store' operation ('output_fm_addr_write_ln42', conv.cpp:42) of variable 'bitcast_ln42_24', conv.cpp:42 on array 'output_fm' and 'load' operation ('output_fm_load', conv.cpp:42) on array 'output_fm'.
+WARNING: [HLS 200-880] The II Violation in module 'conv_Pipeline_VITIS_LOOP_36_8_VITIS_LOOP_37_93' (loop 'VITIS_LOOP_36_8_VITIS_LOOP_37_9'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'store' operation ('output_fm_addr_write_ln42', conv.cpp:42) of variable 'bitcast_ln42_24', conv.cpp:42 on array 'output_fm' and 'load' operation ('output_fm_load', conv.cpp:42) on array 'output_fm'.
+WARNING: [HLS 200-880] The II Violation in module 'conv_Pipeline_VITIS_LOOP_36_8_VITIS_LOOP_37_93' (loop 'VITIS_LOOP_36_8_VITIS_LOOP_37_9'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'store' operation ('output_fm_addr_write_ln42', conv.cpp:42) of variable 'bitcast_ln42_24', conv.cpp:42 on array 'output_fm' and 'load' operation ('output_fm_load', conv.cpp:42) on array 'output_fm'.
+WARNING: [HLS 200-880] The II Violation in module 'conv_Pipeline_VITIS_LOOP_36_8_VITIS_LOOP_37_93' (loop 'VITIS_LOOP_36_8_VITIS_LOOP_37_9'): Unable to enforce a carried dependence constraint (II = 7, distance = 1, offset = 1) between 'store' operation ('output_fm_addr_write_ln42', conv.cpp:42) of variable 'bitcast_ln42_24', conv.cpp:42 on array 'output_fm' and 'load' operation ('output_fm_load', conv.cpp:42) on array 'output_fm'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 8, Depth = 23, loop 'VITIS_LOOP_36_8_VITIS_LOOP_37_9'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.36 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.38 seconds; current allocated memory: 416.660 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.24 seconds. CPU system time: 0 seconds. Elapsed time: 0.24 seconds; current allocated memory: 416.660 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_Pipeline_VITIS_LOOP_36_8_VITIS_LOOP_37_94' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln42_12) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_36_8_VITIS_LOOP_37_9'.
+WARNING: [HLS 200-880] The II Violation in module 'conv_Pipeline_VITIS_LOOP_36_8_VITIS_LOOP_37_94' (loop 'VITIS_LOOP_36_8_VITIS_LOOP_37_9'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'store' operation ('output_fm_addr_write_ln42', conv.cpp:42) of variable 'bitcast_ln42_12', conv.cpp:42 on array 'output_fm' and 'load' operation ('output_fm_load', conv.cpp:42) on array 'output_fm'.
+WARNING: [HLS 200-880] The II Violation in module 'conv_Pipeline_VITIS_LOOP_36_8_VITIS_LOOP_37_94' (loop 'VITIS_LOOP_36_8_VITIS_LOOP_37_9'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'store' operation ('output_fm_addr_write_ln42', conv.cpp:42) of variable 'bitcast_ln42_12', conv.cpp:42 on array 'output_fm' and 'load' operation ('output_fm_load', conv.cpp:42) on array 'output_fm'.
+WARNING: [HLS 200-880] The II Violation in module 'conv_Pipeline_VITIS_LOOP_36_8_VITIS_LOOP_37_94' (loop 'VITIS_LOOP_36_8_VITIS_LOOP_37_9'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'store' operation ('output_fm_addr_write_ln42', conv.cpp:42) of variable 'bitcast_ln42_12', conv.cpp:42 on array 'output_fm' and 'load' operation ('output_fm_load', conv.cpp:42) on array 'output_fm'.
+WARNING: [HLS 200-880] The II Violation in module 'conv_Pipeline_VITIS_LOOP_36_8_VITIS_LOOP_37_94' (loop 'VITIS_LOOP_36_8_VITIS_LOOP_37_9'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'store' operation ('output_fm_addr_write_ln42', conv.cpp:42) of variable 'bitcast_ln42_12', conv.cpp:42 on array 'output_fm' and 'load' operation ('output_fm_load', conv.cpp:42) on array 'output_fm'.
+WARNING: [HLS 200-880] The II Violation in module 'conv_Pipeline_VITIS_LOOP_36_8_VITIS_LOOP_37_94' (loop 'VITIS_LOOP_36_8_VITIS_LOOP_37_9'): Unable to enforce a carried dependence constraint (II = 7, distance = 1, offset = 1) between 'store' operation ('output_fm_addr_write_ln42', conv.cpp:42) of variable 'bitcast_ln42_12', conv.cpp:42 on array 'output_fm' and 'load' operation ('output_fm_load', conv.cpp:42) on array 'output_fm'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 8, Depth = 23, loop 'VITIS_LOOP_36_8_VITIS_LOOP_37_9'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.37 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.38 seconds; current allocated memory: 416.660 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.21 seconds. CPU system time: 0 seconds. Elapsed time: 0.21 seconds; current allocated memory: 416.660 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_Pipeline_VITIS_LOOP_51_10_VITIS_LOOP_52_11_VITIS_LOOP_53_12' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln55_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln55) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_51_10_VITIS_LOOP_52_11_VITIS_LOOP_53_12'.
+WARNING: [HLS 200-885] The II Violation in module 'conv_Pipeline_VITIS_LOOP_51_10_VITIS_LOOP_52_11_VITIS_LOOP_53_12' (loop 'VITIS_LOOP_51_10_VITIS_LOOP_52_11_VITIS_LOOP_53_12'): Unable to schedule 'load' operation ('output_fm_load_1', conv.cpp:55) on array 'output_fm' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'output_fm'.
+WARNING: [HLS 200-885] The II Violation in module 'conv_Pipeline_VITIS_LOOP_51_10_VITIS_LOOP_52_11_VITIS_LOOP_53_12' (loop 'VITIS_LOOP_51_10_VITIS_LOOP_52_11_VITIS_LOOP_53_12'): Unable to schedule 'load' operation ('output_fm_load_3', conv.cpp:55) on array 'output_fm' due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array 'output_fm'.
+WARNING: [HLS 200-885] The II Violation in module 'conv_Pipeline_VITIS_LOOP_51_10_VITIS_LOOP_52_11_VITIS_LOOP_53_12' (loop 'VITIS_LOOP_51_10_VITIS_LOOP_52_11_VITIS_LOOP_53_12'): Unable to schedule 'store' operation ('output_fm_addr_write_ln55', conv.cpp:55) of constant 0 on array 'output_fm' due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array 'output_fm'.
+WARNING: [HLS 200-885] The II Violation in module 'conv_Pipeline_VITIS_LOOP_51_10_VITIS_LOOP_52_11_VITIS_LOOP_53_12' (loop 'VITIS_LOOP_51_10_VITIS_LOOP_52_11_VITIS_LOOP_53_12'): Unable to schedule 'store' operation ('output_fm_addr_2_write_ln55', conv.cpp:55) of constant 0 on array 'output_fm' due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'output_fm'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 5, Depth = 18, loop 'VITIS_LOOP_51_10_VITIS_LOOP_52_11_VITIS_LOOP_53_12'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.39 seconds. CPU system time: 0 seconds. Elapsed time: 0.4 seconds; current allocated memory: 416.660 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.21 seconds. CPU system time: 0 seconds. Elapsed time: 0.21 seconds; current allocated memory: 416.660 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'conv' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln42_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln42) to 3 in order to utilize available DSP registers.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 317.656 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.36 seconds. CPU system time: 0 seconds. Elapsed time: 0.37 seconds; current allocated memory: 416.660 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.18 seconds; current allocated memory: 317.656 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.42 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.43 seconds; current allocated memory: 416.660 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'conv_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_20_3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_20_3' pipeline 'VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_20_3' pipeline type 'loop pipeline'
-INFO: [RTGEN 206-100] Generating core module 'ama_addmuladd_13ns_6ns_6ns_6ns_18_4_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mul_7ns_7ns_13_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_7ns_6ns_6ns_13_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_13ns_6ns_18_4_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_20_3'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.45 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.46 seconds; current allocated memory: 317.656 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.85 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.86 seconds; current allocated memory: 416.660 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'conv_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_29_6_VITIS_LOOP_35_8_VITIS_LOOP_36_9' 
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_Pipeline_VITIS_LOOP_36_8_VITIS_LOOP_37_9' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_29_6_VITIS_LOOP_35_8_VITIS_LOOP_36_9' pipeline 'VITIS_LOOP_27_4_VITIS_LOOP_29_6_VITIS_LOOP_35_8_VITIS_LOOP_36_9' pipeline type 'loop pipeline'
-INFO: [RTGEN 206-100] Generating core module 'ama_addmuladd_13ns_6ns_6ns_6ns_18_4_1': 1 instance(s).
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv_Pipeline_VITIS_LOOP_36_8_VITIS_LOOP_37_9' pipeline 'VITIS_LOOP_36_8_VITIS_LOOP_37_9' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mac_muladd_11s_4ns_4ns_14_4_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mac_muladd_11s_8ns_9s_18_4_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mac_muladd_14s_4ns_4ns_15_4_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mac_muladd_2ns_8ns_9s_11_4_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mul_7ns_7ns_13_1_1': 1 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_29_6_VITIS_LOOP_35_8_VITIS_LOOP_36_9'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.28 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.3 seconds; current allocated memory: 317.656 MB.
+INFO: [RTGEN 206-100] Generating core module 'mul_9ns_66ns_73_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_11s_5ns_14_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_114_32_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_8ns_5ns_4_12_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_Pipeline_VITIS_LOOP_36_8_VITIS_LOOP_37_9'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.38 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.39 seconds; current allocated memory: 416.660 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'conv_Pipeline_VITIS_LOOP_50_10_VITIS_LOOP_51_11_VITIS_LOOP_52_12' 
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_Pipeline_VITIS_LOOP_36_8_VITIS_LOOP_37_91' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv_Pipeline_VITIS_LOOP_50_10_VITIS_LOOP_51_11_VITIS_LOOP_52_12' pipeline 'VITIS_LOOP_50_10_VITIS_LOOP_51_11_VITIS_LOOP_52_12' pipeline type 'loop pipeline'
-INFO: [RTGEN 206-100] Generating core module 'ama_addmuladd_13ns_6ns_6ns_6ns_18_4_1': 1 instance(s).
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv_Pipeline_VITIS_LOOP_36_8_VITIS_LOOP_37_91' pipeline 'VITIS_LOOP_36_8_VITIS_LOOP_37_9' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_8ns_10ns_17_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_11s_5ns_14_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_114_32_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_8ns_5ns_4_12_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_Pipeline_VITIS_LOOP_36_8_VITIS_LOOP_37_91'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.43 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.45 seconds; current allocated memory: 416.660 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_Pipeline_VITIS_LOOP_36_8_VITIS_LOOP_37_92' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv_Pipeline_VITIS_LOOP_36_8_VITIS_LOOP_37_92' pipeline 'VITIS_LOOP_36_8_VITIS_LOOP_37_9' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_11s_5ns_14_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_9ns_10ns_19_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_114_32_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_9ns_5ns_4_13_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_Pipeline_VITIS_LOOP_36_8_VITIS_LOOP_37_92'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.44 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.45 seconds; current allocated memory: 416.660 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_Pipeline_VITIS_LOOP_36_8_VITIS_LOOP_37_93' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv_Pipeline_VITIS_LOOP_36_8_VITIS_LOOP_37_93' pipeline 'VITIS_LOOP_36_8_VITIS_LOOP_37_9' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_8ns_10ns_17_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_11s_5ns_14_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_114_32_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_8ns_5ns_4_12_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_Pipeline_VITIS_LOOP_36_8_VITIS_LOOP_37_93'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.39 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.41 seconds; current allocated memory: 416.660 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_Pipeline_VITIS_LOOP_36_8_VITIS_LOOP_37_94' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv_Pipeline_VITIS_LOOP_36_8_VITIS_LOOP_37_94' pipeline 'VITIS_LOOP_36_8_VITIS_LOOP_37_9' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_8ns_10ns_17_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_11s_5ns_14_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_114_32_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_8ns_5ns_4_12_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_Pipeline_VITIS_LOOP_36_8_VITIS_LOOP_37_94'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.4 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.42 seconds; current allocated memory: 416.660 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_Pipeline_VITIS_LOOP_51_10_VITIS_LOOP_52_11_VITIS_LOOP_53_12' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv_Pipeline_VITIS_LOOP_51_10_VITIS_LOOP_52_11_VITIS_LOOP_53_12' pipeline 'VITIS_LOOP_51_10_VITIS_LOOP_52_11_VITIS_LOOP_53_12' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mul_7ns_7ns_13_1_1': 1 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_Pipeline_VITIS_LOOP_50_10_VITIS_LOOP_51_11_VITIS_LOOP_52_12'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.99 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.02 seconds; current allocated memory: 317.656 MB.
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_7ns_6ns_6ns_13_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_13ns_6ns_18_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_Pipeline_VITIS_LOOP_51_10_VITIS_LOOP_52_11_VITIS_LOOP_53_12'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.4 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.42 seconds; current allocated memory: 416.660 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'conv' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-500] Setting interface mode on port 'conv/input_fm' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'conv/weights' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv/input_fm_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv/input_fm_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv/input_fm_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv/input_fm_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv/input_fm_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv/input_fm_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv/input_fm_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv/input_fm_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv/input_fm_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv/input_fm_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv/input_fm_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv/weights_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv/weights_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv/weights_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv/weights_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv/weights_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv/weights_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv/weights_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv/weights_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv/weights_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv/weights_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv/weights_10' to 'ap_memory'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'conv/biases' to 'ap_memory'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'conv/output_fm' to 'ap_memory'.
 INFO: [RTGEN 206-500] Setting interface mode on function 'conv' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_7ns_6ns_6ns_13_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_11s_5ns_12_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_2ns_9ns_10_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_13ns_6ns_18_4_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'conv'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.28 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.29 seconds; current allocated memory: 381.656 MB.
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 0.07 seconds. Elapsed time: 1.07 seconds; current allocated memory: 381.656 MB.
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.39 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.42 seconds; current allocated memory: 381.656 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.69 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.72 seconds; current allocated memory: 416.660 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 2.16 seconds. CPU system time: 0.12 seconds. Elapsed time: 2.28 seconds; current allocated memory: 416.660 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1.16 seconds. CPU system time: 0.03 seconds. Elapsed time: 1.19 seconds; current allocated memory: 480.660 MB.
 INFO: [VHDL 208-304] Generating VHDL RTL for conv.
 INFO: [VLOG 209-307] Generating Verilog RTL for conv.
 INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
 INFO: [HLS 200-789] **** Estimated Fmax: 137.82 MHz
-INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 10.33 seconds. CPU system time: 1.38 seconds. Elapsed time: 11.7 seconds; current allocated memory: 64.000 MB.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 17.88 seconds. CPU system time: 1.55 seconds. Elapsed time: 19.43 seconds; current allocated memory: 199.125 MB.
+INFO: [HLS 200-1510] Running: export_design -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file vitis.prj/solution1/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 26.12 seconds. CPU system time: 1.58 seconds. Elapsed time: 36.32 seconds; current allocated memory: 0.000 MB.
