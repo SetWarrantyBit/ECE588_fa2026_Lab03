@@ -14,7 +14,7 @@ set NbRWValue 0
 set intNbAccess 0
 set NewDSPMapping 1
 set HasDSPModule 1
-set ResetLevelFlag 0
+set ResetLevelFlag 1
 set ResetStyle control
 set ResetSyncFlag 1
 set ResetRegisterFlag 0
@@ -44,7 +44,7 @@ set SCTraceOption all
 set TargetInfo xc7z020:-clg400:-1
 set SourceFiles {sc {} c ../../conv.cpp}
 set SourceFlags {sc {} c {{}}}
-set DirectiveFile /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part2/vitis.prj/solution1/solution1.directive
+set DirectiveFile /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/Part2_fixed/vitis.prj/solution1/solution1.directive
 set TBFiles {verilog ../../tb_conv.cpp bc ../../tb_conv.cpp vhdl ../../tb_conv.cpp sc ../../tb_conv.cpp cas ../../tb_conv.cpp c {}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

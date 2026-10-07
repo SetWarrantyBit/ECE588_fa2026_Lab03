@@ -1,11 +1,2 @@
 <pragmas>
-<pragma file="conv.cpp" line="10" pragmaType="interface" parentfunction="conv" mode="m_axi" port="input_fm" bundle="mem1" offset="slave" name="" depth="153228" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
-<pragma file="conv.cpp" line="11" pragmaType="interface" parentfunction="conv" mode="m_axi" port="weights" bundle="mem2" offset="slave" name="" depth="23232" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
-<pragma file="conv.cpp" line="12" pragmaType="interface" parentfunction="conv" mode="m_axi" port="biases" bundle="mem2" offset="slave" name="" depth="64" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
-<pragma file="conv.cpp" line="13" pragmaType="interface" parentfunction="conv" mode="m_axi" port="output_fm" bundle="mem1" offset="slave" name="" depth="193600" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
-<pragma file="conv.cpp" line="15" pragmaType="interface" parentfunction="conv" mode="s_axilite" port="input_fm" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
-<pragma file="conv.cpp" line="16" pragmaType="interface" parentfunction="conv" mode="s_axilite" port="weights" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
-<pragma file="conv.cpp" line="17" pragmaType="interface" parentfunction="conv" mode="s_axilite" port="biases" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
-<pragma file="conv.cpp" line="18" pragmaType="interface" parentfunction="conv" mode="s_axilite" port="output_fm" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
-<pragma file="conv.cpp" line="19" pragmaType="interface" parentfunction="conv" mode="s_axilite" port="" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
 </pragmas>

@@ -237,53 +237,57 @@ class AESL_RUNTIME_BC {
     string mName;
 };
 using hls::sim::Byte;
-extern "C" void conv(Byte<4>*, Byte<4>*, int, int, int, int);
+extern "C" void conv(Byte<4>*, Byte<4>*, Byte<4>*, Byte<4>*);
 extern "C" void apatb_conv_hw(volatile void * __xlx_apatb_param_input_fm, volatile void * __xlx_apatb_param_weights, volatile void * __xlx_apatb_param_biases, volatile void * __xlx_apatb_param_output_fm) {
 using hls::sim::createStream;
-  // Collect __xlx_input_fm_output_fm__tmp_vec
-std::vector<Byte<4>> __xlx_input_fm_output_fm__tmp_vec;
-for (size_t i = 0; i < 153228; ++i){
-__xlx_input_fm_output_fm__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_input_fm)[i]);
+  // Collect __xlx_input_fm__tmp_vec
+std::vector<Byte<4>> __xlx_input_fm__tmp_vec;
+for (size_t i = 0; i < 155952; ++i){
+__xlx_input_fm__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_input_fm)[i]);
 }
-  int __xlx_size_param_input_fm = 153228;
+  int __xlx_size_param_input_fm = 155952;
   int __xlx_offset_param_input_fm = 0;
   int __xlx_offset_byte_param_input_fm = 0*4;
-for (size_t i = 0; i < 193600; ++i){
-__xlx_input_fm_output_fm__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_output_fm)[i]);
-}
-  int __xlx_size_param_output_fm = 193600;
-  int __xlx_offset_param_output_fm = 153228;
-  int __xlx_offset_byte_param_output_fm = 153228*4;
-  // Collect __xlx_weights_biases__tmp_vec
-std::vector<Byte<4>> __xlx_weights_biases__tmp_vec;
+  // Collect __xlx_weights__tmp_vec
+std::vector<Byte<4>> __xlx_weights__tmp_vec;
 for (size_t i = 0; i < 23232; ++i){
-__xlx_weights_biases__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_weights)[i]);
+__xlx_weights__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_weights)[i]);
 }
   int __xlx_size_param_weights = 23232;
   int __xlx_offset_param_weights = 0;
   int __xlx_offset_byte_param_weights = 0*4;
+  // Collect __xlx_biases__tmp_vec
+std::vector<Byte<4>> __xlx_biases__tmp_vec;
 for (size_t i = 0; i < 64; ++i){
-__xlx_weights_biases__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_biases)[i]);
+__xlx_biases__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_biases)[i]);
 }
   int __xlx_size_param_biases = 64;
-  int __xlx_offset_param_biases = 23232;
-  int __xlx_offset_byte_param_biases = 23232*4;
+  int __xlx_offset_param_biases = 0;
+  int __xlx_offset_byte_param_biases = 0*4;
+  // Collect __xlx_output_fm__tmp_vec
+std::vector<Byte<4>> __xlx_output_fm__tmp_vec;
+for (size_t i = 0; i < 193600; ++i){
+__xlx_output_fm__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_output_fm)[i]);
+}
+  int __xlx_size_param_output_fm = 193600;
+  int __xlx_offset_param_output_fm = 0;
+  int __xlx_offset_byte_param_output_fm = 0*4;
   // DUT call
-  conv(__xlx_input_fm_output_fm__tmp_vec.data(), __xlx_weights_biases__tmp_vec.data(), __xlx_offset_byte_param_input_fm, __xlx_offset_byte_param_weights, __xlx_offset_byte_param_biases, __xlx_offset_byte_param_output_fm);
+  conv(__xlx_input_fm__tmp_vec.data(), __xlx_weights__tmp_vec.data(), __xlx_biases__tmp_vec.data(), __xlx_output_fm__tmp_vec.data());
 // print __xlx_apatb_param_input_fm
 for (size_t i = 0; i < __xlx_size_param_input_fm; ++i) {
-((Byte<4>*)__xlx_apatb_param_input_fm)[i] = __xlx_input_fm_output_fm__tmp_vec[__xlx_offset_param_input_fm+i];
-}
-// print __xlx_apatb_param_output_fm
-for (size_t i = 0; i < __xlx_size_param_output_fm; ++i) {
-((Byte<4>*)__xlx_apatb_param_output_fm)[i] = __xlx_input_fm_output_fm__tmp_vec[__xlx_offset_param_output_fm+i];
+((Byte<4>*)__xlx_apatb_param_input_fm)[i] = __xlx_input_fm__tmp_vec[__xlx_offset_param_input_fm+i];
 }
 // print __xlx_apatb_param_weights
 for (size_t i = 0; i < __xlx_size_param_weights; ++i) {
-((Byte<4>*)__xlx_apatb_param_weights)[i] = __xlx_weights_biases__tmp_vec[__xlx_offset_param_weights+i];
+((Byte<4>*)__xlx_apatb_param_weights)[i] = __xlx_weights__tmp_vec[__xlx_offset_param_weights+i];
 }
 // print __xlx_apatb_param_biases
 for (size_t i = 0; i < __xlx_size_param_biases; ++i) {
-((Byte<4>*)__xlx_apatb_param_biases)[i] = __xlx_weights_biases__tmp_vec[__xlx_offset_param_biases+i];
+((Byte<4>*)__xlx_apatb_param_biases)[i] = __xlx_biases__tmp_vec[__xlx_offset_param_biases+i];
+}
+// print __xlx_apatb_param_output_fm
+for (size_t i = 0; i < __xlx_size_param_output_fm; ++i) {
+((Byte<4>*)__xlx_apatb_param_output_fm)[i] = __xlx_output_fm__tmp_vec[__xlx_offset_param_output_fm+i];
 }
 }
