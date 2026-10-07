@@ -237,185 +237,25 @@ class AESL_RUNTIME_BC {
     string mName;
 };
 using hls::sim::Byte;
-extern "C" void conv(Byte<4>*, Byte<4>*, Byte<4>*, Byte<4>*, Byte<4>*, Byte<4>*, Byte<4>*, Byte<4>*, Byte<4>*, Byte<4>*, Byte<4>*, Byte<4>*, Byte<4>*, Byte<4>*, Byte<4>*, Byte<4>*, Byte<4>*, Byte<4>*, Byte<4>*, Byte<4>*, Byte<4>*, Byte<4>*, Byte<4>*, Byte<4>*);
-extern "C" void apatb_conv_hw(volatile void * __xlx_apatb_param_input_fm_0, volatile void * __xlx_apatb_param_input_fm_1, volatile void * __xlx_apatb_param_input_fm_2, volatile void * __xlx_apatb_param_input_fm_3, volatile void * __xlx_apatb_param_input_fm_4, volatile void * __xlx_apatb_param_input_fm_5, volatile void * __xlx_apatb_param_input_fm_6, volatile void * __xlx_apatb_param_input_fm_7, volatile void * __xlx_apatb_param_input_fm_8, volatile void * __xlx_apatb_param_input_fm_9, volatile void * __xlx_apatb_param_input_fm_10, volatile void * __xlx_apatb_param_weights_0, volatile void * __xlx_apatb_param_weights_1, volatile void * __xlx_apatb_param_weights_2, volatile void * __xlx_apatb_param_weights_3, volatile void * __xlx_apatb_param_weights_4, volatile void * __xlx_apatb_param_weights_5, volatile void * __xlx_apatb_param_weights_6, volatile void * __xlx_apatb_param_weights_7, volatile void * __xlx_apatb_param_weights_8, volatile void * __xlx_apatb_param_weights_9, volatile void * __xlx_apatb_param_weights_10, volatile void * __xlx_apatb_param_biases, volatile void * __xlx_apatb_param_output_fm) {
+extern "C" void conv(Byte<4>*, Byte<4>*, Byte<4>*, Byte<4>*);
+extern "C" void apatb_conv_hw(volatile void * __xlx_apatb_param_input_fm, volatile void * __xlx_apatb_param_weights, volatile void * __xlx_apatb_param_biases, volatile void * __xlx_apatb_param_output_fm) {
 using hls::sim::createStream;
-  // Collect __xlx_input_fm_0__tmp_vec
-std::vector<Byte<4>> __xlx_input_fm_0__tmp_vec;
-for (size_t i = 0; i < 14364; ++i){
-__xlx_input_fm_0__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_input_fm_0)[i]);
+  // Collect __xlx_input_fm__tmp_vec
+std::vector<Byte<4>> __xlx_input_fm__tmp_vec;
+for (size_t i = 0; i < 153228; ++i){
+__xlx_input_fm__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_input_fm)[i]);
 }
-  int __xlx_size_param_input_fm_0 = 14364;
-  int __xlx_offset_param_input_fm_0 = 0;
-  int __xlx_offset_byte_param_input_fm_0 = 0*4;
-  // Collect __xlx_input_fm_1__tmp_vec
-std::vector<Byte<4>> __xlx_input_fm_1__tmp_vec;
-for (size_t i = 0; i < 14364; ++i){
-__xlx_input_fm_1__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_input_fm_1)[i]);
+  int __xlx_size_param_input_fm = 153228;
+  int __xlx_offset_param_input_fm = 0;
+  int __xlx_offset_byte_param_input_fm = 0*4;
+  // Collect __xlx_weights__tmp_vec
+std::vector<Byte<4>> __xlx_weights__tmp_vec;
+for (size_t i = 0; i < 23232; ++i){
+__xlx_weights__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_weights)[i]);
 }
-  int __xlx_size_param_input_fm_1 = 14364;
-  int __xlx_offset_param_input_fm_1 = 0;
-  int __xlx_offset_byte_param_input_fm_1 = 0*4;
-  // Collect __xlx_input_fm_2__tmp_vec
-std::vector<Byte<4>> __xlx_input_fm_2__tmp_vec;
-for (size_t i = 0; i < 14364; ++i){
-__xlx_input_fm_2__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_input_fm_2)[i]);
-}
-  int __xlx_size_param_input_fm_2 = 14364;
-  int __xlx_offset_param_input_fm_2 = 0;
-  int __xlx_offset_byte_param_input_fm_2 = 0*4;
-  // Collect __xlx_input_fm_3__tmp_vec
-std::vector<Byte<4>> __xlx_input_fm_3__tmp_vec;
-for (size_t i = 0; i < 14364; ++i){
-__xlx_input_fm_3__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_input_fm_3)[i]);
-}
-  int __xlx_size_param_input_fm_3 = 14364;
-  int __xlx_offset_param_input_fm_3 = 0;
-  int __xlx_offset_byte_param_input_fm_3 = 0*4;
-  // Collect __xlx_input_fm_4__tmp_vec
-std::vector<Byte<4>> __xlx_input_fm_4__tmp_vec;
-for (size_t i = 0; i < 14364; ++i){
-__xlx_input_fm_4__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_input_fm_4)[i]);
-}
-  int __xlx_size_param_input_fm_4 = 14364;
-  int __xlx_offset_param_input_fm_4 = 0;
-  int __xlx_offset_byte_param_input_fm_4 = 0*4;
-  // Collect __xlx_input_fm_5__tmp_vec
-std::vector<Byte<4>> __xlx_input_fm_5__tmp_vec;
-for (size_t i = 0; i < 14364; ++i){
-__xlx_input_fm_5__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_input_fm_5)[i]);
-}
-  int __xlx_size_param_input_fm_5 = 14364;
-  int __xlx_offset_param_input_fm_5 = 0;
-  int __xlx_offset_byte_param_input_fm_5 = 0*4;
-  // Collect __xlx_input_fm_6__tmp_vec
-std::vector<Byte<4>> __xlx_input_fm_6__tmp_vec;
-for (size_t i = 0; i < 14364; ++i){
-__xlx_input_fm_6__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_input_fm_6)[i]);
-}
-  int __xlx_size_param_input_fm_6 = 14364;
-  int __xlx_offset_param_input_fm_6 = 0;
-  int __xlx_offset_byte_param_input_fm_6 = 0*4;
-  // Collect __xlx_input_fm_7__tmp_vec
-std::vector<Byte<4>> __xlx_input_fm_7__tmp_vec;
-for (size_t i = 0; i < 14364; ++i){
-__xlx_input_fm_7__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_input_fm_7)[i]);
-}
-  int __xlx_size_param_input_fm_7 = 14364;
-  int __xlx_offset_param_input_fm_7 = 0;
-  int __xlx_offset_byte_param_input_fm_7 = 0*4;
-  // Collect __xlx_input_fm_8__tmp_vec
-std::vector<Byte<4>> __xlx_input_fm_8__tmp_vec;
-for (size_t i = 0; i < 14364; ++i){
-__xlx_input_fm_8__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_input_fm_8)[i]);
-}
-  int __xlx_size_param_input_fm_8 = 14364;
-  int __xlx_offset_param_input_fm_8 = 0;
-  int __xlx_offset_byte_param_input_fm_8 = 0*4;
-  // Collect __xlx_input_fm_9__tmp_vec
-std::vector<Byte<4>> __xlx_input_fm_9__tmp_vec;
-for (size_t i = 0; i < 14364; ++i){
-__xlx_input_fm_9__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_input_fm_9)[i]);
-}
-  int __xlx_size_param_input_fm_9 = 14364;
-  int __xlx_offset_param_input_fm_9 = 0;
-  int __xlx_offset_byte_param_input_fm_9 = 0*4;
-  // Collect __xlx_input_fm_10__tmp_vec
-std::vector<Byte<4>> __xlx_input_fm_10__tmp_vec;
-for (size_t i = 0; i < 14364; ++i){
-__xlx_input_fm_10__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_input_fm_10)[i]);
-}
-  int __xlx_size_param_input_fm_10 = 14364;
-  int __xlx_offset_param_input_fm_10 = 0;
-  int __xlx_offset_byte_param_input_fm_10 = 0*4;
-  // Collect __xlx_weights_0__tmp_vec
-std::vector<Byte<4>> __xlx_weights_0__tmp_vec;
-for (size_t i = 0; i < 2112; ++i){
-__xlx_weights_0__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_weights_0)[i]);
-}
-  int __xlx_size_param_weights_0 = 2112;
-  int __xlx_offset_param_weights_0 = 0;
-  int __xlx_offset_byte_param_weights_0 = 0*4;
-  // Collect __xlx_weights_1__tmp_vec
-std::vector<Byte<4>> __xlx_weights_1__tmp_vec;
-for (size_t i = 0; i < 2112; ++i){
-__xlx_weights_1__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_weights_1)[i]);
-}
-  int __xlx_size_param_weights_1 = 2112;
-  int __xlx_offset_param_weights_1 = 0;
-  int __xlx_offset_byte_param_weights_1 = 0*4;
-  // Collect __xlx_weights_2__tmp_vec
-std::vector<Byte<4>> __xlx_weights_2__tmp_vec;
-for (size_t i = 0; i < 2112; ++i){
-__xlx_weights_2__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_weights_2)[i]);
-}
-  int __xlx_size_param_weights_2 = 2112;
-  int __xlx_offset_param_weights_2 = 0;
-  int __xlx_offset_byte_param_weights_2 = 0*4;
-  // Collect __xlx_weights_3__tmp_vec
-std::vector<Byte<4>> __xlx_weights_3__tmp_vec;
-for (size_t i = 0; i < 2112; ++i){
-__xlx_weights_3__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_weights_3)[i]);
-}
-  int __xlx_size_param_weights_3 = 2112;
-  int __xlx_offset_param_weights_3 = 0;
-  int __xlx_offset_byte_param_weights_3 = 0*4;
-  // Collect __xlx_weights_4__tmp_vec
-std::vector<Byte<4>> __xlx_weights_4__tmp_vec;
-for (size_t i = 0; i < 2112; ++i){
-__xlx_weights_4__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_weights_4)[i]);
-}
-  int __xlx_size_param_weights_4 = 2112;
-  int __xlx_offset_param_weights_4 = 0;
-  int __xlx_offset_byte_param_weights_4 = 0*4;
-  // Collect __xlx_weights_5__tmp_vec
-std::vector<Byte<4>> __xlx_weights_5__tmp_vec;
-for (size_t i = 0; i < 2112; ++i){
-__xlx_weights_5__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_weights_5)[i]);
-}
-  int __xlx_size_param_weights_5 = 2112;
-  int __xlx_offset_param_weights_5 = 0;
-  int __xlx_offset_byte_param_weights_5 = 0*4;
-  // Collect __xlx_weights_6__tmp_vec
-std::vector<Byte<4>> __xlx_weights_6__tmp_vec;
-for (size_t i = 0; i < 2112; ++i){
-__xlx_weights_6__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_weights_6)[i]);
-}
-  int __xlx_size_param_weights_6 = 2112;
-  int __xlx_offset_param_weights_6 = 0;
-  int __xlx_offset_byte_param_weights_6 = 0*4;
-  // Collect __xlx_weights_7__tmp_vec
-std::vector<Byte<4>> __xlx_weights_7__tmp_vec;
-for (size_t i = 0; i < 2112; ++i){
-__xlx_weights_7__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_weights_7)[i]);
-}
-  int __xlx_size_param_weights_7 = 2112;
-  int __xlx_offset_param_weights_7 = 0;
-  int __xlx_offset_byte_param_weights_7 = 0*4;
-  // Collect __xlx_weights_8__tmp_vec
-std::vector<Byte<4>> __xlx_weights_8__tmp_vec;
-for (size_t i = 0; i < 2112; ++i){
-__xlx_weights_8__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_weights_8)[i]);
-}
-  int __xlx_size_param_weights_8 = 2112;
-  int __xlx_offset_param_weights_8 = 0;
-  int __xlx_offset_byte_param_weights_8 = 0*4;
-  // Collect __xlx_weights_9__tmp_vec
-std::vector<Byte<4>> __xlx_weights_9__tmp_vec;
-for (size_t i = 0; i < 2112; ++i){
-__xlx_weights_9__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_weights_9)[i]);
-}
-  int __xlx_size_param_weights_9 = 2112;
-  int __xlx_offset_param_weights_9 = 0;
-  int __xlx_offset_byte_param_weights_9 = 0*4;
-  // Collect __xlx_weights_10__tmp_vec
-std::vector<Byte<4>> __xlx_weights_10__tmp_vec;
-for (size_t i = 0; i < 2112; ++i){
-__xlx_weights_10__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_weights_10)[i]);
-}
-  int __xlx_size_param_weights_10 = 2112;
-  int __xlx_offset_param_weights_10 = 0;
-  int __xlx_offset_byte_param_weights_10 = 0*4;
+  int __xlx_size_param_weights = 23232;
+  int __xlx_offset_param_weights = 0;
+  int __xlx_offset_byte_param_weights = 0*4;
   // Collect __xlx_biases__tmp_vec
 std::vector<Byte<4>> __xlx_biases__tmp_vec;
 for (size_t i = 0; i < 64; ++i){
@@ -433,94 +273,14 @@ __xlx_output_fm__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_output_fm)[i]);
   int __xlx_offset_param_output_fm = 0;
   int __xlx_offset_byte_param_output_fm = 0*4;
   // DUT call
-  conv(__xlx_input_fm_0__tmp_vec.data(), __xlx_input_fm_1__tmp_vec.data(), __xlx_input_fm_2__tmp_vec.data(), __xlx_input_fm_3__tmp_vec.data(), __xlx_input_fm_4__tmp_vec.data(), __xlx_input_fm_5__tmp_vec.data(), __xlx_input_fm_6__tmp_vec.data(), __xlx_input_fm_7__tmp_vec.data(), __xlx_input_fm_8__tmp_vec.data(), __xlx_input_fm_9__tmp_vec.data(), __xlx_input_fm_10__tmp_vec.data(), __xlx_weights_0__tmp_vec.data(), __xlx_weights_1__tmp_vec.data(), __xlx_weights_2__tmp_vec.data(), __xlx_weights_3__tmp_vec.data(), __xlx_weights_4__tmp_vec.data(), __xlx_weights_5__tmp_vec.data(), __xlx_weights_6__tmp_vec.data(), __xlx_weights_7__tmp_vec.data(), __xlx_weights_8__tmp_vec.data(), __xlx_weights_9__tmp_vec.data(), __xlx_weights_10__tmp_vec.data(), __xlx_biases__tmp_vec.data(), __xlx_output_fm__tmp_vec.data());
-// print __xlx_apatb_param_input_fm_0
-for (size_t i = 0; i < __xlx_size_param_input_fm_0; ++i) {
-((Byte<4>*)__xlx_apatb_param_input_fm_0)[i] = __xlx_input_fm_0__tmp_vec[__xlx_offset_param_input_fm_0+i];
+  conv(__xlx_input_fm__tmp_vec.data(), __xlx_weights__tmp_vec.data(), __xlx_biases__tmp_vec.data(), __xlx_output_fm__tmp_vec.data());
+// print __xlx_apatb_param_input_fm
+for (size_t i = 0; i < __xlx_size_param_input_fm; ++i) {
+((Byte<4>*)__xlx_apatb_param_input_fm)[i] = __xlx_input_fm__tmp_vec[__xlx_offset_param_input_fm+i];
 }
-// print __xlx_apatb_param_input_fm_1
-for (size_t i = 0; i < __xlx_size_param_input_fm_1; ++i) {
-((Byte<4>*)__xlx_apatb_param_input_fm_1)[i] = __xlx_input_fm_1__tmp_vec[__xlx_offset_param_input_fm_1+i];
-}
-// print __xlx_apatb_param_input_fm_2
-for (size_t i = 0; i < __xlx_size_param_input_fm_2; ++i) {
-((Byte<4>*)__xlx_apatb_param_input_fm_2)[i] = __xlx_input_fm_2__tmp_vec[__xlx_offset_param_input_fm_2+i];
-}
-// print __xlx_apatb_param_input_fm_3
-for (size_t i = 0; i < __xlx_size_param_input_fm_3; ++i) {
-((Byte<4>*)__xlx_apatb_param_input_fm_3)[i] = __xlx_input_fm_3__tmp_vec[__xlx_offset_param_input_fm_3+i];
-}
-// print __xlx_apatb_param_input_fm_4
-for (size_t i = 0; i < __xlx_size_param_input_fm_4; ++i) {
-((Byte<4>*)__xlx_apatb_param_input_fm_4)[i] = __xlx_input_fm_4__tmp_vec[__xlx_offset_param_input_fm_4+i];
-}
-// print __xlx_apatb_param_input_fm_5
-for (size_t i = 0; i < __xlx_size_param_input_fm_5; ++i) {
-((Byte<4>*)__xlx_apatb_param_input_fm_5)[i] = __xlx_input_fm_5__tmp_vec[__xlx_offset_param_input_fm_5+i];
-}
-// print __xlx_apatb_param_input_fm_6
-for (size_t i = 0; i < __xlx_size_param_input_fm_6; ++i) {
-((Byte<4>*)__xlx_apatb_param_input_fm_6)[i] = __xlx_input_fm_6__tmp_vec[__xlx_offset_param_input_fm_6+i];
-}
-// print __xlx_apatb_param_input_fm_7
-for (size_t i = 0; i < __xlx_size_param_input_fm_7; ++i) {
-((Byte<4>*)__xlx_apatb_param_input_fm_7)[i] = __xlx_input_fm_7__tmp_vec[__xlx_offset_param_input_fm_7+i];
-}
-// print __xlx_apatb_param_input_fm_8
-for (size_t i = 0; i < __xlx_size_param_input_fm_8; ++i) {
-((Byte<4>*)__xlx_apatb_param_input_fm_8)[i] = __xlx_input_fm_8__tmp_vec[__xlx_offset_param_input_fm_8+i];
-}
-// print __xlx_apatb_param_input_fm_9
-for (size_t i = 0; i < __xlx_size_param_input_fm_9; ++i) {
-((Byte<4>*)__xlx_apatb_param_input_fm_9)[i] = __xlx_input_fm_9__tmp_vec[__xlx_offset_param_input_fm_9+i];
-}
-// print __xlx_apatb_param_input_fm_10
-for (size_t i = 0; i < __xlx_size_param_input_fm_10; ++i) {
-((Byte<4>*)__xlx_apatb_param_input_fm_10)[i] = __xlx_input_fm_10__tmp_vec[__xlx_offset_param_input_fm_10+i];
-}
-// print __xlx_apatb_param_weights_0
-for (size_t i = 0; i < __xlx_size_param_weights_0; ++i) {
-((Byte<4>*)__xlx_apatb_param_weights_0)[i] = __xlx_weights_0__tmp_vec[__xlx_offset_param_weights_0+i];
-}
-// print __xlx_apatb_param_weights_1
-for (size_t i = 0; i < __xlx_size_param_weights_1; ++i) {
-((Byte<4>*)__xlx_apatb_param_weights_1)[i] = __xlx_weights_1__tmp_vec[__xlx_offset_param_weights_1+i];
-}
-// print __xlx_apatb_param_weights_2
-for (size_t i = 0; i < __xlx_size_param_weights_2; ++i) {
-((Byte<4>*)__xlx_apatb_param_weights_2)[i] = __xlx_weights_2__tmp_vec[__xlx_offset_param_weights_2+i];
-}
-// print __xlx_apatb_param_weights_3
-for (size_t i = 0; i < __xlx_size_param_weights_3; ++i) {
-((Byte<4>*)__xlx_apatb_param_weights_3)[i] = __xlx_weights_3__tmp_vec[__xlx_offset_param_weights_3+i];
-}
-// print __xlx_apatb_param_weights_4
-for (size_t i = 0; i < __xlx_size_param_weights_4; ++i) {
-((Byte<4>*)__xlx_apatb_param_weights_4)[i] = __xlx_weights_4__tmp_vec[__xlx_offset_param_weights_4+i];
-}
-// print __xlx_apatb_param_weights_5
-for (size_t i = 0; i < __xlx_size_param_weights_5; ++i) {
-((Byte<4>*)__xlx_apatb_param_weights_5)[i] = __xlx_weights_5__tmp_vec[__xlx_offset_param_weights_5+i];
-}
-// print __xlx_apatb_param_weights_6
-for (size_t i = 0; i < __xlx_size_param_weights_6; ++i) {
-((Byte<4>*)__xlx_apatb_param_weights_6)[i] = __xlx_weights_6__tmp_vec[__xlx_offset_param_weights_6+i];
-}
-// print __xlx_apatb_param_weights_7
-for (size_t i = 0; i < __xlx_size_param_weights_7; ++i) {
-((Byte<4>*)__xlx_apatb_param_weights_7)[i] = __xlx_weights_7__tmp_vec[__xlx_offset_param_weights_7+i];
-}
-// print __xlx_apatb_param_weights_8
-for (size_t i = 0; i < __xlx_size_param_weights_8; ++i) {
-((Byte<4>*)__xlx_apatb_param_weights_8)[i] = __xlx_weights_8__tmp_vec[__xlx_offset_param_weights_8+i];
-}
-// print __xlx_apatb_param_weights_9
-for (size_t i = 0; i < __xlx_size_param_weights_9; ++i) {
-((Byte<4>*)__xlx_apatb_param_weights_9)[i] = __xlx_weights_9__tmp_vec[__xlx_offset_param_weights_9+i];
-}
-// print __xlx_apatb_param_weights_10
-for (size_t i = 0; i < __xlx_size_param_weights_10; ++i) {
-((Byte<4>*)__xlx_apatb_param_weights_10)[i] = __xlx_weights_10__tmp_vec[__xlx_offset_param_weights_10+i];
+// print __xlx_apatb_param_weights
+for (size_t i = 0; i < __xlx_size_param_weights; ++i) {
+((Byte<4>*)__xlx_apatb_param_weights)[i] = __xlx_weights__tmp_vec[__xlx_offset_param_weights+i];
 }
 // print __xlx_apatb_param_biases
 for (size_t i = 0; i < __xlx_size_param_biases; ++i) {

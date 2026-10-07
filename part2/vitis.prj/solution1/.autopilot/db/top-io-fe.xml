@@ -1,73 +1,13 @@
 <root versionMajor = "1" versionMinor = "5">
   <kernel src_name="conv" language="c" hwCtrl="ap_ctrl_hs" mem_layout="fpga64-xilinx-none">
     <args>
-      <arg id="0" access_type="r" src_name="input_fm" src_type="float*" src_isptr="1" src_bitwidth="32" src_size_or_depth="155952">
-        <hw hw_usage="data" hw_interface="BRAM" hw_name="input_fm_0" hw_bitwidth="32" hw_size_or_depth="14364" hw_kernel_support="false">
-          <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0"/>
-        </hw>
-        <hw hw_usage="data" hw_interface="BRAM" hw_name="input_fm_1" hw_bitwidth="32" hw_size_or_depth="14364" hw_kernel_support="false">
-          <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0"/>
-        </hw>
-        <hw hw_usage="data" hw_interface="BRAM" hw_name="input_fm_2" hw_bitwidth="32" hw_size_or_depth="14364" hw_kernel_support="false">
-          <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0"/>
-        </hw>
-        <hw hw_usage="data" hw_interface="BRAM" hw_name="input_fm_3" hw_bitwidth="32" hw_size_or_depth="14364" hw_kernel_support="false">
-          <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0"/>
-        </hw>
-        <hw hw_usage="data" hw_interface="BRAM" hw_name="input_fm_4" hw_bitwidth="32" hw_size_or_depth="14364" hw_kernel_support="false">
-          <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0"/>
-        </hw>
-        <hw hw_usage="data" hw_interface="BRAM" hw_name="input_fm_5" hw_bitwidth="32" hw_size_or_depth="14364" hw_kernel_support="false">
-          <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0"/>
-        </hw>
-        <hw hw_usage="data" hw_interface="BRAM" hw_name="input_fm_6" hw_bitwidth="32" hw_size_or_depth="14364" hw_kernel_support="false">
-          <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0"/>
-        </hw>
-        <hw hw_usage="data" hw_interface="BRAM" hw_name="input_fm_7" hw_bitwidth="32" hw_size_or_depth="14364" hw_kernel_support="false">
-          <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0"/>
-        </hw>
-        <hw hw_usage="data" hw_interface="BRAM" hw_name="input_fm_8" hw_bitwidth="32" hw_size_or_depth="14364" hw_kernel_support="false">
-          <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0"/>
-        </hw>
-        <hw hw_usage="data" hw_interface="BRAM" hw_name="input_fm_9" hw_bitwidth="32" hw_size_or_depth="14364" hw_kernel_support="false">
-          <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0"/>
-        </hw>
-        <hw hw_usage="data" hw_interface="BRAM" hw_name="input_fm_10" hw_bitwidth="32" hw_size_or_depth="14364" hw_kernel_support="false">
+      <arg id="0" access_type="r" src_name="input_fm" src_type="float*" src_isptr="1" src_bitwidth="32" src_size_or_depth="153228">
+        <hw hw_usage="data" hw_interface="BRAM" hw_name="input_fm" hw_bitwidth="32" hw_size_or_depth="153228" hw_kernel_support="false">
           <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0"/>
         </hw>
       </arg>
       <arg id="1" access_type="r" src_name="weights" src_type="float*" src_isptr="1" src_bitwidth="32" src_size_or_depth="23232">
-        <hw hw_usage="data" hw_interface="BRAM" hw_name="weights_0" hw_bitwidth="32" hw_size_or_depth="2112" hw_kernel_support="false">
-          <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0"/>
-        </hw>
-        <hw hw_usage="data" hw_interface="BRAM" hw_name="weights_1" hw_bitwidth="32" hw_size_or_depth="2112" hw_kernel_support="false">
-          <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0"/>
-        </hw>
-        <hw hw_usage="data" hw_interface="BRAM" hw_name="weights_2" hw_bitwidth="32" hw_size_or_depth="2112" hw_kernel_support="false">
-          <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0"/>
-        </hw>
-        <hw hw_usage="data" hw_interface="BRAM" hw_name="weights_3" hw_bitwidth="32" hw_size_or_depth="2112" hw_kernel_support="false">
-          <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0"/>
-        </hw>
-        <hw hw_usage="data" hw_interface="BRAM" hw_name="weights_4" hw_bitwidth="32" hw_size_or_depth="2112" hw_kernel_support="false">
-          <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0"/>
-        </hw>
-        <hw hw_usage="data" hw_interface="BRAM" hw_name="weights_5" hw_bitwidth="32" hw_size_or_depth="2112" hw_kernel_support="false">
-          <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0"/>
-        </hw>
-        <hw hw_usage="data" hw_interface="BRAM" hw_name="weights_6" hw_bitwidth="32" hw_size_or_depth="2112" hw_kernel_support="false">
-          <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0"/>
-        </hw>
-        <hw hw_usage="data" hw_interface="BRAM" hw_name="weights_7" hw_bitwidth="32" hw_size_or_depth="2112" hw_kernel_support="false">
-          <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0"/>
-        </hw>
-        <hw hw_usage="data" hw_interface="BRAM" hw_name="weights_8" hw_bitwidth="32" hw_size_or_depth="2112" hw_kernel_support="false">
-          <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0"/>
-        </hw>
-        <hw hw_usage="data" hw_interface="BRAM" hw_name="weights_9" hw_bitwidth="32" hw_size_or_depth="2112" hw_kernel_support="false">
-          <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0"/>
-        </hw>
-        <hw hw_usage="data" hw_interface="BRAM" hw_name="weights_10" hw_bitwidth="32" hw_size_or_depth="2112" hw_kernel_support="false">
+        <hw hw_usage="data" hw_interface="BRAM" hw_name="weights" hw_bitwidth="32" hw_size_or_depth="23232" hw_kernel_support="false">
           <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0"/>
         </hw>
       </arg>

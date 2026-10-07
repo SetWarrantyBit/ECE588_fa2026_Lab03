@@ -2,17 +2,5 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part2/vitis_hls.tcl:25:9" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="directive" ARG_PragmaFunction="conv" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=conv" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="conv.cpp:24:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="conv" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=weights complete dim=4" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="conv.cpp:25:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="conv" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=input_fm cyclic factor=11 dim=3" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="conv.cpp:22:0" msg_body="Applying array_partition to 'input_fm': Cyclic partitioning with factor 11 on dimension 3.">
-        <args Dim="3" Factor="11" Mode="Cyclic" UOName="input_fm"/>
-    </msg>
-    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="conv.cpp:22:0" msg_body="Applying array_partition to 'weights': Complete partitioning on dimension 4.">
-        <args Dim="4" Mode="Complete" UOName="weights"/>
-    </msg>
 </xilinx:hls_fe_msgs>
 

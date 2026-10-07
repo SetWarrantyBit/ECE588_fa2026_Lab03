@@ -27,11 +27,11 @@ void conv(
     for (f = 0; f < F; f++){
         for (m = 0; m < M; m++){
             for (i = K/2 -1; i < I - K/2; i = i + stride){
-                r = ((i - K/2) - 1)/stride;
-                for(a = K/2; a < I - K/2; a = a + stride){
+                r = (i - (K/2 - 1))/stride;
+                for(a = K/2 - 1; a < I - K/2; a = a + stride){
                     //#pragma HLS PIPELINE II=1
                     //#pragma HLS UNROLL factor = 4
-                    c = ((a - K/2) - 1)/stride;
+                    c = (a -(K/2 - 1))/stride;
                     for (j = 0; j < K; j++){
                         for (k = 0; k < K; k++){
                             //#pragma HLS PIPELINE II=1

@@ -1,10 +1,4 @@
 /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part2/vitis_hls.tcl:25:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=conv_XLX_SEP_ PragmaOptions=name=conv_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLSDIRECTIVE TOP name=conv
         ^
-conv.cpp:24:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv_XLX_SEP_ PragmaOptions=variable=weights complete dim=4_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS ARRAY_PARTITION variable=weights complete dim=4
-        ^
-conv.cpp:25:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv_XLX_SEP_ PragmaOptions=variable=input_fm cyclic factor=11 dim=3_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS ARRAY_PARTITION variable=input_fm cyclic factor=11 dim=3
-        ^
-3 warnings generated.
+1 warning generated.

@@ -163,53 +163,56 @@ extern "C" {
 typedef float fm_t, wt_t;
 # 21 "./conv.hpp"
 __attribute__((sdx_kernel("conv", 0))) void conv(
-    fm_t input_fm[3][228][228],
+    fm_t input_fm[3][226][226],
     wt_t weights[64][3][11][11],
     wt_t biases[64],
     fm_t output_fm[64][55][55]);
 # 2 "conv.cpp" 2
-# 17 "conv.cpp"
+
+
 __attribute__((sdx_kernel("conv", 0))) void conv(
-    fm_t input_fm[3][228][228],
+    fm_t input_fm[3][226][226],
     wt_t weights[64][3][11][11],
     wt_t biases[64],
     fm_t output_fm[64][55][55])
 {
 #line 25 "/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part2/vitis_hls.tcl"
 #pragma HLSDIRECTIVE TOP name=conv
-# 22 "conv.cpp"
+# 9 "conv.cpp"
 
 
-#pragma HLS ARRAY_PARTITION variable=weights complete dim=4
-#pragma HLS ARRAY_PARTITION variable=input_fm cyclic factor=11 dim=3
 
- const int stride = 4;
+
+
+    const int stride = 4;
 
 
     int x, y, z;
-    VITIS_LOOP_31_1: for (x = 0; x < 64; x++){
-        VITIS_LOOP_32_2: for (y = 0; y < 55; y++){
-            VITIS_LOOP_33_3: for (z = 0; z < 55; z++){
+    VITIS_LOOP_18_1: for (x = 0; x < 64; x++){
+        VITIS_LOOP_19_2: for (y = 0; y < 55; y++){
+            VITIS_LOOP_20_3: for (z = 0; z < 55; z++){
                 output_fm[x][y][z] = biases[x];
             }
         }
     }
 
     int f, m, i, a, j, k, r, c;
-    VITIS_LOOP_40_4: for (f = 0; f < 64; f++){
-        VITIS_LOOP_41_5: for (m = 0; m < 3; m++){
-            VITIS_LOOP_42_6: for (i = 11/2; i < 228 - 11/2; i = i + stride){
-                r = (i - 11/2)/stride;
-                VITIS_LOOP_44_7: for(a = 11/2; a < 228 - 11/2; a = a + stride){
+    VITIS_LOOP_27_4: for (f = 0; f < 64; f++){
+        VITIS_LOOP_28_5: for (m = 0; m < 3; m++){
+            VITIS_LOOP_29_6: for (i = 11/2 -1; i < 226 - 11/2; i = i + stride){
+                r = (i - (11/2 - 1))/stride;
+                VITIS_LOOP_31_7: for(a = 11/2 - 1; a < 226 - 11/2; a = a + stride){
 
 
-                    c = (a - 11/2)/stride;
-                    VITIS_LOOP_48_8: for (j = 0; j < 11; j++){
-                        VITIS_LOOP_49_9: for (k = 0; k < 11; k++){
+                    c = (a -(11/2 - 1))/stride;
+                    VITIS_LOOP_35_8: for (j = 0; j < 11; j++){
+                        VITIS_LOOP_36_9: for (k = 0; k < 11; k++){
 
-
-                            output_fm[f][r][c] += weights[f][m][j][k] * input_fm[m][i - 11/2 + j][a - 11/2 + k];
-
+                            int row = i - 11/2 + j;
+                            int col = a - 11/2 + k;
+                            if (row >= 0 && row < 226 && col >= 0 && col < 226){
+                                output_fm[f][r][c] += weights[f][m][j][k] * input_fm[m][row][col];
+                            }
                         }
                     }
                 }
@@ -217,9 +220,9 @@ __attribute__((sdx_kernel("conv", 0))) void conv(
         }
     }
 
-    VITIS_LOOP_61_10: for (x = 0; x < 64; x++){
-        VITIS_LOOP_62_11: for (y = 0; y < 55; y++){
-            VITIS_LOOP_63_12: for (z = 0; z < 55; z++){
+    VITIS_LOOP_50_10: for (x = 0; x < 64; x++){
+        VITIS_LOOP_51_11: for (y = 0; y < 55; y++){
+            VITIS_LOOP_52_12: for (z = 0; z < 55; z++){
                 if (output_fm[x][y][z] < 0) output_fm[x][y][z] = 0;
             }
         }

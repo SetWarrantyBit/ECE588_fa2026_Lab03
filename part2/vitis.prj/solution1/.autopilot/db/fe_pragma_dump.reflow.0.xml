@@ -1,4 +1,2 @@
 <pragmas>
-<pragma file="conv.cpp" line="24" pragmaType="array_partition" parentfunction="conv" dim="4" factor="0" mode="complete" dynamic="0" variable="weights"/>
-<pragma file="conv.cpp" line="25" pragmaType="array_partition" parentfunction="conv" dim="3" factor="11" mode="cyclic" dynamic="0" variable="input_fm"/>
 </pragmas>
