@@ -1,101 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AdditionalInfo>
   <CTypeInfo>
-      <RtlPort>
-        <name>biases_address0</name>
-        <type>Unsigned</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>biases_ce0</name>
-        <type>bool</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>biases_q0</name>
-        <type>Floating-point</type>
-        <fractionWidth>24</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>input_fm_address0</name>
-        <type>Unsigned</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>input_fm_ce0</name>
-        <type>bool</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>input_fm_q0</name>
-        <type>Floating-point</type>
-        <fractionWidth>24</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>output_fm_address0</name>
-        <type>Unsigned</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>output_fm_address1</name>
-        <type>Unsigned</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>output_fm_ce0</name>
-        <type>bool</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>output_fm_ce1</name>
-        <type>bool</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>output_fm_d0</name>
-        <type>Floating-point</type>
-        <fractionWidth>24</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>output_fm_d1</name>
-        <type>Floating-point</type>
-        <fractionWidth>24</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>output_fm_q0</name>
-        <type>Floating-point</type>
-        <fractionWidth>24</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>output_fm_q1</name>
-        <type>Floating-point</type>
-        <fractionWidth>24</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>output_fm_we0</name>
-        <type>bool</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>output_fm_we1</name>
-        <type>bool</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>weights_address0</name>
-        <type>Unsigned</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>weights_ce0</name>
-        <type>bool</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>weights_q0</name>
-        <type>Floating-point</type>
-        <fractionWidth>24</fractionWidth>
-      </RtlPort>
   </CTypeInfo>
   <DesignConstraint>
     <clk_period>10</clk_period>
@@ -103,7 +8,7 @@
   <Machine>64</Machine>
   <modelParameters>
     <combinational>0</combinational>
-    <latency>562524194</latency>
-    <II>562524195</II>
+    <latency>10190523825</latency>
+    <II>10190523826</II>
   </modelParameters>
 </AdditionalInfo>

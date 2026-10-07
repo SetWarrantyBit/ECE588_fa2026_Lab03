@@ -2,11 +2,32 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part2/vitis_hls.tcl:25:9" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="directive" ARG_PragmaFunction="conv" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=conv" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="conv.cpp:21:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="conv" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor = 5" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="conv.cpp:10:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=input_fm offset=slave bundle=mem1 depth=153228" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-188" msg_severity="INFO" msg_loc="conv.cpp:9:0" msg_body="Unrolling loop 'VITIS_LOOP_20_3' (conv.cpp:20:30) in function 'conv' partially with a factor of 5">
-        <args Factor="5" LoopLoc="conv.cpp:20:30" LoopName="VITIS_LOOP_20_3"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="conv.cpp:11:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=weights offset=slave bundle=mem2 depth=23232" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="conv.cpp:12:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=biases offset=slave bundle=mem2 depth=64" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="conv.cpp:13:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=output_fm offset=slave bundle=mem1 depth=193600" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="conv.cpp:15:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite port=input_fm bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="conv.cpp:16:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite port=weights bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="conv.cpp:17:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite port=biases bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="conv.cpp:18:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite port=output_fm bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="conv.cpp:19:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite port=return bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
 </xilinx:hls_fe_msgs>
 

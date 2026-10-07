@@ -7,6 +7,16 @@ void conv(
     wt_t biases[F],
     fm_t output_fm[N][O][O])
 {
+    #pragma HLS INTERFACE mode=m_axi port=input_fm  offset=slave bundle=mem1 depth=153228
+    #pragma HLS INTERFACE mode=m_axi port=weights   offset=slave bundle=mem2 depth=23232
+    #pragma HLS INTERFACE mode=m_axi port=biases    offset=slave bundle=mem2 depth=64
+    #pragma HLS INTERFACE mode=m_axi port=output_fm offset=slave bundle=mem1 depth=193600
+
+    #pragma HLS INTERFACE mode=s_axilite port=input_fm  bundle=control
+    #pragma HLS INTERFACE mode=s_axilite port=weights   bundle=control
+    #pragma HLS INTERFACE mode=s_axilite port=biases    bundle=control
+    #pragma HLS INTERFACE mode=s_axilite port=output_fm bundle=control
+    #pragma HLS INTERFACE mode=s_axilite port=return   bundle=control
     // Perform 11X11 Convolution
     //#pragma HLS ARRAY_PARTITION variable=weights complete dim=4
     //#pragma HLS ARRAY_PARTITION variable=input_fm cyclic factor=11 dim=3
@@ -18,7 +28,7 @@ void conv(
     for (x = 0; x < F; x++){
         for (y = 0; y < O; y++){
             for (z = 0; z < O; z++){
-                #pragma HLS UNROLL factor = 5
+                //#pragma HLS UNROLL factor = 5
                 output_fm[x][y][z] = biases[x];
             }
         }

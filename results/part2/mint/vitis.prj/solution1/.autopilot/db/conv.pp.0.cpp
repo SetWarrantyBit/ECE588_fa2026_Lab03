@@ -180,34 +180,44 @@ __attribute__((sdx_kernel("conv", 0))) void conv(
 #pragma HLSDIRECTIVE TOP name=conv
 # 9 "conv.cpp"
 
+#pragma HLS INTERFACE mode=m_axi port=input_fm offset=slave bundle=mem1 depth=153228
+#pragma HLS INTERFACE mode=m_axi port=weights offset=slave bundle=mem2 depth=23232
+#pragma HLS INTERFACE mode=m_axi port=biases offset=slave bundle=mem2 depth=64
+#pragma HLS INTERFACE mode=m_axi port=output_fm offset=slave bundle=mem1 depth=193600
+
+#pragma HLS INTERFACE mode=s_axilite port=input_fm bundle=control
+#pragma HLS INTERFACE mode=s_axilite port=weights bundle=control
+#pragma HLS INTERFACE mode=s_axilite port=biases bundle=control
+#pragma HLS INTERFACE mode=s_axilite port=output_fm bundle=control
+#pragma HLS INTERFACE mode=s_axilite port=return bundle=control
 
 
 
 
-    const int stride = 4;
+ const int stride = 4;
 
 
     int x, y, z;
-    VITIS_LOOP_18_1: for (x = 0; x < 64; x++){
-        VITIS_LOOP_19_2: for (y = 0; y < 55; y++){
-            VITIS_LOOP_20_3: for (z = 0; z < 55; z++){
-#pragma HLS UNROLL factor = 5
- output_fm[x][y][z] = biases[x];
+    VITIS_LOOP_28_1: for (x = 0; x < 64; x++){
+        VITIS_LOOP_29_2: for (y = 0; y < 55; y++){
+            VITIS_LOOP_30_3: for (z = 0; z < 55; z++){
+
+                output_fm[x][y][z] = biases[x];
             }
         }
     }
 
     int f, m, i, a, j, k, r, c;
-    VITIS_LOOP_28_4: for (f = 0; f < 64; f++){
-        VITIS_LOOP_29_5: for (m = 0; m < 3; m++){
-            VITIS_LOOP_30_6: for (i = 11/2 -1; i < 226 - 11/2; i = i + stride){
+    VITIS_LOOP_38_4: for (f = 0; f < 64; f++){
+        VITIS_LOOP_39_5: for (m = 0; m < 3; m++){
+            VITIS_LOOP_40_6: for (i = 11/2 -1; i < 226 - 11/2; i = i + stride){
                 r = (i - (11/2 - 1))/stride;
-                VITIS_LOOP_32_7: for(a = 11/2 - 1; a < 226 - 11/2; a = a + stride){
+                VITIS_LOOP_42_7: for(a = 11/2 - 1; a < 226 - 11/2; a = a + stride){
 
 
                     c = (a -(11/2 - 1))/stride;
-                    VITIS_LOOP_36_8: for (j = 0; j < 11; j++){
-                        VITIS_LOOP_37_9: for (k = 0; k < 11; k++){
+                    VITIS_LOOP_46_8: for (j = 0; j < 11; j++){
+                        VITIS_LOOP_47_9: for (k = 0; k < 11; k++){
 
 
                             int row = i - 11/2 + j;
@@ -222,9 +232,9 @@ __attribute__((sdx_kernel("conv", 0))) void conv(
         }
     }
 
-    VITIS_LOOP_52_10: for (x = 0; x < 64; x++){
-        VITIS_LOOP_53_11: for (y = 0; y < 55; y++){
-            VITIS_LOOP_54_12: for (z = 0; z < 55; z++){
+    VITIS_LOOP_62_10: for (x = 0; x < 64; x++){
+        VITIS_LOOP_63_11: for (y = 0; y < 55; y++){
+            VITIS_LOOP_64_12: for (z = 0; z < 55; z++){
 
                 if (output_fm[x][y][z] < 0) output_fm[x][y][z] = 0;
             }
