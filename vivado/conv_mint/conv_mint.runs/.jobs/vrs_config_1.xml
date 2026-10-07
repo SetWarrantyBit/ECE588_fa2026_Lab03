@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="conv_mint_conv_0_0_synth_1" LaunchDir="/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.runs/conv_mint_conv_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="conv_mint_auto_us_1_synth_1" LaunchDir="/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.runs/conv_mint_auto_us_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="conv_mint_auto_pc_3_synth_1" LaunchDir="/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.runs/conv_mint_auto_pc_3_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="conv_mint_processing_system7_0_0_synth_1" LaunchDir="/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.runs/conv_mint_processing_system7_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="conv_mint_auto_us_0_synth_1" LaunchDir="/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.runs/conv_mint_auto_us_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="conv_mint_auto_pc_2_synth_1" LaunchDir="/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.runs/conv_mint_auto_pc_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="conv_mint_rst_ps7_0_100M_3_synth_1" LaunchDir="/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.runs/conv_mint_rst_ps7_0_100M_3_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="conv_mint_auto_pc_1_synth_1" LaunchDir="/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.runs/conv_mint_auto_pc_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="conv_mint_conv_0_0_synth_1"/>
+		<Parent Id="conv_mint_auto_us_1_synth_1"/>
+		<Parent Id="conv_mint_auto_pc_3_synth_1"/>
+		<Parent Id="conv_mint_processing_system7_0_0_synth_1"/>
+		<Parent Id="conv_mint_auto_us_0_synth_1"/>
+		<Parent Id="conv_mint_auto_pc_2_synth_1"/>
+		<Parent Id="conv_mint_rst_ps7_0_100M_3_synth_1"/>
+		<Parent Id="conv_mint_auto_pc_1_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+
