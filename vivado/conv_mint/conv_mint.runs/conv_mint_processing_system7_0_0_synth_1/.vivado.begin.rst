@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="ykim131_588fa26" Host="hunmin.ece.iit.edu" Pid="89713" HostCore="48" HostMemory="394682476">
-    </Process>
-</ProcessHandle>

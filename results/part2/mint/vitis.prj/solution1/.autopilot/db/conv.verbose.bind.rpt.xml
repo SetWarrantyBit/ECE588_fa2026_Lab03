@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv'" level="0">
-<item name = "Date">Wed Oct  7 16:46:07 2026
+<item name = "Date">Wed Oct  7 17:39:53 2026
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">vitis.prj</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 7.300 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 8.280 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,21 +24,19 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">10190523825, 10190523825, 101.905 sec, 101.905 sec, 10190523826, 10190523826, no</column>
+<column name="">381972870, 381972870, 3.820 sec, 3.820 sec, 381972871, 381972871, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_conv_Pipeline_VITIS_LOOP_29_2_VITIS_LOOP_30_3_fu_146">conv_Pipeline_VITIS_LOOP_29_2_VITIS_LOOP_30_3, 3027, 3027, 30.270 us, 30.270 us, 3027, 3027, no</column>
-<column name="grp_conv_Pipeline_VITIS_LOOP_38_4_VITIS_LOOP_40_6_VITIS_LOOP_46_8_VITIS_LOOP_47_9_fu_155">conv_Pipeline_VITIS_LOOP_38_4_VITIS_LOOP_40_6_VITIS_LOOP_46_8_VITIS_LOOP_47_9, 10190136014, 10190136014, 101.901 sec, 101.901 sec, 10190136014, 10190136014, no</column>
-<column name="grp_conv_Pipeline_VITIS_LOOP_62_10_VITIS_LOOP_63_11_VITIS_LOOP_64_12_fu_166">conv_Pipeline_VITIS_LOOP_62_10_VITIS_LOOP_63_11_VITIS_LOOP_64_12, 193748, 193748, 1.937 ms, 1.937 ms, 193748, 193748, no</column>
+<column name="grp_conv_Pipeline_VITIS_LOOP_23_4_VITIS_LOOP_25_5_fu_218">conv_Pipeline_VITIS_LOOP_23_4_VITIS_LOOP_25_5, 1896, 1896, 18.960 us, 18.960 us, 1896, 1896, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- VITIS_LOOP_28_1">193920, 193920, 3030, -, -, 64, no</column>
+<column name="- VITIS_LOOP_15_1_VITIS_LOOP_17_2_VITIS_LOOP_19_3">381972800, 381972800, 1973, -, -, 193600, no</column>
 </table>
 </item>
 </section>

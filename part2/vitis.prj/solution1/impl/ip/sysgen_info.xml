@@ -1,71 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AdditionalInfo>
   <CTypeInfo>
-      <RtlPort>
-        <name>biases_address0</name>
-        <type>Unsigned</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>biases_ce0</name>
-        <type>bool</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>biases_q0</name>
-        <type>Floating-point</type>
-        <fractionWidth>24</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>input_fm_address0</name>
-        <type>Unsigned</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>input_fm_ce0</name>
-        <type>bool</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>input_fm_q0</name>
-        <type>Floating-point</type>
-        <fractionWidth>24</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>output_fm_address0</name>
-        <type>Unsigned</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>output_fm_ce0</name>
-        <type>bool</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>output_fm_d0</name>
-        <type>Floating-point</type>
-        <fractionWidth>24</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>output_fm_we0</name>
-        <type>bool</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>weights_address0</name>
-        <type>Unsigned</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>weights_ce0</name>
-        <type>bool</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>weights_q0</name>
-        <type>Floating-point</type>
-        <fractionWidth>24</fractionWidth>
-      </RtlPort>
   </CTypeInfo>
   <DesignConstraint>
     <clk_period>10</clk_period>
@@ -73,7 +8,7 @@
   <Machine>64</Machine>
   <modelParameters>
     <combinational>0</combinational>
-    <latency>355256001</latency>
-    <II>355256002</II>
+    <latency>381972870</latency>
+    <II>381972871</II>
   </modelParameters>
 </AdditionalInfo>

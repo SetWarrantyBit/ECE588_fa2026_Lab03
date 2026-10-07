@@ -163,80 +163,52 @@ extern "C" {
 typedef float fm_t, wt_t;
 # 21 "./conv.hpp"
 __attribute__((sdx_kernel("conv", 0))) void conv(
-    fm_t input_fm[3][226][226],
+    fm_t input_fm[3][228][228],
     wt_t weights[64][3][11][11],
     wt_t biases[64],
     fm_t output_fm[64][55][55]);
 # 2 "conv.cpp" 2
 
-
 __attribute__((sdx_kernel("conv", 0))) void conv(
-    fm_t input_fm[3][226][226],
+    fm_t input_fm[3][228][228],
     wt_t weights[64][3][11][11],
     wt_t biases[64],
     fm_t output_fm[64][55][55])
 {
 #line 25 "/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part2/vitis_hls.tcl"
 #pragma HLSDIRECTIVE TOP name=conv
-# 9 "conv.cpp"
+# 8 "conv.cpp"
 
-#pragma HLS INTERFACE mode=m_axi port=input_fm offset=slave bundle=mem1 depth=153228
-#pragma HLS INTERFACE mode=m_axi port=weights offset=slave bundle=mem2 depth=23232
-#pragma HLS INTERFACE mode=m_axi port=biases offset=slave bundle=mem2 depth=64
-#pragma HLS INTERFACE mode=m_axi port=output_fm offset=slave bundle=mem1 depth=193600
+#pragma HLS INTERFACE mode=m_axi port=input_fm offset=slave bundle=mem1
+#pragma HLS INTERFACE mode=m_axi port=weights offset=slave bundle=mem2
+#pragma HLS INTERFACE mode=m_axi port=biases offset=slave bundle=mem2
+#pragma HLS INTERFACE mode=m_axi port=output_fm offset=slave bundle=mem1
+#pragma HLS INTERFACE mode=s_axilite port=return
 
-#pragma HLS INTERFACE mode=s_axilite port=input_fm bundle=control
-#pragma HLS INTERFACE mode=s_axilite port=weights bundle=control
-#pragma HLS INTERFACE mode=s_axilite port=biases bundle=control
-#pragma HLS INTERFACE mode=s_axilite port=output_fm bundle=control
-#pragma HLS INTERFACE mode=s_axilite port=return bundle=control
+ VITIS_LOOP_15_1: for (int n = 0; n < 64; n++)
+    {
+        VITIS_LOOP_17_2: for (int out_r = 0; out_r < 55; out_r++)
+        {
+            VITIS_LOOP_19_3: for (int out_c = 0; out_c < 55; out_c++)
+            {
+                fm_t sum = biases[n];
 
+                VITIS_LOOP_23_4: for (int m = 0; m < 3; m++)
+                {
+                    VITIS_LOOP_25_5: for (int kr = 0; kr < 11; kr++)
+                    {
+                        VITIS_LOOP_27_6: for (int kc = 0; kc < 11; kc++)
+                        {
+                            int in_r = out_r * 4 + kr;
+                            int in_c = out_c * 4 + kc;
 
-
-
- const int stride = 4;
-
-
-    int x, y, z;
-    VITIS_LOOP_28_1: for (x = 0; x < 64; x++){
-        VITIS_LOOP_29_2: for (y = 0; y < 55; y++){
-            VITIS_LOOP_30_3: for (z = 0; z < 55; z++){
-
-                output_fm[x][y][z] = biases[x];
-            }
-        }
-    }
-
-    int f, m, i, a, j, k, r, c;
-    VITIS_LOOP_38_4: for (f = 0; f < 64; f++){
-        VITIS_LOOP_39_5: for (m = 0; m < 3; m++){
-            VITIS_LOOP_40_6: for (i = 11/2 -1; i < 226 - 11/2; i = i + stride){
-                r = (i - (11/2 - 1))/stride;
-                VITIS_LOOP_42_7: for(a = 11/2 - 1; a < 226 - 11/2; a = a + stride){
-
-
-                    c = (a -(11/2 - 1))/stride;
-                    VITIS_LOOP_46_8: for (j = 0; j < 11; j++){
-                        VITIS_LOOP_47_9: for (k = 0; k < 11; k++){
-
-
-                            int row = i - 11/2 + j;
-                            int col = a - 11/2 + k;
-                            if (row >= 0 && row < 226 && col >= 0 && col < 226){
-                                output_fm[f][r][c] += weights[f][m][j][k] * input_fm[m][row][col];
-                            }
+                            sum += input_fm[m][in_r][in_c] *
+                                   weights[n][m][kr][kc];
                         }
                     }
                 }
-            }
-        }
-    }
 
-    VITIS_LOOP_62_10: for (x = 0; x < 64; x++){
-        VITIS_LOOP_63_11: for (y = 0; y < 55; y++){
-            VITIS_LOOP_64_12: for (z = 0; z < 55; z++){
-
-                if (output_fm[x][y][z] < 0) output_fm[x][y][z] = 0;
+                output_fm[n][out_r][out_c] = (sum > 0.0f) ? sum : 0.0f;
             }
         }
     }

@@ -16,9 +16,33 @@ float ex_output_fm[N][O][O];
 
 void read_bin_files()
 {
+    float raw_input[M][226][226];
+
     ifstream in_fm("./params/conv_input.bin", ios::in | ios::binary);
-    in_fm.read((char *)(**tb_input_fm), M * I * I * sizeof(float));
+    in_fm.read((char *)(**raw_input), M * 226 * 226 * sizeof(float));
     in_fm.close();
+
+    for (int m = 0; m < M; m++)
+    {
+        for (int r = 0; r < I; r++)
+        {
+            for (int c = 0; c < I; c++)
+            {
+                tb_input_fm[m][r][c] = 0.0f;
+            }
+        }
+    }
+
+    for (int m = 0; m < M; m++)
+    {
+        for (int r = 0; r < 226; r++)
+        {
+            for (int c = 0; c < 226; c++)
+            {
+                tb_input_fm[m][r + 1][c + 1] = raw_input[m][r][c];
+            }
+        }
+    }
 
     ifstream conv_weights("./params/conv_weights.bin", ios::in | ios::binary);
     conv_weights.read((char *)(***tb_weights), F * M * K * K * sizeof(float));

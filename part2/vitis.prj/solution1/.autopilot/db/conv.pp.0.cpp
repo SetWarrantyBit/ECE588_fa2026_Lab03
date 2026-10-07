@@ -175,23 +175,29 @@ __attribute__((sdx_kernel("conv", 0))) void conv(
     wt_t biases[64],
     fm_t output_fm[64][55][55])
 {
-#line 25 "/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/Part2_fixed/vitis_hls.tcl"
+#line 25 "/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part2/vitis_hls.tcl"
 #pragma HLSDIRECTIVE TOP name=conv
 # 8 "conv.cpp"
 
-    VITIS_LOOP_9_1: for (int n = 0; n < 64; n++)
+#pragma HLS INTERFACE mode=m_axi port=input_fm offset=slave bundle=mem1
+#pragma HLS INTERFACE mode=m_axi port=weights offset=slave bundle=mem2
+#pragma HLS INTERFACE mode=m_axi port=biases offset=slave bundle=mem2
+#pragma HLS INTERFACE mode=m_axi port=output_fm offset=slave bundle=mem1
+#pragma HLS INTERFACE mode=s_axilite port=return
+
+ VITIS_LOOP_15_1: for (int n = 0; n < 64; n++)
     {
-        VITIS_LOOP_11_2: for (int out_r = 0; out_r < 55; out_r++)
+        VITIS_LOOP_17_2: for (int out_r = 0; out_r < 55; out_r++)
         {
-            VITIS_LOOP_13_3: for (int out_c = 0; out_c < 55; out_c++)
+            VITIS_LOOP_19_3: for (int out_c = 0; out_c < 55; out_c++)
             {
                 fm_t sum = biases[n];
 
-                VITIS_LOOP_17_4: for (int m = 0; m < 3; m++)
+                VITIS_LOOP_23_4: for (int m = 0; m < 3; m++)
                 {
-                    VITIS_LOOP_19_5: for (int kr = 0; kr < 11; kr++)
+                    VITIS_LOOP_25_5: for (int kr = 0; kr < 11; kr++)
                     {
-                        VITIS_LOOP_21_6: for (int kc = 0; kc < 11; kc++)
+                        VITIS_LOOP_27_6: for (int kc = 0; kc < 11; kc++)
                         {
                             int in_r = out_r * 4 + kr;
                             int in_c = out_c * 4 + kc;

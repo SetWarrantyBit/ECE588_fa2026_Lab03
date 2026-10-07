@@ -3,10 +3,10 @@
 <!--                                                         -->
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="61" Path="/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/Part2_fixed/vitis.prj/solution1/impl/ip/tmp.xpr">
+<Project Version="7" Minor="61" Path="/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part2/vitis.prj/solution1/impl/ip/tmp.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="a86c400cc1d84cd39bc9816fb089ad0d"/>
+    <Option Name="Id" Val="bbdf58ea521c4090878a3202b7ee3432"/>
     <Option Name="Part" Val="xc7z020clg400-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>

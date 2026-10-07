@@ -242,18 +242,18 @@ extern "C" void apatb_conv_hw(volatile void * __xlx_apatb_param_input_fm, volati
 using hls::sim::createStream;
   // Collect __xlx_input_fm_output_fm__tmp_vec
 std::vector<Byte<4>> __xlx_input_fm_output_fm__tmp_vec;
-for (size_t i = 0; i < 153228; ++i){
+for (size_t i = 0; i < 155952; ++i){
 __xlx_input_fm_output_fm__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_input_fm)[i]);
 }
-  int __xlx_size_param_input_fm = 153228;
+  int __xlx_size_param_input_fm = 155952;
   int __xlx_offset_param_input_fm = 0;
   int __xlx_offset_byte_param_input_fm = 0*4;
 for (size_t i = 0; i < 193600; ++i){
 __xlx_input_fm_output_fm__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_output_fm)[i]);
 }
   int __xlx_size_param_output_fm = 193600;
-  int __xlx_offset_param_output_fm = 153228;
-  int __xlx_offset_byte_param_output_fm = 153228*4;
+  int __xlx_offset_param_output_fm = 155952;
+  int __xlx_offset_byte_param_output_fm = 155952*4;
   // Collect __xlx_weights_biases__tmp_vec
 std::vector<Byte<4>> __xlx_weights_biases__tmp_vec;
 for (size_t i = 0; i < 23232; ++i){

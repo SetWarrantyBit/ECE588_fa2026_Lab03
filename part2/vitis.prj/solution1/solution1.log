@@ -11,65 +11,57 @@ INFO: [HLS 200-1510] Running: create_clock -period 10 -name default
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 INFO: [HLS 200-1510] Running: config_interface -m_axi_latency 64 
 INFO: [HLS 200-1510] Running: csynth_design 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 10.02 seconds; current allocated memory: 281.535 MB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 10.02 seconds; current allocated memory: 281.535 MB.
 INFO: [HLS 200-10] Analyzing design file 'conv.cpp' ... 
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.46 seconds. CPU system time: 0.4 seconds. Elapsed time: 0.88 seconds; current allocated memory: 281.535 MB.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.45 seconds. CPU system time: 0.44 seconds. Elapsed time: 0.89 seconds; current allocated memory: 281.535 MB.
 INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 4.42 seconds. CPU system time: 0.57 seconds. Elapsed time: 5 seconds; current allocated memory: 281.535 MB.
+INFO: [HLS 214-115] Multiple burst writes of length 193600 and bit width 32 in loop 'VITIS_LOOP_15_1'(conv.cpp:15:19) has been inferred on bundle 'mem1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (conv.cpp:15:19)
+INFO: [HLS 214-115] Multiple burst reads of length 11 and bit width 32 in loop 'VITIS_LOOP_27_6'(conv.cpp:27:42) has been inferred on bundle 'mem1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (conv.cpp:27:42)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 4.42 seconds. CPU system time: 0.69 seconds. Elapsed time: 5.11 seconds; current allocated memory: 281.535 MB.
 INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 281.535 MB.
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 281.535 MB.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 281.535 MB.
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 281.535 MB.
-INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_21_6' (conv.cpp:15) in function 'conv' automatically.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 345.535 MB.
-INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_19_5' (conv.cpp:15:22) in function 'conv'.
-INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_17_4' (conv.cpp:15:22) in function 'conv'.
-WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_13_3' (conv.cpp:13:39) in function 'conv' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
-INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_11_2' (conv.cpp:11:35) in function 'conv'.
-INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_9_1' (conv.cpp:9:30) in function 'conv'.
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 345.535 MB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_25_5' (conv.cpp:21) in function 'conv' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_25_5' (conv.cpp:21) in function 'conv' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_27_6' (conv.cpp:21) in function 'conv' completely with a factor of 11.
+INFO: [XFORM 203-11] Balancing expressions in function 'conv' (conv.cpp:4)...3 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.08 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.09 seconds; current allocated memory: 345.535 MB.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_23_4' (conv.cpp:21:22) in function 'conv'.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_19_3' (conv.cpp:19:39) in function 'conv' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_17_2' (conv.cpp:17:35) in function 'conv'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_15_1' (conv.cpp:15:28) in function 'conv'.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 345.535 MB.
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'conv' ...
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'conv_Pipeline_VITIS_LOOP_17_4_VITIS_LOOP_19_5_VITIS_LOOP_21_6' 
+INFO: [HLS 200-42] -- Implementing module 'conv_Pipeline_VITIS_LOOP_23_4_VITIS_LOOP_25_5' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln26) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=mul_ln19) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=mul_ln17) to 3 in order to utilize available DSP registers.
-INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_17_4_VITIS_LOOP_19_5_VITIS_LOOP_21_6'.
-WARNING: [HLS 200-880] The II Violation in module 'conv_Pipeline_VITIS_LOOP_17_4_VITIS_LOOP_19_5_VITIS_LOOP_21_6' (loop 'VITIS_LOOP_17_4_VITIS_LOOP_19_5_VITIS_LOOP_21_6'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('sum_1_write_ln21', conv.cpp:21) of variable 'sum', conv.cpp:26 on local variable 'sum' and 'load' operation ('sum_1_load', conv.cpp:26) on local variable 'sum'.
-WARNING: [HLS 200-880] The II Violation in module 'conv_Pipeline_VITIS_LOOP_17_4_VITIS_LOOP_19_5_VITIS_LOOP_21_6' (loop 'VITIS_LOOP_17_4_VITIS_LOOP_19_5_VITIS_LOOP_21_6'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('sum_1_write_ln21', conv.cpp:21) of variable 'sum', conv.cpp:26 on local variable 'sum' and 'load' operation ('sum_1_load', conv.cpp:26) on local variable 'sum'.
-WARNING: [HLS 200-880] The II Violation in module 'conv_Pipeline_VITIS_LOOP_17_4_VITIS_LOOP_19_5_VITIS_LOOP_21_6' (loop 'VITIS_LOOP_17_4_VITIS_LOOP_19_5_VITIS_LOOP_21_6'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('sum_1_write_ln21', conv.cpp:21) of variable 'sum', conv.cpp:26 on local variable 'sum' and 'load' operation ('sum_1_load', conv.cpp:26) on local variable 'sum'.
-WARNING: [HLS 200-880] The II Violation in module 'conv_Pipeline_VITIS_LOOP_17_4_VITIS_LOOP_19_5_VITIS_LOOP_21_6' (loop 'VITIS_LOOP_17_4_VITIS_LOOP_19_5_VITIS_LOOP_21_6'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 0) between 'store' operation ('sum_1_write_ln21', conv.cpp:21) of variable 'sum', conv.cpp:26 on local variable 'sum' and 'load' operation ('sum_1_load', conv.cpp:26) on local variable 'sum'.
-INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 5, Depth = 18, loop 'VITIS_LOOP_17_4_VITIS_LOOP_19_5_VITIS_LOOP_21_6'
+INFO: [HLS 200-486] Changing DSP latency (root=empty_23) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_23_4_VITIS_LOOP_25_5'.
+WARNING: [HLS 200-880] The II Violation in module 'conv_Pipeline_VITIS_LOOP_23_4_VITIS_LOOP_25_5' (loop 'VITIS_LOOP_23_4_VITIS_LOOP_25_5'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'fadd' operation ('sum_2_s', conv.cpp:32) and 'fadd' operation ('sum_s', conv.cpp:32).
+WARNING: [HLS 200-880] The II Violation in module 'conv_Pipeline_VITIS_LOOP_23_4_VITIS_LOOP_25_5' (loop 'VITIS_LOOP_23_4_VITIS_LOOP_25_5'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'fadd' operation ('sum_2_s', conv.cpp:32) and 'fadd' operation ('sum_s', conv.cpp:32).
+WARNING: [HLS 200-880] The II Violation in module 'conv_Pipeline_VITIS_LOOP_23_4_VITIS_LOOP_25_5' (loop 'VITIS_LOOP_23_4_VITIS_LOOP_25_5'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'fadd' operation ('sum_2_s', conv.cpp:32) and 'fadd' operation ('sum_s', conv.cpp:32).
+WARNING: [HLS 200-880] The II Violation in module 'conv_Pipeline_VITIS_LOOP_23_4_VITIS_LOOP_25_5' (loop 'VITIS_LOOP_23_4_VITIS_LOOP_25_5'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'fadd' operation ('sum_2_s', conv.cpp:32) and 'fadd' operation ('sum_s', conv.cpp:32).
+WARNING: [HLS 200-880] The II Violation in module 'conv_Pipeline_VITIS_LOOP_23_4_VITIS_LOOP_25_5' (loop 'VITIS_LOOP_23_4_VITIS_LOOP_25_5'): Unable to enforce a carried dependence constraint (II = 35, distance = 1, offset = 1) between 'fadd' operation ('sum_2_s', conv.cpp:32) and 'fadd' operation ('sum_s', conv.cpp:32).
+WARNING: [HLS 200-880] The II Violation in module 'conv_Pipeline_VITIS_LOOP_23_4_VITIS_LOOP_25_5' (loop 'VITIS_LOOP_23_4_VITIS_LOOP_25_5'): Unable to enforce a carried dependence constraint (II = 51, distance = 1, offset = 1) between 'fadd' operation ('sum_2_s', conv.cpp:32) and 'fadd' operation ('sum_s', conv.cpp:32).
+WARNING: [HLS 200-880] The II Violation in module 'conv_Pipeline_VITIS_LOOP_23_4_VITIS_LOOP_25_5' (loop 'VITIS_LOOP_23_4_VITIS_LOOP_25_5'): Unable to enforce a carried dependence constraint (II = 53, distance = 1, offset = 1) between 'fadd' operation ('sum_2_s', conv.cpp:32) and 'fadd' operation ('sum_s', conv.cpp:32).
+WARNING: [HLS 200-880] The II Violation in module 'conv_Pipeline_VITIS_LOOP_23_4_VITIS_LOOP_25_5' (loop 'VITIS_LOOP_23_4_VITIS_LOOP_25_5'): Unable to enforce a carried dependence constraint (II = 54, distance = 1, offset = 1) between 'fadd' operation ('sum_2_s', conv.cpp:32) and 'fadd' operation ('sum_s', conv.cpp:32).
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 55, Depth = 135, loop 'VITIS_LOOP_23_4_VITIS_LOOP_25_5'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.15 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.19 seconds; current allocated memory: 345.535 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.56 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.6 seconds; current allocated memory: 345.535 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.16 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.16 seconds; current allocated memory: 345.535 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.86 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.88 seconds; current allocated memory: 345.535 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'conv' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln15) to 3 in order to utilize available DSP registers.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.22 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.23 seconds; current allocated memory: 345.535 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.13 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 345.535 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'conv_Pipeline_VITIS_LOOP_17_4_VITIS_LOOP_19_5_VITIS_LOOP_21_6' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv_Pipeline_VITIS_LOOP_17_4_VITIS_LOOP_19_5_VITIS_LOOP_21_6' pipeline 'VITIS_LOOP_17_4_VITIS_LOOP_19_5_VITIS_LOOP_21_6' pipeline type 'loop pipeline'
-INFO: [RTGEN 206-100] Generating core module 'ama_addmuladd_10ns_8ns_8ns_8ns_18_4_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mac_muladd_11s_4ns_4ns_14_4_1': 1 instance(s).
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.66 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.68 seconds; current allocated memory: 345.535 MB.

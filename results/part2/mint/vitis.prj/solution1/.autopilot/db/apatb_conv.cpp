@@ -1041,10 +1041,10 @@ void apatb_conv_hw(void* __xlx_apatb_param_input_fm, void* __xlx_apatb_param_wei
 #endif
   };
   __xlx_offset_byte_param_input_fm = 0*4;
-  __xlx_offset_byte_param_output_fm = 153228*4;
+  __xlx_offset_byte_param_output_fm = 155952*4;
   port4.param = { __xlx_apatb_param_input_fm, __xlx_apatb_param_output_fm };
-  port4.depth = { 153228, 193600 };
-  port4.offset = { 0, 153228 };
+  port4.depth = { 155952, 193600 };
+  port4.offset = { 0, 155952 };
   port4.hasWrite = { true, true };
 
 #ifdef USE_BINARY_TV_FILE
