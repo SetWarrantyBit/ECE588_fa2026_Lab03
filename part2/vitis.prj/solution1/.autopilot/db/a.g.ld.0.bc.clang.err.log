@@ -1,0 +1,2 @@
+remark: conv.cpp:22:0: Applying array_partition to 'input_fm': Cyclic partitioning with factor 11 on dimension 3.
+remark: conv.cpp:22:0: Applying array_partition to 'weights': Complete partitioning on dimension 4.

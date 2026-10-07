@@ -1,0 +1,377 @@
+
+
+================================================================
+== Synthesis Summary Report of 'conv'
+================================================================
++ General Information: 
+    * Date:           Wed Oct  7 01:14:43 2026
+    * Version:        2022.2 (Build 3670227 on Oct 13 2022)
+    * Project:        vitis.prj
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +---------------------------------------------------------------------+--------+-------+-----------+-----------+----------+-----------+--------+----------+------+---------+-----------+------------+-----+
+    |                               Modules                               |  Issue |       |  Latency  |  Latency  | Iteration|           |  Trip  |          |      |         |           |            |     |
+    |                               & Loops                               |  Type  | Slack |  (cycles) |    (ns)   |  Latency |  Interval |  Count | Pipelined| BRAM |   DSP   |     FF    |     LUT    | URAM|
+    +---------------------------------------------------------------------+--------+-------+-----------+-----------+----------+-----------+--------+----------+------+---------+-----------+------------+-----+
+    |+ conv                                                               |  Timing|  -0.98|  367452817|  3.675e+09|         -|  367452818|       -|        no|     -|  10 (4%)|  3656 (3%)|  5478 (10%)|    -|
+    | + conv_Pipeline_VITIS_LOOP_31_1_VITIS_LOOP_32_2_VITIS_LOOP_33_3     |       -|   0.29|     193605|  1.936e+06|         -|     193605|       -|        no|     -|  1 (~0%)|  143 (~0%)|   296 (~0%)|    -|
+    |  o VITIS_LOOP_31_1_VITIS_LOOP_32_2_VITIS_LOOP_33_3                  |       -|   7.30|     193603|  1.936e+06|         5|          1|  193600|       yes|     -|        -|          -|           -|    -|
+    | + conv_Pipeline_VITIS_LOOP_61_10_VITIS_LOOP_62_11_VITIS_LOOP_63_12  |       -|   0.29|     193609|  1.936e+06|         -|     193609|       -|        no|     -|  1 (~0%)|  206 (~0%)|   326 (~0%)|    -|
+    |  o VITIS_LOOP_61_10_VITIS_LOOP_62_11_VITIS_LOOP_63_12               |       -|   7.30|     193607|  1.936e+06|         9|          1|  193600|       yes|     -|        -|          -|           -|    -|
+    | o VITIS_LOOP_40_4_VITIS_LOOP_42_6_VITIS_LOOP_44_7                   |       -|   7.30|  367065600|  3.671e+09|       632|          -|  580800|        no|     -|        -|          -|           -|    -|
+    |  + conv_Pipeline_VITIS_LOOP_48_8                                    |  Timing|  -0.98|        617|  6.170e+03|         -|        617|       -|        no|     -|   6 (2%)|  1681 (1%)|   2878 (5%)|    -|
+    |   o VITIS_LOOP_48_8                                                 |      II|   7.30|        615|  6.150e+03|        66|         55|      11|       yes|     -|        -|          -|           -|    -|
+    +---------------------------------------------------------------------+--------+-------+-----------+-----------+----------+-----------+--------+----------+------+---------+-----------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AP_MEMORY
++----------------------+----------+
+| Interface            | Bitwidth |
++----------------------+----------+
+| biases_address0      | 6        |
+| biases_q0            | 32       |
+| input_fm_0_address0  | 14       |
+| input_fm_0_address1  | 14       |
+| input_fm_0_q0        | 32       |
+| input_fm_0_q1        | 32       |
+| input_fm_10_address0 | 14       |
+| input_fm_10_address1 | 14       |
+| input_fm_10_q0       | 32       |
+| input_fm_10_q1       | 32       |
+| input_fm_1_address0  | 14       |
+| input_fm_1_address1  | 14       |
+| input_fm_1_q0        | 32       |
+| input_fm_1_q1        | 32       |
+| input_fm_2_address0  | 14       |
+| input_fm_2_address1  | 14       |
+| input_fm_2_q0        | 32       |
+| input_fm_2_q1        | 32       |
+| input_fm_3_address0  | 14       |
+| input_fm_3_address1  | 14       |
+| input_fm_3_q0        | 32       |
+| input_fm_3_q1        | 32       |
+| input_fm_4_address0  | 14       |
+| input_fm_4_address1  | 14       |
+| input_fm_4_q0        | 32       |
+| input_fm_4_q1        | 32       |
+| input_fm_5_address0  | 14       |
+| input_fm_5_address1  | 14       |
+| input_fm_5_q0        | 32       |
+| input_fm_5_q1        | 32       |
+| input_fm_6_address0  | 14       |
+| input_fm_6_address1  | 14       |
+| input_fm_6_q0        | 32       |
+| input_fm_6_q1        | 32       |
+| input_fm_7_address0  | 14       |
+| input_fm_7_address1  | 14       |
+| input_fm_7_q0        | 32       |
+| input_fm_7_q1        | 32       |
+| input_fm_8_address0  | 14       |
+| input_fm_8_address1  | 14       |
+| input_fm_8_q0        | 32       |
+| input_fm_8_q1        | 32       |
+| input_fm_9_address0  | 14       |
+| input_fm_9_address1  | 14       |
+| input_fm_9_q0        | 32       |
+| input_fm_9_q1        | 32       |
+| output_fm_address0   | 18       |
+| output_fm_address1   | 18       |
+| output_fm_d0         | 32       |
+| output_fm_q0         | 32       |
+| output_fm_q1         | 32       |
+| weights_0_address0   | 12       |
+| weights_0_q0         | 32       |
+| weights_10_address0  | 12       |
+| weights_10_q0        | 32       |
+| weights_1_address0   | 12       |
+| weights_1_q0         | 32       |
+| weights_2_address0   | 12       |
+| weights_2_q0         | 32       |
+| weights_3_address0   | 12       |
+| weights_3_q0         | 32       |
+| weights_4_address0   | 12       |
+| weights_4_q0         | 32       |
+| weights_5_address0   | 12       |
+| weights_5_q0         | 32       |
+| weights_6_address0   | 12       |
+| weights_6_q0         | 32       |
+| weights_7_address0   | 12       |
+| weights_7_q0         | 32       |
+| weights_8_address0   | 12       |
+| weights_8_q0         | 32       |
+| weights_9_address0   | 12       |
+| weights_9_q0         | 32       |
++----------------------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++-----------+-----------+----------+
+| Argument  | Direction | Datatype |
++-----------+-----------+----------+
+| input_fm  | in        | float*   |
+| weights   | in        | float*   |
+| biases    | in        | float*   |
+| output_fm | inout     | float*   |
++-----------+-----------+----------+
+
+* SW-to-HW Mapping
++-----------+----------------------+---------+----------+
+| Argument  | HW Interface         | HW Type | HW Usage |
++-----------+----------------------+---------+----------+
+| input_fm  | input_fm_0_address0  | port    | offset   |
+| input_fm  | input_fm_0_ce0       | port    |          |
+| input_fm  | input_fm_0_q0        | port    |          |
+| input_fm  | input_fm_0_address1  | port    | offset   |
+| input_fm  | input_fm_0_ce1       | port    |          |
+| input_fm  | input_fm_0_q1        | port    |          |
+| input_fm  | input_fm_1_address0  | port    | offset   |
+| input_fm  | input_fm_1_ce0       | port    |          |
+| input_fm  | input_fm_1_q0        | port    |          |
+| input_fm  | input_fm_1_address1  | port    | offset   |
+| input_fm  | input_fm_1_ce1       | port    |          |
+| input_fm  | input_fm_1_q1        | port    |          |
+| input_fm  | input_fm_2_address0  | port    | offset   |
+| input_fm  | input_fm_2_ce0       | port    |          |
+| input_fm  | input_fm_2_q0        | port    |          |
+| input_fm  | input_fm_2_address1  | port    | offset   |
+| input_fm  | input_fm_2_ce1       | port    |          |
+| input_fm  | input_fm_2_q1        | port    |          |
+| input_fm  | input_fm_3_address0  | port    | offset   |
+| input_fm  | input_fm_3_ce0       | port    |          |
+| input_fm  | input_fm_3_q0        | port    |          |
+| input_fm  | input_fm_3_address1  | port    | offset   |
+| input_fm  | input_fm_3_ce1       | port    |          |
+| input_fm  | input_fm_3_q1        | port    |          |
+| input_fm  | input_fm_4_address0  | port    | offset   |
+| input_fm  | input_fm_4_ce0       | port    |          |
+| input_fm  | input_fm_4_q0        | port    |          |
+| input_fm  | input_fm_4_address1  | port    | offset   |
+| input_fm  | input_fm_4_ce1       | port    |          |
+| input_fm  | input_fm_4_q1        | port    |          |
+| input_fm  | input_fm_5_address0  | port    | offset   |
+| input_fm  | input_fm_5_ce0       | port    |          |
+| input_fm  | input_fm_5_q0        | port    |          |
+| input_fm  | input_fm_5_address1  | port    | offset   |
+| input_fm  | input_fm_5_ce1       | port    |          |
+| input_fm  | input_fm_5_q1        | port    |          |
+| input_fm  | input_fm_6_address0  | port    | offset   |
+| input_fm  | input_fm_6_ce0       | port    |          |
+| input_fm  | input_fm_6_q0        | port    |          |
+| input_fm  | input_fm_6_address1  | port    | offset   |
+| input_fm  | input_fm_6_ce1       | port    |          |
+| input_fm  | input_fm_6_q1        | port    |          |
+| input_fm  | input_fm_7_address0  | port    | offset   |
+| input_fm  | input_fm_7_ce0       | port    |          |
+| input_fm  | input_fm_7_q0        | port    |          |
+| input_fm  | input_fm_7_address1  | port    | offset   |
+| input_fm  | input_fm_7_ce1       | port    |          |
+| input_fm  | input_fm_7_q1        | port    |          |
+| input_fm  | input_fm_8_address0  | port    | offset   |
+| input_fm  | input_fm_8_ce0       | port    |          |
+| input_fm  | input_fm_8_q0        | port    |          |
+| input_fm  | input_fm_8_address1  | port    | offset   |
+| input_fm  | input_fm_8_ce1       | port    |          |
+| input_fm  | input_fm_8_q1        | port    |          |
+| input_fm  | input_fm_9_address0  | port    | offset   |
+| input_fm  | input_fm_9_ce0       | port    |          |
+| input_fm  | input_fm_9_q0        | port    |          |
+| input_fm  | input_fm_9_address1  | port    | offset   |
+| input_fm  | input_fm_9_ce1       | port    |          |
+| input_fm  | input_fm_9_q1        | port    |          |
+| input_fm  | input_fm_10_address0 | port    | offset   |
+| input_fm  | input_fm_10_ce0      | port    |          |
+| input_fm  | input_fm_10_q0       | port    |          |
+| input_fm  | input_fm_10_address1 | port    | offset   |
+| input_fm  | input_fm_10_ce1      | port    |          |
+| input_fm  | input_fm_10_q1       | port    |          |
+| weights   | weights_0_address0   | port    | offset   |
+| weights   | weights_0_ce0        | port    |          |
+| weights   | weights_0_q0         | port    |          |
+| weights   | weights_1_address0   | port    | offset   |
+| weights   | weights_1_ce0        | port    |          |
+| weights   | weights_1_q0         | port    |          |
+| weights   | weights_2_address0   | port    | offset   |
+| weights   | weights_2_ce0        | port    |          |
+| weights   | weights_2_q0         | port    |          |
+| weights   | weights_3_address0   | port    | offset   |
+| weights   | weights_3_ce0        | port    |          |
+| weights   | weights_3_q0         | port    |          |
+| weights   | weights_4_address0   | port    | offset   |
+| weights   | weights_4_ce0        | port    |          |
+| weights   | weights_4_q0         | port    |          |
+| weights   | weights_5_address0   | port    | offset   |
+| weights   | weights_5_ce0        | port    |          |
+| weights   | weights_5_q0         | port    |          |
+| weights   | weights_6_address0   | port    | offset   |
+| weights   | weights_6_ce0        | port    |          |
+| weights   | weights_6_q0         | port    |          |
+| weights   | weights_7_address0   | port    | offset   |
+| weights   | weights_7_ce0        | port    |          |
+| weights   | weights_7_q0         | port    |          |
+| weights   | weights_8_address0   | port    | offset   |
+| weights   | weights_8_ce0        | port    |          |
+| weights   | weights_8_q0         | port    |          |
+| weights   | weights_9_address0   | port    | offset   |
+| weights   | weights_9_ce0        | port    |          |
+| weights   | weights_9_q0         | port    |          |
+| weights   | weights_10_address0  | port    | offset   |
+| weights   | weights_10_ce0       | port    |          |
+| weights   | weights_10_q0        | port    |          |
+| biases    | biases_address0      | port    | offset   |
+| biases    | biases_ce0           | port    |          |
+| biases    | biases_q0            | port    |          |
+| output_fm | output_fm_address0   | port    | offset   |
+| output_fm | output_fm_ce0        | port    |          |
+| output_fm | output_fm_we0        | port    |          |
+| output_fm | output_fm_d0         | port    |          |
+| output_fm | output_fm_q0         | port    |          |
+| output_fm | output_fm_address1   | port    | offset   |
+| output_fm | output_fm_ce1        | port    |          |
+| output_fm | output_fm_q1         | port    |          |
++-----------+----------------------+---------+----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++---------------------------------------------------------------------+-----+--------+-------------+------+---------+---------+
+| Name                                                                | DSP | Pragma | Variable    | Op   | Impl    | Latency |
++---------------------------------------------------------------------+-----+--------+-------------+------+---------+---------+
+| + conv                                                              | 10  |        |             |      |         |         |
+|   add_ln43_fu_341_p2                                                | -   |        | add_ln43    | add  | fabric  | 0       |
+|   add_ln40_1_fu_363_p2                                              | -   |        | add_ln40_1  | add  | fabric  | 0       |
+|   add_ln40_fu_903_p2                                                | -   |        | add_ln40    | add  | fabric  | 0       |
+|   empty_29_fu_960_p2                                                | -   |        | empty_29    | sub  | fabric  | 0       |
+|   mul_7ns_7ns_13_1_1_U102                                           | -   |        | mul_ln52    | mul  | auto    | 0       |
+|   add_ln41_fu_970_p2                                                | -   |        | add_ln41    | add  | fabric  | 0       |
+|   mul_2ns_9ns_10_1_1_U103                                           | -   |        | mul_ln52_1  | mul  | auto    | 0       |
+|   empty_30_fu_987_p2                                                | -   |        | empty_30    | add  | fabric  | 0       |
+|   mul_11s_5ns_12_1_1_U104                                           | 1   |        | mul_ln41    | mul  | auto    | 0       |
+|   add_ln42_fu_503_p2                                                | -   |        | add_ln42    | add  | fabric  | 0       |
+|   add_ln43_1_fu_509_p2                                              | -   |        | add_ln43_1  | add  | fabric  | 0       |
+|   ama_addmuladd_13ns_6ns_6ns_6ns_18_4_1_U105                        | 1   |        | add_ln52_9  | add  | dsp48   | 3       |
+|   ama_addmuladd_13ns_6ns_6ns_6ns_18_4_1_U105                        | 1   |        | mul_ln42    | mul  | dsp48   | 3       |
+|   add_ln47_fu_546_p2                                                | -   |        | add_ln47    | add  | fabric  | 0       |
+|   ama_addmuladd_13ns_6ns_6ns_6ns_18_4_1_U105                        | 1   |        | add_ln52_10 | add  | dsp48   | 3       |
+|   mul_8ns_10ns_17_1_1_U81                                           | -   |        | mul_ln52_2  | mul  | auto    | 0       |
+|   add_ln52_fu_587_p2                                                | -   |        | add_ln52    | add  | fabric  | 0       |
+|   mul_8ns_10ns_17_1_1_U83                                           | -   |        | mul_ln52_3  | mul  | auto    | 0       |
+|   add_ln52_1_fu_618_p2                                              | -   |        | add_ln52_1  | add  | fabric  | 0       |
+|   mul_8ns_10ns_17_1_1_U85                                           | -   |        | mul_ln52_4  | mul  | auto    | 0       |
+|   add_ln52_2_fu_649_p2                                              | -   |        | add_ln52_2  | add  | fabric  | 0       |
+|   mul_8ns_10ns_17_1_1_U87                                           | -   |        | mul_ln52_5  | mul  | auto    | 0       |
+|   add_ln52_3_fu_680_p2                                              | -   |        | add_ln52_3  | add  | fabric  | 0       |
+|   mul_8ns_10ns_17_1_1_U89                                           | -   |        | mul_ln52_6  | mul  | auto    | 0       |
+|   mul_8ns_10ns_17_1_1_U91                                           | -   |        | mul_ln52_7  | mul  | auto    | 0       |
+|   add_ln52_4_fu_735_p2                                              | -   |        | add_ln52_4  | add  | fabric  | 0       |
+|   mul_8ns_10ns_17_1_1_U93                                           | -   |        | mul_ln52_8  | mul  | auto    | 0       |
+|   add_ln52_5_fu_766_p2                                              | -   |        | add_ln52_5  | add  | fabric  | 0       |
+|   mul_8ns_10ns_17_1_1_U95                                           | -   |        | mul_ln52_9  | mul  | auto    | 0       |
+|   add_ln52_6_fu_797_p2                                              | -   |        | add_ln52_6  | add  | fabric  | 0       |
+|   mul_8ns_10ns_17_1_1_U97                                           | -   |        | mul_ln52_10 | mul  | auto    | 0       |
+|   add_ln52_7_fu_828_p2                                              | -   |        | add_ln52_7  | add  | fabric  | 0       |
+|   mul_8ns_10ns_17_1_1_U99                                           | -   |        | mul_ln52_11 | mul  | auto    | 0       |
+|   add_ln52_8_fu_859_p2                                              | -   |        | add_ln52_8  | add  | fabric  | 0       |
+|   mul_8ns_10ns_17_1_1_U101                                          | -   |        | mul_ln52_12 | mul  | auto    | 0       |
+|   add_ln42_1_fu_442_p2                                              | -   |        | add_ln42_1  | add  | fabric  | 0       |
+|   add_ln41_1_fu_456_p2                                              | -   |        | add_ln41_1  | add  | fabric  | 0       |
+|  + conv_Pipeline_VITIS_LOOP_31_1_VITIS_LOOP_32_2_VITIS_LOOP_33_3    | 1   |        |             |      |         |         |
+|    add_ln31_1_fu_143_p2                                             | -   |        | add_ln31_1  | add  | fabric  | 0       |
+|    add_ln31_fu_155_p2                                               | -   |        | add_ln31    | add  | fabric  | 0       |
+|    mul_7ns_7ns_13_1_1_U1                                            | -   |        | mul_ln34    | mul  | auto    | 0       |
+|    add_ln32_fu_243_p2                                               | -   |        | add_ln32    | add  | fabric  | 0       |
+|    ama_addmuladd_13ns_6ns_6ns_6ns_18_4_1_U2                         | 1   |        | add_ln34    | add  | dsp48   | 3       |
+|    ama_addmuladd_13ns_6ns_6ns_6ns_18_4_1_U2                         | 1   |        | mul_ln34_1  | mul  | dsp48   | 3       |
+|    ama_addmuladd_13ns_6ns_6ns_6ns_18_4_1_U2                         | 1   |        | add_ln34_1  | add  | dsp48   | 3       |
+|    add_ln33_fu_274_p2                                               | -   |        | add_ln33    | add  | fabric  | 0       |
+|    add_ln32_1_fu_175_p2                                             | -   |        | add_ln32_1  | add  | fabric  | 0       |
+|  + conv_Pipeline_VITIS_LOOP_61_10_VITIS_LOOP_62_11_VITIS_LOOP_63_12 | 1   |        |             |      |         |         |
+|    add_ln61_1_fu_152_p2                                             | -   |        | add_ln61_1  | add  | fabric  | 0       |
+|    add_ln61_fu_161_p2                                               | -   |        | add_ln61    | add  | fabric  | 0       |
+|    mul_7ns_7ns_13_1_1_U76                                           | -   |        | mul_ln64    | mul  | auto    | 0       |
+|    add_ln62_fu_249_p2                                               | -   |        | add_ln62    | add  | fabric  | 0       |
+|    ama_addmuladd_13ns_6ns_6ns_6ns_18_4_1_U77                        | 1   |        | add_ln64    | add  | dsp48   | 3       |
+|    ama_addmuladd_13ns_6ns_6ns_6ns_18_4_1_U77                        | 1   |        | mul_ln64_1  | mul  | dsp48   | 3       |
+|    ama_addmuladd_13ns_6ns_6ns_6ns_18_4_1_U77                        | 1   |        | add_ln64_1  | add  | dsp48   | 3       |
+|    add_ln63_fu_280_p2                                               | -   |        | add_ln63    | add  | fabric  | 0       |
+|    add_ln62_1_fu_181_p2                                             | -   |        | add_ln62_1  | add  | fabric  | 0       |
+|  + conv_Pipeline_VITIS_LOOP_48_8                                    | 6   |        |             |      |         |         |
+|    add_ln48_fu_1631_p2                                              | -   |        | add_ln48    | add  | fabric  | 0       |
+|    empty_16_fu_1641_p2                                              | -   |        | empty_16    | add  | fabric  | 0       |
+|    empty_17_fu_1666_p2                                              | -   |        | empty_17    | add  | fabric  | 0       |
+|    add_ln52_fu_1676_p2                                              | -   |        | add_ln52    | add  | fabric  | 0       |
+|    mul_mul_10ns_5ns_14_4_1_U20                                      | 1   |        | mul_ln52    | mul  | dsp48   | 3       |
+|    add_ln52_1_fu_1692_p2                                            | -   |        | add_ln52_1  | add  | fabric  | 0       |
+|    add_ln52_2_fu_1711_p2                                            | -   |        | add_ln52_2  | add  | fabric  | 0       |
+|    add_ln52_3_fu_1730_p2                                            | -   |        | add_ln52_3  | add  | fabric  | 0       |
+|    add_ln52_4_fu_1749_p2                                            | -   |        | add_ln52_4  | add  | fabric  | 0       |
+|    add_ln52_5_fu_1910_p2                                            | -   |        | add_ln52_5  | add  | fabric  | 0       |
+|    add_ln52_6_fu_1929_p2                                            | -   |        | add_ln52_6  | add  | fabric  | 0       |
+|    add_ln52_7_fu_1948_p2                                            | -   |        | add_ln52_7  | add  | fabric  | 0       |
+|    add_ln52_8_fu_1952_p2                                            | -   |        | add_ln52_8  | add  | fabric  | 0       |
+|    add_ln52_9_fu_1956_p2                                            | -   |        | add_ln52_9  | add  | fabric  | 0       |
+|    add_ln52_11_fu_1960_p2                                           | -   |        | add_ln52_11 | add  | fabric  | 0       |
+|    add_ln52_12_fu_1964_p2                                           | -   |        | add_ln52_12 | add  | fabric  | 0       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U8                                 | 3   |        | mul         | fmul | maxdsp  | 3       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U7                                | 2   |        | add         | fadd | fulldsp | 4       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U8                                 | 3   |        | mul_1       | fmul | maxdsp  | 3       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U7                                | 2   |        | add_1       | fadd | fulldsp | 4       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U8                                 | 3   |        | mul_2       | fmul | maxdsp  | 3       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U7                                | 2   |        | add_2       | fadd | fulldsp | 4       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U8                                 | 3   |        | mul_3       | fmul | maxdsp  | 3       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U7                                | 2   |        | add_3       | fadd | fulldsp | 4       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U8                                 | 3   |        | mul_4       | fmul | maxdsp  | 3       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U7                                | 2   |        | add_4       | fadd | fulldsp | 4       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U8                                 | 3   |        | mul_5       | fmul | maxdsp  | 3       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U7                                | 2   |        | add_5       | fadd | fulldsp | 4       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U8                                 | 3   |        | mul_6       | fmul | maxdsp  | 3       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U7                                | 2   |        | add_6       | fadd | fulldsp | 4       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U8                                 | 3   |        | mul_7       | fmul | maxdsp  | 3       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U7                                | 2   |        | add_7       | fadd | fulldsp | 4       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U8                                 | 3   |        | mul_8       | fmul | maxdsp  | 3       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U7                                | 2   |        | add_8       | fadd | fulldsp | 4       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U8                                 | 3   |        | mul_9       | fmul | maxdsp  | 3       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U7                                | 2   |        | add_9       | fadd | fulldsp | 4       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U8                                 | 3   |        | mul_s       | fmul | maxdsp  | 3       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U7                                | 2   |        | add_s       | fadd | fulldsp | 4       |
++---------------------------------------------------------------------+-----+--------+-------------+------+---------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+------------------------------------------+-------------------------------+
+| Type            | Options                                  | Location                      |
++-----------------+------------------------------------------+-------------------------------+
+| array_partition | variable=weights complete dim=4          | conv.cpp:24 in conv, weights  |
+| array_partition | variable=input_fm cyclic factor=11 dim=3 | conv.cpp:25 in conv, input_fm |
++-----------------+------------------------------------------+-------------------------------+
+
+
