@@ -1,0 +1,763 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Wed Oct  7 21:38:37 2026
+# Process ID: 115580
+# Current directory: /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.runs/conv_optim_conv_0_0_synth_1
+# Command line: vivado -log conv_optim_conv_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source conv_optim_conv_0_0.tcl
+# Log file: /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.runs/conv_optim_conv_0_0_synth_1/conv_optim_conv_0_0.vds
+# Journal file: /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.runs/conv_optim_conv_0_0_synth_1/vivado.jou
+# Running On: hunmin.ece.iit.edu, OS: Linux, CPU Frequency: 2599.841 MHz, CPU Physical cores: 24, Host memory: 404154 MB
+#-----------------------------------------------------------
+source conv_optim_conv_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1385.480 ; gain = 2.020 ; free physical = 184381 ; free virtual = 289818
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/results/part2/optim/vitis.prj/solution1/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/apps/Xilinx/Vivado/2022.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: conv_optim_conv_0_0
+Command: synth_design -top conv_optim_conv_0_0 -part xc7z020clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 117741
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/apps/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2099.848 ; gain = 368.617 ; free physical = 177768 ; free virtual = 283217
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1165.049; parent = 1045.584; children = 119.465
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3429.801; parent = 2118.660; children = 1311.141
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'conv_optim_conv_0_0' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ip/conv_optim_conv_0_0/synth/conv_optim_conv_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'conv' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv.v:10]
+INFO: [Synth 8-6157] synthesizing module 'conv_control_s_axi' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_control_s_axi.v:7]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_control_s_axi.v:233]
+INFO: [Synth 8-6155] done synthesizing module 'conv_control_s_axi' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_control_s_axi.v:7]
+INFO: [Synth 8-6157] synthesizing module 'conv_mem1_m_axi' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:11]
+INFO: [Synth 8-6157] synthesizing module 'conv_mem1_m_axi_store' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:781]
+INFO: [Synth 8-6157] synthesizing module 'conv_mem1_m_axi_fifo' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'conv_mem1_m_axi_srl' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mem1_m_axi_srl' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mem1_m_axi_fifo' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'conv_mem1_m_axi_fifo__parameterized0' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'conv_mem1_m_axi_mem' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:2783]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mem1_m_axi_mem' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:2783]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mem1_m_axi_fifo__parameterized0' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'conv_mem1_m_axi_fifo__parameterized1' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'conv_mem1_m_axi_srl__parameterized0' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mem1_m_axi_srl__parameterized0' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mem1_m_axi_fifo__parameterized1' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'conv_mem1_m_axi_fifo__parameterized2' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'conv_mem1_m_axi_srl__parameterized1' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mem1_m_axi_srl__parameterized1' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mem1_m_axi_fifo__parameterized2' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:2551]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mem1_m_axi_store' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:781]
+INFO: [Synth 8-6157] synthesizing module 'conv_mem1_m_axi_load' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:325]
+INFO: [Synth 8-6157] synthesizing module 'conv_mem1_m_axi_fifo__parameterized3' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'conv_mem1_m_axi_mem__parameterized0' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:2783]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mem1_m_axi_mem__parameterized0' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:2783]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mem1_m_axi_fifo__parameterized3' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:2551]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mem1_m_axi_load' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:325]
+INFO: [Synth 8-6157] synthesizing module 'conv_mem1_m_axi_write' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:1716]
+INFO: [Synth 8-6157] synthesizing module 'conv_mem1_m_axi_reg_slice' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:2449]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mem1_m_axi_reg_slice' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:2449]
+INFO: [Synth 8-6157] synthesizing module 'conv_mem1_m_axi_fifo__parameterized4' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'conv_mem1_m_axi_srl__parameterized2' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mem1_m_axi_srl__parameterized2' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mem1_m_axi_fifo__parameterized4' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'conv_mem1_m_axi_throttle' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:2224]
+INFO: [Synth 8-6157] synthesizing module 'conv_mem1_m_axi_reg_slice__parameterized0' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:2449]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mem1_m_axi_reg_slice__parameterized0' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:2449]
+INFO: [Synth 8-6157] synthesizing module 'conv_mem1_m_axi_fifo__parameterized5' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'conv_mem1_m_axi_srl__parameterized3' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mem1_m_axi_srl__parameterized3' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mem1_m_axi_fifo__parameterized5' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'conv_mem1_m_axi_fifo__parameterized6' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'conv_mem1_m_axi_srl__parameterized4' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mem1_m_axi_srl__parameterized4' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mem1_m_axi_fifo__parameterized6' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:2551]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mem1_m_axi_throttle' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:2224]
+INFO: [Synth 8-6157] synthesizing module 'conv_mem1_m_axi_reg_slice__parameterized1' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:2449]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mem1_m_axi_reg_slice__parameterized1' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:2449]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:2216]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:2219]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mem1_m_axi_write' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:1716]
+INFO: [Synth 8-6157] synthesizing module 'conv_mem1_m_axi_read' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:1332]
+INFO: [Synth 8-6157] synthesizing module 'conv_mem1_m_axi_reg_slice__parameterized2' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:2449]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mem1_m_axi_reg_slice__parameterized2' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:2449]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:1708]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mem1_m_axi_read' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:1332]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mem1_m_axi' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem1_m_axi.v:11]
+INFO: [Synth 8-6157] synthesizing module 'conv_mem2_m_axi' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:11]
+INFO: [Synth 8-6157] synthesizing module 'conv_mem2_m_axi_store' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:781]
+INFO: [Synth 8-6157] synthesizing module 'conv_mem2_m_axi_fifo' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'conv_mem2_m_axi_srl' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mem2_m_axi_srl' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mem2_m_axi_fifo' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'conv_mem2_m_axi_fifo__parameterized0' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'conv_mem2_m_axi_mem' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:2783]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mem2_m_axi_mem' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:2783]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mem2_m_axi_fifo__parameterized0' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'conv_mem2_m_axi_fifo__parameterized1' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'conv_mem2_m_axi_srl__parameterized0' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mem2_m_axi_srl__parameterized0' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mem2_m_axi_fifo__parameterized1' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'conv_mem2_m_axi_fifo__parameterized2' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'conv_mem2_m_axi_srl__parameterized1' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mem2_m_axi_srl__parameterized1' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mem2_m_axi_fifo__parameterized2' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:2551]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mem2_m_axi_store' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:781]
+INFO: [Synth 8-6157] synthesizing module 'conv_mem2_m_axi_load' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:325]
+INFO: [Synth 8-6157] synthesizing module 'conv_mem2_m_axi_fifo__parameterized3' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'conv_mem2_m_axi_mem__parameterized0' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:2783]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mem2_m_axi_mem__parameterized0' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:2783]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mem2_m_axi_fifo__parameterized3' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:2551]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mem2_m_axi_load' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:325]
+INFO: [Synth 8-6157] synthesizing module 'conv_mem2_m_axi_write' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:1716]
+INFO: [Synth 8-6157] synthesizing module 'conv_mem2_m_axi_reg_slice' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:2449]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mem2_m_axi_reg_slice' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:2449]
+INFO: [Synth 8-6157] synthesizing module 'conv_mem2_m_axi_fifo__parameterized4' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'conv_mem2_m_axi_srl__parameterized2' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mem2_m_axi_srl__parameterized2' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mem2_m_axi_fifo__parameterized4' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'conv_mem2_m_axi_throttle' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:2224]
+INFO: [Synth 8-6157] synthesizing module 'conv_mem2_m_axi_reg_slice__parameterized0' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:2449]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mem2_m_axi_reg_slice__parameterized0' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:2449]
+INFO: [Synth 8-6157] synthesizing module 'conv_mem2_m_axi_fifo__parameterized5' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'conv_mem2_m_axi_srl__parameterized3' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mem2_m_axi_srl__parameterized3' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mem2_m_axi_fifo__parameterized5' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'conv_mem2_m_axi_fifo__parameterized6' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:2551]
+INFO: [Synth 8-6157] synthesizing module 'conv_mem2_m_axi_srl__parameterized4' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mem2_m_axi_srl__parameterized4' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:2729]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mem2_m_axi_fifo__parameterized6' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:2551]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mem2_m_axi_throttle' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:2224]
+INFO: [Synth 8-6157] synthesizing module 'conv_mem2_m_axi_reg_slice__parameterized1' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:2449]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mem2_m_axi_reg_slice__parameterized1' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:2449]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:2216]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:2219]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mem2_m_axi_write' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:1716]
+INFO: [Synth 8-6157] synthesizing module 'conv_mem2_m_axi_read' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:1332]
+INFO: [Synth 8-6157] synthesizing module 'conv_mem2_m_axi_reg_slice__parameterized2' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:2449]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mem2_m_axi_reg_slice__parameterized2' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:2449]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:1708]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mem2_m_axi_read' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:1332]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mem2_m_axi' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mem2_m_axi.v:11]
+INFO: [Synth 8-6157] synthesizing module 'conv_Loop_VITIS_LOOP_24_1_proc1' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_Loop_VITIS_LOOP_24_1_proc1.v:10]
+INFO: [Synth 8-6157] synthesizing module 'conv_Loop_VITIS_LOOP_24_1_proc1_local_output_RAM_AUTO_1R1W' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_Loop_VITIS_LOOP_24_1_proc1_local_output_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'conv_Loop_VITIS_LOOP_24_1_proc1_local_output_RAM_AUTO_1R1W' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_Loop_VITIS_LOOP_24_1_proc1_local_output_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6157] synthesizing module 'conv_Loop_VITIS_LOOP_24_1_proc1_local_weights_RAM_AUTO_1R1W' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_Loop_VITIS_LOOP_24_1_proc1_local_weights_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'conv_Loop_VITIS_LOOP_24_1_proc1_local_weights_RAM_AUTO_1R1W' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_Loop_VITIS_LOOP_24_1_proc1_local_weights_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6157] synthesizing module 'conv_Loop_VITIS_LOOP_24_1_proc1_local_input_RAM_AUTO_1R1W' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_Loop_VITIS_LOOP_24_1_proc1_local_input_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'conv_Loop_VITIS_LOOP_24_1_proc1_local_input_RAM_AUTO_1R1W' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_Loop_VITIS_LOOP_24_1_proc1_local_input_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6157] synthesizing module 'conv_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_29_2_VITIS_LOOP_31_3' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_29_2_VITIS_LOOP_31_3.v:10]
+INFO: [Synth 8-6157] synthesizing module 'conv_flow_control_loop_pipe_sequential_init' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_flow_control_loop_pipe_sequential_init.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'conv_flow_control_loop_pipe_sequential_init' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_flow_control_loop_pipe_sequential_init.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'conv_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_29_2_VITIS_LOOP_31_3' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_29_2_VITIS_LOOP_31_3.v:10]
+INFO: [Synth 8-6157] synthesizing module 'conv_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_41_5_VITIS_LOOP_43_6' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_41_5_VITIS_LOOP_43_6.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'conv_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_41_5_VITIS_LOOP_43_6' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_41_5_VITIS_LOOP_43_6.v:10]
+INFO: [Synth 8-6157] synthesizing module 'conv_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_51_7_VITIS_LOOP_53_8' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_51_7_VITIS_LOOP_53_8.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'conv_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_51_7_VITIS_LOOP_53_8' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_51_7_VITIS_LOOP_53_8.v:10]
+INFO: [Synth 8-6157] synthesizing module 'conv_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_85_13_VITIS_LOOP_87_14' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_85_13_VITIS_LOOP_87_14.v:10]
+INFO: [Synth 8-6157] synthesizing module 'conv_fcmp_32ns_32ns_1_2_no_dsp_1' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_fcmp_32ns_32ns_1_2_no_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'conv_fcmp_32ns_32ns_1_2_no_dsp_1_ip' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/ip/conv_fcmp_32ns_32ns_1_2_no_dsp_1_ip.v:53]
+INFO: [Synth 8-6157] synthesizing module 'LUT1' [/apps/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:78971]
+INFO: [Synth 8-6155] done synthesizing module 'LUT1' (0#1) [/apps/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:78971]
+INFO: [Synth 8-6155] done synthesizing module 'conv_fcmp_32ns_32ns_1_2_no_dsp_1_ip' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/ip/conv_fcmp_32ns_32ns_1_2_no_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'conv_fcmp_32ns_32ns_1_2_no_dsp_1' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_fcmp_32ns_32ns_1_2_no_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'conv_mux_556_32_1_1' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mux_556_32_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mux_556_32_1_1' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mux_556_32_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'conv_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_85_13_VITIS_LOOP_87_14' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_85_13_VITIS_LOOP_87_14.v:10]
+INFO: [Synth 8-6157] synthesizing module 'conv_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_66_11_VITIS_LOOP_68_12' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_66_11_VITIS_LOOP_68_12.v:10]
+INFO: [Synth 8-6157] synthesizing module 'conv_fadd_32ns_32ns_32_5_full_dsp_1' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_fadd_32ns_32ns_32_5_full_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'conv_fadd_32ns_32ns_32_5_full_dsp_1_ip' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/ip/conv_fadd_32ns_32ns_32_5_full_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'conv_fadd_32ns_32ns_32_5_full_dsp_1_ip' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/ip/conv_fadd_32ns_32ns_32_5_full_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'conv_fadd_32ns_32ns_32_5_full_dsp_1' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_fadd_32ns_32ns_32_5_full_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'conv_fmul_32ns_32ns_32_4_max_dsp_1' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_fmul_32ns_32ns_32_4_max_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'conv_fmul_32ns_32ns_32_4_max_dsp_1_ip' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/ip/conv_fmul_32ns_32ns_32_4_max_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'conv_fmul_32ns_32ns_32_4_max_dsp_1_ip' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/ip/conv_fmul_32ns_32ns_32_4_max_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'conv_fmul_32ns_32ns_32_4_max_dsp_1' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_fmul_32ns_32ns_32_4_max_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'conv_mux_114_32_1_1' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mux_114_32_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mux_114_32_1_1' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mux_114_32_1_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'conv_mux_2008_32_1_1' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mux_2008_32_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mux_2008_32_1_1' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_mux_2008_32_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'conv_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_66_11_VITIS_LOOP_68_12' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_66_11_VITIS_LOOP_68_12.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'conv_Loop_VITIS_LOOP_24_1_proc1' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_Loop_VITIS_LOOP_24_1_proc1.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'conv' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'conv_optim_conv_0_0' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ip/conv_optim_conv_0_0/synth/conv_optim_conv_0_0.v:53]
+WARNING: [Synth 8-6014] Unused sequential element int_ap_done_reg was removed.  [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ipshared/876a/hdl/verilog/conv_control_s_axi.v:318]
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized11 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized11 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized11 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized11 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized11 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized60 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized60 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized60 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized60 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized60 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DEC_OP_STATE[11] in module flt_dec_op_lat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DEC_OP_STATE[10] in module flt_dec_op_lat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DEC_OP_STATE[9] in module flt_dec_op_lat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DEC_OP_STATE[8] in module flt_dec_op_lat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DIVIDE_BY_ZERO_IN in module flt_dec_op_lat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized34 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized34 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized34 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized34 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized34 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized77 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized77 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized77 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized77 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized77 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized75 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized75 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized75 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized75 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized75 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized20 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized20 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized20 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized20 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized20 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized18 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized18 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized18 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized18 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized18 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module dsp48e1_wrapper__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SIGN in module flt_round_dsp_opt_full is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized73 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized73 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized73 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized73 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized73 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized54 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized54 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized54 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized54 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized54 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized52 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized52 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized52 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized52 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized52 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized38 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized38 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized38 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized69 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized69 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized69 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized36 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized36 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized36 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized67 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized67 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized67 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized24 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized24 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized24 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CARRYS_OUT[0] in module compare_eq_im__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[31] in module special_detect__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized65 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized65 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized65 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized65 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized65 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized22 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized22 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized22 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized22 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized22 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized63 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized63 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized63 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized63 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized63 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized9 is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 2418.664 ; gain = 687.434 ; free physical = 177563 ; free virtual = 283031
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1405.421; parent = 1285.956; children = 119.465
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3729.801; parent = 2418.660; children = 1311.141
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 2433.504 ; gain = 702.273 ; free physical = 177721 ; free virtual = 283189
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1405.421; parent = 1285.956; children = 119.465
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3744.645; parent = 2433.504; children = 1311.141
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 2433.504 ; gain = 702.273 ; free physical = 177718 ; free virtual = 283186
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1405.421; parent = 1285.956; children = 119.465
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3744.645; parent = 2433.504; children = 1311.141
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.88 ; elapsed = 00:00:00.89 . Memory (MB): peak = 2439.441 ; gain = 0.000 ; free physical = 177385 ; free virtual = 282878
+INFO: [Netlist 29-17] Analyzing 152 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ip/conv_optim_conv_0_0/constraints/conv_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.gen/sources_1/bd/conv_optim/ip/conv_optim_conv_0_0/constraints/conv_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.runs/conv_optim_conv_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.runs/conv_optim_conv_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2581.270 ; gain = 0.000 ; free physical = 177330 ; free virtual = 282824
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 3 instances were transformed.
+  FDE => FDRE: 3 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.66 . Memory (MB): peak = 2590.176 ; gain = 8.906 ; free physical = 177599 ; free virtual = 283092
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/apps/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:45 ; elapsed = 00:00:45 . Memory (MB): peak = 2590.176 ; gain = 858.945 ; free physical = 177544 ; free virtual = 283031
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1405.421; parent = 1285.956; children = 119.735
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3869.301; parent = 2558.160; children = 1311.141
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:45 ; elapsed = 00:00:45 . Memory (MB): peak = 2590.176 ; gain = 858.945 ; free physical = 177555 ; free virtual = 283042
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1405.421; parent = 1285.956; children = 119.735
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3869.301; parent = 2558.160; children = 1311.141
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.runs/conv_optim_conv_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:45 ; elapsed = 00:00:45 . Memory (MB): peak = 2590.176 ; gain = 858.945 ; free physical = 177582 ; free virtual = 283069
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1405.421; parent = 1285.956; children = 119.735
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3869.301; parent = 2558.160; children = 1311.141
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'conv_control_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'conv_control_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'conv_mem1_m_axi_reg_slice'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'conv_mem1_m_axi_reg_slice__parameterized0'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'conv_mem1_m_axi_reg_slice__parameterized1'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'conv_mem1_m_axi_reg_slice__parameterized2'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'conv_mem2_m_axi_reg_slice'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'conv_mem2_m_axi_reg_slice__parameterized0'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'conv_mem2_m_axi_reg_slice__parameterized1'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'conv_mem2_m_axi_reg_slice__parameterized2'
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               11
+*
+                  WRIDLE |                             0010 |                               00
+                  WRDATA |                             0100 |                               01
+                  WRRESP |                             1000 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'conv_control_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                               10
+*
+                  RDIDLE |                              010 |                               00
+                  RDDATA |                              100 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'conv_control_s_axi'
+INFO: [Synth 8-7082] The signal mem_reg is implemented as Block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The depth (4 address bits) is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'conv_mem1_m_axi_reg_slice'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'conv_mem1_m_axi_reg_slice__parameterized0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'conv_mem1_m_axi_reg_slice__parameterized1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'conv_mem1_m_axi_reg_slice__parameterized2'
+INFO: [Synth 8-7082] The signal mem_reg is implemented as Block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The depth (4 address bits) is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'conv_mem2_m_axi_reg_slice'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'conv_mem2_m_axi_reg_slice__parameterized0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'conv_mem2_m_axi_reg_slice__parameterized1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'conv_mem2_m_axi_reg_slice__parameterized2'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:55 ; elapsed = 00:00:56 . Memory (MB): peak = 2590.176 ; gain = 858.945 ; free physical = 180884 ; free virtual = 286367
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1405.421; parent = 1285.956; children = 121.146
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3869.301; parent = 2558.160; children = 1311.141
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'inst/Loop_VITIS_LOOP_24_1_proc1_U0/grp_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_85_13_VITIS_LOOP_87_14_fu_12344/fcmp_32ns_32ns_1_2_no_dsp_1_U495/conv_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized5) to 'inst/Loop_VITIS_LOOP_24_1_proc1_U0/grp_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_85_13_VITIS_LOOP_87_14_fu_12344/fcmp_32ns_32ns_1_2_no_dsp_1_U495/conv_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u/inst/i_synth/DELAY_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/Loop_VITIS_LOOP_24_1_proc1_U0/grp_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_85_13_VITIS_LOOP_87_14_fu_12344/fcmp_32ns_32ns_1_2_no_dsp_1_U495/conv_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized5) to 'inst/Loop_VITIS_LOOP_24_1_proc1_U0/grp_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_85_13_VITIS_LOOP_87_14_fu_12344/fcmp_32ns_32ns_1_2_no_dsp_1_U495/conv_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u/inst/i_synth/DELAY_UNDERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/Loop_VITIS_LOOP_24_1_proc1_U0/grp_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_85_13_VITIS_LOOP_87_14_fu_12344/fcmp_32ns_32ns_1_2_no_dsp_1_U495/conv_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized5) to 'inst/Loop_VITIS_LOOP_24_1_proc1_U0/grp_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_85_13_VITIS_LOOP_87_14_fu_12344/fcmp_32ns_32ns_1_2_no_dsp_1_U495/conv_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/Loop_VITIS_LOOP_24_1_proc1_U0/grp_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_85_13_VITIS_LOOP_87_14_fu_12344/fcmp_32ns_32ns_1_2_no_dsp_1_U495/conv_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized5) to 'inst/Loop_VITIS_LOOP_24_1_proc1_U0/grp_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_85_13_VITIS_LOOP_87_14_fu_12344/fcmp_32ns_32ns_1_2_no_dsp_1_U495/conv_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/Loop_VITIS_LOOP_24_1_proc1_U0/grp_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_66_11_VITIS_LOOP_68_12_fu_12406/fadd_32ns_32ns_32_5_full_dsp_1_U272/conv_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/SUB_DELAY' (delay__parameterized5) to 'inst/Loop_VITIS_LOOP_24_1_proc1_U0/grp_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_66_11_VITIS_LOOP_68_12_fu_12406/fadd_32ns_32ns_32_5_full_dsp_1_U272/conv_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/SUB_ADD_IP_DELAY'
+INFO: [Synth 8-223] decloning instance 'inst/Loop_VITIS_LOOP_24_1_proc1_U0/grp_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_66_11_VITIS_LOOP_68_12_fu_12406/fadd_32ns_32ns_32_5_full_dsp_1_U272/conv_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized5) to 'inst/Loop_VITIS_LOOP_24_1_proc1_U0/grp_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_66_11_VITIS_LOOP_68_12_fu_12406/fadd_32ns_32ns_32_5_full_dsp_1_U272/conv_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/Loop_VITIS_LOOP_24_1_proc1_U0/grp_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_66_11_VITIS_LOOP_68_12_fu_12406/fadd_32ns_32ns_32_5_full_dsp_1_U272/conv_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized5) to 'inst/Loop_VITIS_LOOP_24_1_proc1_U0/grp_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_66_11_VITIS_LOOP_68_12_fu_12406/fadd_32ns_32ns_32_5_full_dsp_1_U272/conv_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/Loop_VITIS_LOOP_24_1_proc1_U0/grp_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_66_11_VITIS_LOOP_68_12_fu_12406/fmul_32ns_32ns_32_4_max_dsp_1_U273/conv_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized5) to 'inst/Loop_VITIS_LOOP_24_1_proc1_U0/grp_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_66_11_VITIS_LOOP_68_12_fu_12406/fmul_32ns_32ns_32_4_max_dsp_1_U273/conv_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/Loop_VITIS_LOOP_24_1_proc1_U0/grp_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_66_11_VITIS_LOOP_68_12_fu_12406/fmul_32ns_32ns_32_4_max_dsp_1_U273/conv_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized5) to 'inst/Loop_VITIS_LOOP_24_1_proc1_U0/grp_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_66_11_VITIS_LOOP_68_12_fu_12406/fmul_32ns_32ns_32_4_max_dsp_1_U273/conv_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+INFO: [Synth 8-7082] The signal store_unit/buff_wdata/U_fifo_mem/mem_reg is implemented as Block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The depth (4 address bits) is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
+INFO: [Synth 8-5784] Optimized 36 bits of RAM "store_unit/buff_wdata/U_fifo_mem/mem_reg" due to constant propagation. Old ram width 36 bits, new ram width 0 bits.
+WARNING: [Synth 8-5785] Removed RAM "store_unit/buff_wdata/U_fifo_mem/mem_reg" due to constant propagation. Write data stuck at zero 
+WARNING: [Synth 8-3332] Sequential element (control_s_axi_U/FSM_onehot_wstate_reg[0]) is unused and will be removed from module conv.
+WARNING: [Synth 8-3332] Sequential element (control_s_axi_U/FSM_onehot_rstate_reg[0]) is unused and will be removed from module conv.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/FSM_sequential_state_reg[1]) is unused and will be removed from module conv_mem2_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/FSM_sequential_state_reg[0]) is unused and will be removed from module conv_mem2_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/wreq_throttle/rs_req/FSM_sequential_state_reg[1]) is unused and will be removed from module conv_mem2_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/wreq_throttle/rs_req/FSM_sequential_state_reg[0]) is unused and will be removed from module conv_mem2_m_axi.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_15_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_15_viv__parameterized1.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:44 ; elapsed = 00:01:49 . Memory (MB): peak = 2590.176 ; gain = 858.945 ; free physical = 185520 ; free virtual = 291020
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1405.421; parent = 1285.956; children = 122.487
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3869.301; parent = 2558.160; children = 1311.141
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:54 ; elapsed = 00:01:59 . Memory (MB): peak = 2590.176 ; gain = 858.945 ; free physical = 185406 ; free virtual = 290907
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1416.360; parent = 1293.875; children = 122.487
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3869.301; parent = 2558.160; children = 1311.141
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:02:00 ; elapsed = 00:02:06 . Memory (MB): peak = 2590.176 ; gain = 858.945 ; free physical = 185352 ; free virtual = 290852
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1453.841; parent = 1331.355; children = 122.487
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3869.301; parent = 2558.160; children = 1311.141
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance inst/mem1_m_axi_U/load_unit/buff_rdata/U_fifo_mem/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/mem2_m_axi_U/load_unit/buff_rdata/U_fifo_mem/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_1_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_1_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_2_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_2_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_3_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_3_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_4_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_4_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_5_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_5_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_6_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_6_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_7_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_7_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_8_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_8_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_9_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_9_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_10_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_10_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_11_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_11_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_12_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_12_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_13_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_13_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_14_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_14_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_15_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_15_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_16_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_16_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_17_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_17_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_18_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_18_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_19_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_19_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_20_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_20_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_21_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_21_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_22_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_22_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_23_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_23_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_24_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_24_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_25_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_25_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_26_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_26_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_27_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_27_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_28_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_28_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_29_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_29_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_30_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_30_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_31_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_31_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_32_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_32_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_33_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_33_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_34_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_34_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_35_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_35_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_36_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_36_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_37_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_37_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_38_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_38_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_39_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_39_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_40_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_40_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_41_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_41_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_42_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_42_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_43_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_43_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_44_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_44_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_45_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_45_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_46_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_46_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_47_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_47_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_48_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_VITIS_LOOP_24_1_proc1_U0/local_output_48_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Common 17-14] Message 'Synth 8-7052' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:02:10 ; elapsed = 00:02:16 . Memory (MB): peak = 2590.176 ; gain = 858.945 ; free physical = 185369 ; free virtual = 290870
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1453.841; parent = 1331.355; children = 122.487
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3869.301; parent = 2558.160; children = 1311.141
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:18 ; elapsed = 00:02:24 . Memory (MB): peak = 2590.176 ; gain = 858.945 ; free physical = 185296 ; free virtual = 290796
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1453.841; parent = 1331.355; children = 122.487
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3869.301; parent = 2558.160; children = 1311.141
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:18 ; elapsed = 00:02:25 . Memory (MB): peak = 2590.176 ; gain = 858.945 ; free physical = 185296 ; free virtual = 290797
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1453.841; parent = 1331.355; children = 122.487
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3869.301; parent = 2558.160; children = 1311.141
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:21 ; elapsed = 00:02:28 . Memory (MB): peak = 2590.176 ; gain = 858.945 ; free physical = 185302 ; free virtual = 290801
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1453.841; parent = 1331.355; children = 122.487
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3869.301; parent = 2558.160; children = 1311.141
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:22 ; elapsed = 00:02:28 . Memory (MB): peak = 2590.176 ; gain = 858.945 ; free physical = 185333 ; free virtual = 290832
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1453.841; parent = 1331.355; children = 122.487
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3869.301; parent = 2558.160; children = 1311.141
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:22 ; elapsed = 00:02:29 . Memory (MB): peak = 2590.176 ; gain = 858.945 ; free physical = 185332 ; free virtual = 290831
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1453.841; parent = 1331.355; children = 122.487
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3869.301; parent = 2558.160; children = 1311.141
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:22 ; elapsed = 00:02:29 . Memory (MB): peak = 2590.176 ; gain = 858.945 ; free physical = 185404 ; free virtual = 290902
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1453.841; parent = 1331.355; children = 122.487
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3869.301; parent = 2558.160; children = 1311.141
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++--------------------------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                     | DSP Mapping     | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------------------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|dsp48e1_wrapper                 | Dynamic         | -      | -      | -      | -      | 40     | -    | -    | -    | -    | 0     | 0    | 1    | 
+|dsp48e1_wrapper__parameterized0 | C+A'*B'         | 24     | 16     | 35     | -      | 35     | 1    | 1    | 1    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized1 | (A*B)'          | 24     | 17     | -      | -      | 41     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper__parameterized2 | PCIN>>17+(A*B)' | 0      | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|dsp48e1_wrapper__parameterized3 | PCIN+A:B+C      | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++--------------------------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |   241|
+|2     |DSP48E1  |     5|
+|7     |LUT1     |    80|
+|8     |LUT2     |   317|
+|9     |LUT3     |  4556|
+|10    |LUT4     |  1048|
+|11    |LUT5     |   729|
+|12    |LUT6     |  3525|
+|13    |MUXCY    |   105|
+|14    |MUXF7    |  1453|
+|15    |MUXF8    |   576|
+|16    |RAM16X1S |   352|
+|17    |RAMB18E1 |   258|
+|20    |SRL16E   |   112|
+|21    |SRLC32E  |   615|
+|22    |XORCY    |    25|
+|23    |FDE      |     3|
+|24    |FDRE     |  6679|
+|25    |FDSE     |     9|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:22 ; elapsed = 00:02:29 . Memory (MB): peak = 2590.176 ; gain = 858.945 ; free physical = 185406 ; free virtual = 290904
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1453.841; parent = 1331.355; children = 122.487
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3869.301; parent = 2558.160; children = 1311.141
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 473 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:06 ; elapsed = 00:02:17 . Memory (MB): peak = 2590.176 ; gain = 702.273 ; free physical = 185462 ; free virtual = 290961
+Synthesis Optimization Complete : Time (s): cpu = 00:02:22 ; elapsed = 00:02:29 . Memory (MB): peak = 2590.176 ; gain = 858.945 ; free physical = 185462 ; free virtual = 290961
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.35 ; elapsed = 00:00:00.37 . Memory (MB): peak = 2590.176 ; gain = 0.000 ; free physical = 185563 ; free virtual = 291062
+INFO: [Netlist 29-17] Analyzing 3018 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2590.176 ; gain = 0.000 ; free physical = 185498 ; free virtual = 290997
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 384 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 29 instances
+  FDE => FDRE: 3 instances
+  RAM16X1S => RAM32X1S (RAMS32): 352 instances
+
+Synth Design complete, checksum: ddcbb550
+INFO: [Common 17-83] Releasing license: Synthesis
+314 Infos, 115 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:38 ; elapsed = 00:02:41 . Memory (MB): peak = 2590.176 ; gain = 1198.758 ; free physical = 185763 ; free virtual = 291262
+INFO: [Common 17-1381] The checkpoint '/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.runs/conv_optim_conv_0_0_synth_1/conv_optim_conv_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP conv_optim_conv_0_0, cache-ID = d135b7156c0e1063
+INFO: [Coretcl 2-1174] Renamed 445 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_optim/conv_optim.runs/conv_optim_conv_0_0_synth_1/conv_optim_conv_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file conv_optim_conv_0_0_utilization_synth.rpt -pb conv_optim_conv_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Oct  7 21:41:42 2026...
