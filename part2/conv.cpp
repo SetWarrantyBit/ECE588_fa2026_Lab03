@@ -1,96 +1,68 @@
 #include "conv.hpp"
 
+// Update independent output columns in consecutive cycles. Each pixel retains
+// the original m, kr, kc accumulation order.
+static void accumulate_channel(
+    const fm_t input[I][I], const wt_t kernel[K][K],
+    fm_t partial[O][O])
+{
+#pragma HLS INLINE off
+    ROW: for (int r = 0; r < O; ++r) {
+        KR: for (int kr = 0; kr < K; ++kr) {
+            KC: for (int kc = 0; kc < K; ++kc) {
+#pragma HLS LOOP_FLATTEN off
+                wt_t weight = kernel[kr][kc];
+                COL: for (int c = 0; c < O; ++c) {
+#pragma HLS PIPELINE II=1
+                    fm_t product;
+                    fm_t updated;
+#pragma HLS BIND_OP variable=product op=fmul impl=maxdsp latency=5
+#pragma HLS BIND_OP variable=updated op=fadd impl=fulldsp latency=8
+                    product = input[r * 4 + kr][c * 4 + kc] * weight;
+                    updated = partial[r][c] + product;
+                    partial[r][c] = updated;
+                }
+            }
+        }
+    }
+}
+
 void conv(
     fm_t input_fm[M][I][I],
     wt_t weights[F][M][K][K],
     wt_t biases[F],
     fm_t output_fm[N][O][O])
 {
-    const int stride = 4;
     #pragma HLS INTERFACE mode=m_axi port=input_fm  offset=slave bundle=mem1
     #pragma HLS INTERFACE mode=m_axi port=weights   offset=slave bundle=mem2
     #pragma HLS INTERFACE mode=m_axi port=biases    offset=slave bundle=mem2
     #pragma HLS INTERFACE mode=m_axi port=output_fm offset=slave bundle=mem1
     #pragma HLS INTERFACE mode=s_axilite port=return
-
-    fm_t local_input[I][I];
-    wt_t local_weights[K][K];
-    fm_t local_output[O][O];
-    #pragma HLS ARRAY_PARTITION variable=local_input complete dim=2
-    #pragma HLS ARRAY_PARTITION variable=local_weights complete dim=2
-    #pragma HLS ARRAY_PARTITION variable=local_output complete dim=2   
     
     for (int n = 0; n < N; n++)
     {
-        // bias
-        wt_t bias = biases[n];
-
         for (int out_r = 0; out_r < O; out_r++)
         {
             for (int out_c = 0; out_c < O; out_c++)
             {
-                #pragma HLS PIPELINE II=1
-                local_output[out_r][out_c] = bias;
-            }
-        }
+                fm_t sum = biases[n];
 
-        for (int m = 0; m < M; m++)
-        {
-            // input channel
-            for (int r = 0; r < I; r++)
-            {
-                for (int c = 0; c < I; c++)
+                for (int m = 0; m < M; m++)
                 {
-                    #pragma HLS PIPELINE II=1
-                    local_input[r][c] = input_fm[m][r][c];
-                }
-            }
-
-            // local weights
-            for (int kr = 0; kr < K; kr++)
-            {
-                for (int kc = 0; kc < K; kc++)
-                {
-                    #pragma HLS PIPELINE II=1
-                    local_weights[kr][kc] = weights[n][m][kr][kc];
-                }
-            }
-
-            for (int out_r = 0; out_r < O; out_r++)
-            {
-                for (int out_c = 0; out_c < O; out_c++)
-                {
-                    fm_t sum = local_output[out_r][out_c];
-
                     for (int kr = 0; kr < K; kr++)
                     {
                         for (int kc = 0; kc < K; kc++)
                         {
-                            #pragma HLS PIPELINE II=1
+                            int in_r = out_r * 4 + kr;
+                            int in_c = out_c * 4 + kc;
 
-                            int in_r = out_r * stride + kr;
-                            int in_c = out_c * stride + kc;
-
-                            sum += local_input[in_r][in_c] *
-                                   local_weights[kr][kc];
+                            sum += input_fm[m][in_r][in_c] *
+                                   weights[n][m][kr][kc];
                         }
                     }
-
-                    local_output[out_r][out_c] = sum;
                 }
-            }
-        }
 
-        // Apply ReLU only after accumulating all input channels.
-        for (int out_r = 0; out_r < O; out_r++)
-        {
-            for (int out_c = 0; out_c < O; out_c++)
-            {
-                #pragma HLS PIPELINE II=1
-
-                fm_t result = local_output[out_r][out_c];
-                output_fm[n][out_r][out_c] =
-                    (result > 0.0f) ? result : 0.0f;
+                output_fm[n][out_r][out_c] = (sum > 0.0f) ? sum : 0.0f;
             }
         }
 
