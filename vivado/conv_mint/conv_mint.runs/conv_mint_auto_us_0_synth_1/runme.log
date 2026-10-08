@@ -1,0 +1,429 @@
+
+*** Running vivado
+    with args -log conv_mint_auto_us_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source conv_mint_auto_us_0.tcl
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source conv_mint_auto_us_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1445.996 ; gain = 2.020 ; free physical = 185710 ; free virtual = 290320
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/results/part2/mint/vitis.prj/solution1/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/apps/Xilinx/Vivado/2022.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: conv_mint_auto_us_0
+Command: synth_design -top conv_mint_auto_us_0 -part xc7z020clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 148524
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/apps/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2101.277 ; gain = 371.617 ; free physical = 179080 ; free virtual = 283701
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1158.641; parent = 1039.141; children = 119.500
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3386.414; parent = 2111.184; children = 1275.230
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'conv_mint_auto_us_0' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.gen/sources_1/bd/conv_mint/ip/conv_mint_auto_us_0/synth/conv_mint_auto_us_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_27_top' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.gen/sources_1/bd/conv_mint/ipshared/4675/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:14461]
+INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_27_axi_upsizer' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.gen/sources_1/bd/conv_mint/ipshared/4675/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:7037]
+INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_27_w_upsizer' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.gen/sources_1/bd/conv_mint/ipshared/4675/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:5562]
+INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_27_w_upsizer' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.gen/sources_1/bd/conv_mint/ipshared/4675/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:5562]
+INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_27_a_upsizer' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.gen/sources_1/bd/conv_mint/ipshared/4675/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:3602]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_command_fifo' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.gen/sources_1/bd/conv_mint/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:654]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_command_fifo' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.gen/sources_1/bd/conv_mint/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:654]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_command_fifo__parameterized0' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.gen/sources_1/bd/conv_mint/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:654]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_command_fifo__parameterized0' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.gen/sources_1/bd/conv_mint/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:654]
+INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_27_a_upsizer' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.gen/sources_1/bd/conv_mint/ipshared/4675/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:3602]
+INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_27_r_upsizer' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.gen/sources_1/bd/conv_mint/ipshared/4675/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:4652]
+INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_27_r_upsizer' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.gen/sources_1/bd/conv_mint/ipshared/4675/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:4652]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_27_axi_register_slice' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.gen/sources_1/bd/conv_mint/ipshared/f0b4/hdl/axi_register_slice_v2_1_vl_rfs.v:3725]
+INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.gen/sources_1/bd/conv_mint/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.gen/sources_1/bd/conv_mint/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:59]
+INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.gen/sources_1/bd/conv_mint/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:473]
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.gen/sources_1/bd/conv_mint/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:473]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_27_axic_register_slice' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.gen/sources_1/bd/conv_mint/ipshared/f0b4/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_27_axic_register_slice' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.gen/sources_1/bd/conv_mint/ipshared/f0b4/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_27_axic_register_slice__parameterized0' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.gen/sources_1/bd/conv_mint/ipshared/f0b4/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_27_axic_register_slice__parameterized0' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.gen/sources_1/bd/conv_mint/ipshared/f0b4/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_27_axic_register_slice__parameterized1' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.gen/sources_1/bd/conv_mint/ipshared/f0b4/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_27_axic_register_slice__parameterized1' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.gen/sources_1/bd/conv_mint/ipshared/f0b4/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_27_axic_register_slice__parameterized2' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.gen/sources_1/bd/conv_mint/ipshared/f0b4/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_27_axic_register_slice__parameterized2' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.gen/sources_1/bd/conv_mint/ipshared/f0b4/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_27_axi_register_slice' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.gen/sources_1/bd/conv_mint/ipshared/f0b4/hdl/axi_register_slice_v2_1_vl_rfs.v:3725]
+WARNING: [Synth 8-7071] port 'aclk2x' of module 'axi_register_slice_v2_1_27_axi_register_slice' is unconnected for instance 'mi_register_slice_inst' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.gen/sources_1/bd/conv_mint/ipshared/4675/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:8475]
+WARNING: [Synth 8-7023] instance 'mi_register_slice_inst' of module 'axi_register_slice_v2_1_27_axi_register_slice' has 93 connections declared, but only 92 given [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.gen/sources_1/bd/conv_mint/ipshared/4675/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:8475]
+INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_27_a_upsizer__parameterized0' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.gen/sources_1/bd/conv_mint/ipshared/4675/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:3602]
+INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_27_a_upsizer__parameterized0' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.gen/sources_1/bd/conv_mint/ipshared/4675/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:3602]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_27_axi_register_slice__parameterized0' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.gen/sources_1/bd/conv_mint/ipshared/f0b4/hdl/axi_register_slice_v2_1_vl_rfs.v:3725]
+INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector__parameterized0' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.gen/sources_1/bd/conv_mint/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector__parameterized0' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.gen/sources_1/bd/conv_mint/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:59]
+INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi__parameterized0' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.gen/sources_1/bd/conv_mint/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:473]
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi__parameterized0' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.gen/sources_1/bd/conv_mint/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:473]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_27_axic_register_slice__parameterized3' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.gen/sources_1/bd/conv_mint/ipshared/f0b4/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_27_axic_register_slice__parameterized3' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.gen/sources_1/bd/conv_mint/ipshared/f0b4/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_27_axic_register_slice__parameterized4' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.gen/sources_1/bd/conv_mint/ipshared/f0b4/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_27_axic_register_slice__parameterized4' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.gen/sources_1/bd/conv_mint/ipshared/f0b4/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_27_axic_register_slice__parameterized5' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.gen/sources_1/bd/conv_mint/ipshared/f0b4/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_27_axic_register_slice__parameterized5' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.gen/sources_1/bd/conv_mint/ipshared/f0b4/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_27_axi_register_slice__parameterized0' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.gen/sources_1/bd/conv_mint/ipshared/f0b4/hdl/axi_register_slice_v2_1_vl_rfs.v:3725]
+WARNING: [Synth 8-7071] port 'aclk2x' of module 'axi_register_slice_v2_1_27_axi_register_slice' is unconnected for instance 'si_register_slice_inst' [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.gen/sources_1/bd/conv_mint/ipshared/4675/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:7379]
+WARNING: [Synth 8-7023] instance 'si_register_slice_inst' of module 'axi_register_slice_v2_1_27_axi_register_slice' has 93 connections declared, but only 92 given [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.gen/sources_1/bd/conv_mint/ipshared/4675/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:7379]
+INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_27_axi_upsizer' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.gen/sources_1/bd/conv_mint/ipshared/4675/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:7037]
+INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_27_top' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.gen/sources_1/bd/conv_mint/ipshared/4675/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:14461]
+INFO: [Synth 8-6155] done synthesizing module 'conv_mint_auto_us_0' (0#1) [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.gen/sources_1/bd/conv_mint/ip/conv_mint_auto_us_0/synth/conv_mint_auto_us_0.v:53]
+WARNING: [Synth 8-7129] Port m_axi_buser[0] in module axi_infrastructure_v1_1_0_vector2axi__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_ruser[0] in module axi_infrastructure_v1_1_0_vector2axi__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awregion[3] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awregion[2] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awregion[1] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awregion[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awuser[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wuser[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arregion[3] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arregion[2] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arregion[1] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arregion[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_aruser[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclk2x in module axi_register_slice_v2_1_27_axi_register_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_buser[0] in module axi_infrastructure_v1_1_0_vector2axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_ruser[0] in module axi_infrastructure_v1_1_0_vector2axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awuser[0] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[0] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wuser[0] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_aruser[0] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclk2x in module axi_register_slice_v2_1_27_axi_register_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[7] in module axi_dwidth_converter_v2_1_27_axi_upsizer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[6] in module axi_dwidth_converter_v2_1_27_axi_upsizer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[5] in module axi_dwidth_converter_v2_1_27_axi_upsizer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[4] in module axi_dwidth_converter_v2_1_27_axi_upsizer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arlen[7] in module axi_dwidth_converter_v2_1_27_axi_upsizer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arlen[6] in module axi_dwidth_converter_v2_1_27_axi_upsizer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arlen[5] in module axi_dwidth_converter_v2_1_27_axi_upsizer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arlen[4] in module axi_dwidth_converter_v2_1_27_axi_upsizer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_aresetn in module axi_dwidth_converter_v2_1_27_axi_upsizer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_aclk in module axi_dwidth_converter_v2_1_27_axi_upsizer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awregion[3] in module axi_dwidth_converter_v2_1_27_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awregion[2] in module axi_dwidth_converter_v2_1_27_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awregion[1] in module axi_dwidth_converter_v2_1_27_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awregion[0] in module axi_dwidth_converter_v2_1_27_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arregion[3] in module axi_dwidth_converter_v2_1_27_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arregion[2] in module axi_dwidth_converter_v2_1_27_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arregion[1] in module axi_dwidth_converter_v2_1_27_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arregion[0] in module axi_dwidth_converter_v2_1_27_top is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 2289.156 ; gain = 559.496 ; free physical = 178782 ; free virtual = 283405
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1217.283; parent = 1097.783; children = 119.500
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3564.383; parent = 2289.152; children = 1275.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 2301.027 ; gain = 571.367 ; free physical = 179093 ; free virtual = 283717
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1217.283; parent = 1097.783; children = 119.500
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3576.258; parent = 2301.027; children = 1275.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 2301.027 ; gain = 571.367 ; free physical = 179129 ; free virtual = 283754
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1217.283; parent = 1097.783; children = 119.500
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3576.258; parent = 2301.027; children = 1275.230
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2301.027 ; gain = 0.000 ; free physical = 179314 ; free virtual = 283944
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.gen/sources_1/bd/conv_mint/ip/conv_mint_auto_us_0/conv_mint_auto_us_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.gen/sources_1/bd/conv_mint/ip/conv_mint_auto_us_0/conv_mint_auto_us_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.runs/conv_mint_auto_us_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.runs/conv_mint_auto_us_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2424.777 ; gain = 0.000 ; free physical = 179106 ; free virtual = 283743
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2424.777 ; gain = 0.000 ; free physical = 179093 ; free virtual = 283730
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/apps/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:28 . Memory (MB): peak = 2424.777 ; gain = 695.117 ; free physical = 179022 ; free virtual = 283661
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1217.283; parent = 1097.783; children = 119.500
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3667.992; parent = 2392.762; children = 1275.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:28 . Memory (MB): peak = 2424.777 ; gain = 695.117 ; free physical = 179023 ; free virtual = 283662
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1217.283; parent = 1097.783; children = 119.500
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3667.992; parent = 2392.762; children = 1275.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.runs/conv_mint_auto_us_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:28 . Memory (MB): peak = 2424.777 ; gain = 695.117 ; free physical = 179029 ; free virtual = 283668
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1217.283; parent = 1097.783; children = 119.500
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3667.992; parent = 2392.762; children = 1275.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 2424.777 ; gain = 695.117 ; free physical = 178899 ; free virtual = 283551
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1217.283; parent = 1097.783; children = 119.500
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3667.992; parent = 2392.762; children = 1275.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    8 Bit       Adders := 4     
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 4     
+	   2 Input    4 Bit       Adders := 2     
+	   2 Input    3 Bit       Adders := 4     
++---Registers : 
+	               94 Bit    Registers := 2     
+	               87 Bit    Registers := 2     
+	               73 Bit    Registers := 2     
+	               68 Bit    Registers := 2     
+	               64 Bit    Registers := 1     
+	               38 Bit    Registers := 2     
+	               36 Bit    Registers := 2     
+	               30 Bit    Registers := 2     
+	                8 Bit    Registers := 18    
+	                5 Bit    Registers := 4     
+	                3 Bit    Registers := 6     
+	                2 Bit    Registers := 11    
+	                1 Bit    Registers := 61    
++---Muxes : 
+	   2 Input   73 Bit        Muxes := 2     
+	   2 Input   68 Bit        Muxes := 2     
+	   2 Input   64 Bit        Muxes := 6     
+	   2 Input   38 Bit        Muxes := 2     
+	   2 Input   36 Bit        Muxes := 2     
+	   2 Input   32 Bit        Muxes := 3     
+	   2 Input    8 Bit        Muxes := 22    
+	   8 Input    8 Bit        Muxes := 4     
+	   2 Input    3 Bit        Muxes := 11    
+	   8 Input    3 Bit        Muxes := 6     
+	   2 Input    2 Bit        Muxes := 9     
+	   2 Input    1 Bit        Muxes := 61    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port aclk2x in module axi_register_slice_v2_1_27_axi_register_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awregion[3] in module axi_register_slice_v2_1_27_axi_register_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awregion[2] in module axi_register_slice_v2_1_27_axi_register_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awregion[1] in module axi_register_slice_v2_1_27_axi_register_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awregion[0] in module axi_register_slice_v2_1_27_axi_register_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awuser[0] in module axi_register_slice_v2_1_27_axi_register_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wuser[0] in module axi_register_slice_v2_1_27_axi_register_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arregion[3] in module axi_register_slice_v2_1_27_axi_register_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arregion[2] in module axi_register_slice_v2_1_27_axi_register_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arregion[1] in module axi_register_slice_v2_1_27_axi_register_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arregion[0] in module axi_register_slice_v2_1_27_axi_register_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_aruser[0] in module axi_register_slice_v2_1_27_axi_register_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_buser[0] in module axi_register_slice_v2_1_27_axi_register_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_ruser[0] in module axi_register_slice_v2_1_27_axi_register_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclk2x in module axi_register_slice_v2_1_27_axi_register_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awuser[0] in module axi_register_slice_v2_1_27_axi_register_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[0] in module axi_register_slice_v2_1_27_axi_register_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wuser[0] in module axi_register_slice_v2_1_27_axi_register_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_aruser[0] in module axi_register_slice_v2_1_27_axi_register_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_buser[0] in module axi_register_slice_v2_1_27_axi_register_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_ruser[0] in module axi_register_slice_v2_1_27_axi_register_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[7] in module axi_dwidth_converter_v2_1_27_axi_upsizer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[6] in module axi_dwidth_converter_v2_1_27_axi_upsizer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[5] in module axi_dwidth_converter_v2_1_27_axi_upsizer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[4] in module axi_dwidth_converter_v2_1_27_axi_upsizer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arlen[7] in module axi_dwidth_converter_v2_1_27_axi_upsizer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arlen[6] in module axi_dwidth_converter_v2_1_27_axi_upsizer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arlen[5] in module axi_dwidth_converter_v2_1_27_axi_upsizer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arlen[4] in module axi_dwidth_converter_v2_1_27_axi_upsizer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_aresetn in module axi_dwidth_converter_v2_1_27_axi_upsizer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_aclk in module axi_dwidth_converter_v2_1_27_axi_upsizer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awregion[3] in module axi_dwidth_converter_v2_1_27_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awregion[2] in module axi_dwidth_converter_v2_1_27_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awregion[1] in module axi_dwidth_converter_v2_1_27_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awregion[0] in module axi_dwidth_converter_v2_1_27_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arregion[3] in module axi_dwidth_converter_v2_1_27_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arregion[2] in module axi_dwidth_converter_v2_1_27_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arregion[1] in module axi_dwidth_converter_v2_1_27_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arregion[0] in module axi_dwidth_converter_v2_1_27_top is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 2424.777 ; gain = 695.117 ; free physical = 179354 ; free virtual = 284034
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1217.283; parent = 1097.783; children = 119.771
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3667.992; parent = 2392.762; children = 1275.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:43 . Memory (MB): peak = 2424.777 ; gain = 695.117 ; free physical = 178982 ; free virtual = 283655
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1242.526; parent = 1122.756; children = 119.771
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3667.992; parent = 2392.762; children = 1275.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 2424.777 ; gain = 695.117 ; free physical = 179029 ; free virtual = 283703
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1242.947; parent = 1123.177; children = 119.771
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3667.992; parent = 2392.762; children = 1275.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:39 ; elapsed = 00:00:45 . Memory (MB): peak = 2424.777 ; gain = 695.117 ; free physical = 180038 ; free virtual = 284711
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1246.887; parent = 1126.807; children = 120.080
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3667.992; parent = 2392.762; children = 1275.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 2424.777 ; gain = 695.117 ; free physical = 181861 ; free virtual = 286528
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1249.226; parent = 1128.362; children = 120.863
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3667.992; parent = 2392.762; children = 1275.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 2424.777 ; gain = 695.117 ; free physical = 181904 ; free virtual = 286570
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1249.226; parent = 1128.362; children = 120.863
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3667.992; parent = 2392.762; children = 1275.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 2424.777 ; gain = 695.117 ; free physical = 182013 ; free virtual = 286678
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1249.377; parent = 1128.515; children = 120.863
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3667.992; parent = 2392.762; children = 1275.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 2424.777 ; gain = 695.117 ; free physical = 182010 ; free virtual = 286675
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1249.389; parent = 1128.525; children = 120.863
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3667.992; parent = 2392.762; children = 1275.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 2424.777 ; gain = 695.117 ; free physical = 182010 ; free virtual = 286676
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1249.390; parent = 1128.526; children = 120.863
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3667.992; parent = 2392.762; children = 1275.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 2424.777 ; gain = 695.117 ; free physical = 182012 ; free virtual = 286679
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1249.394; parent = 1128.530; children = 120.863
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3667.992; parent = 2392.762; children = 1275.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Dynamic Shift Register Report:
++------------+-------------------------------+--------+------------+--------+---------+--------+--------+--------+
+|Module Name | RTL Name                      | Length | Data Width | SRL16E | SRLC32E | Mux F7 | Mux F8 | Mux F9 | 
++------------+-------------------------------+--------+------------+--------+---------+--------+--------+--------+
+|dsrl        | USE_RTL_FIFO.data_srl_reg[31] | 1      | 1          | 0      | 1       | 0      | 0      | 0      | 
+|dsrl__1     | USE_RTL_FIFO.data_srl_reg[31] | 30     | 30         | 0      | 30      | 0      | 0      | 0      | 
+|dsrl__4     | USE_RTL_FIFO.data_srl_reg[31] | 30     | 30         | 0      | 30      | 0      | 0      | 0      | 
++------------+-------------------------------+--------+------------+--------+---------+--------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |LUT1    |     8|
+|2     |LUT2    |    28|
+|3     |LUT3    |   102|
+|4     |LUT4    |   136|
+|5     |LUT5    |    66|
+|6     |LUT6    |   145|
+|7     |SRLC32E |    51|
+|8     |FDRE    |   644|
+|9     |FDSE    |     4|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 2424.777 ; gain = 695.117 ; free physical = 182011 ; free virtual = 286677
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1249.421; parent = 1128.558; children = 120.863
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3667.992; parent = 2392.762; children = 1275.230
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 40 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:42 ; elapsed = 00:00:48 . Memory (MB): peak = 2424.777 ; gain = 571.367 ; free physical = 182066 ; free virtual = 286728
+Synthesis Optimization Complete : Time (s): cpu = 00:00:45 ; elapsed = 00:00:51 . Memory (MB): peak = 2424.777 ; gain = 695.117 ; free physical = 182066 ; free virtual = 286727
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2424.777 ; gain = 0.000 ; free physical = 182175 ; free virtual = 286837
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2424.777 ; gain = 0.000 ; free physical = 182106 ; free virtual = 286769
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: bc1e99f0
+INFO: [Common 17-83] Releasing license: Synthesis
+63 Infos, 83 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:55 ; elapsed = 00:00:58 . Memory (MB): peak = 2424.777 ; gain = 978.781 ; free physical = 182319 ; free virtual = 286983
+INFO: [Common 17-1381] The checkpoint '/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.runs/conv_mint_auto_us_0_synth_1/conv_mint_auto_us_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP conv_mint_auto_us_0, cache-ID = 258f3e6175b9b492
+INFO: [Coretcl 2-1174] Renamed 15 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/vivado/conv_mint/conv_mint.runs/conv_mint_auto_us_0_synth_1/conv_mint_auto_us_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file conv_mint_auto_us_0_utilization_synth.rpt -pb conv_mint_auto_us_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Oct  7 18:56:12 2026...
