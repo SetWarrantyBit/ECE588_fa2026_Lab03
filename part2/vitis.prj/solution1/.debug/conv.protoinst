@@ -13,7 +13,47 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_conv_Pipeline_VITIS_LOOP_23_4_VITIS_LOOP_25_5_fu_218/grp_conv_Pipeline_VITIS_LOOP_23_4_VITIS_LOOP_25_5_fu_218_activity": {
+				"grp_conv_Pipeline_VITIS_LOOP_28_2_VITIS_LOOP_30_3_fu_12189/grp_conv_Pipeline_VITIS_LOOP_28_2_VITIS_LOOP_30_3_fu_12189_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_conv_Pipeline_VITIS_LOOP_40_5_VITIS_LOOP_42_6_fu_12249/grp_conv_Pipeline_VITIS_LOOP_40_5_VITIS_LOOP_42_6_fu_12249_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_conv_Pipeline_VITIS_LOOP_50_7_VITIS_LOOP_52_8_fu_12483/grp_conv_Pipeline_VITIS_LOOP_50_7_VITIS_LOOP_52_8_fu_12483_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_conv_Pipeline_VITIS_LOOP_65_11_VITIS_LOOP_67_12_fu_12563/grp_conv_Pipeline_VITIS_LOOP_65_11_VITIS_LOOP_67_12_fu_12563_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_conv_Pipeline_VITIS_LOOP_85_13_VITIS_LOOP_87_14_fu_12501/grp_conv_Pipeline_VITIS_LOOP_85_13_VITIS_LOOP_87_14_fu_12501_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
