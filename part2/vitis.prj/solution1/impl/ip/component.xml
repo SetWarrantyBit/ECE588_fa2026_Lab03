@@ -1579,7 +1579,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>5f8f8474</spirit:value>
+            <spirit:value>85f37b32</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1598,7 +1598,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>fae6aa14</spirit:value>
+            <spirit:value>2aff6bec</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1617,7 +1617,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>0f6d61cc</spirit:value>
+            <spirit:value>862d3a88</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1636,7 +1636,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>7b851a39</spirit:value>
+            <spirit:value>3ed73277</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -3814,26 +3814,6 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/conv_conv_Pipeline_VITIS_LOOP_28_2_VITIS_LOOP_30_3.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/conv_conv_Pipeline_VITIS_LOOP_40_5_VITIS_LOOP_42_6.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/conv_conv_Pipeline_VITIS_LOOP_50_7_VITIS_LOOP_52_8.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/conv_conv_Pipeline_VITIS_LOOP_65_11_VITIS_LOOP_67_12.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/conv_conv_Pipeline_VITIS_LOOP_85_13_VITIS_LOOP_87_14.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/verilog/conv_fadd_32ns_32ns_32_5_full_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
@@ -3850,15 +3830,39 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/conv_local_input_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:name>hdl/verilog/conv_Loop_VITIS_LOOP_24_1_proc1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/conv_local_output_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:name>hdl/verilog/conv_Loop_VITIS_LOOP_24_1_proc1_local_input_RAM_AUTO_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/conv_local_weights_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:name>hdl/verilog/conv_Loop_VITIS_LOOP_24_1_proc1_local_output_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/conv_Loop_VITIS_LOOP_24_1_proc1_local_weights_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/conv_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_29_2_VITIS_LOOP_31_3.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/conv_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_41_5_VITIS_LOOP_43_6.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/conv_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_51_7_VITIS_LOOP_53_8.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/conv_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_66_11_VITIS_LOOP_68_12.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/conv_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_85_13_VITIS_LOOP_87_14.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -3878,7 +3882,7 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/conv_mux_2278_32_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/conv_mux_2008_32_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -3904,31 +3908,6 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/conv_conv_Pipeline_VITIS_LOOP_28_2_VITIS_LOOP_30_3.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/conv_conv_Pipeline_VITIS_LOOP_40_5_VITIS_LOOP_42_6.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/conv_conv_Pipeline_VITIS_LOOP_50_7_VITIS_LOOP_52_8.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/conv_conv_Pipeline_VITIS_LOOP_65_11_VITIS_LOOP_67_12.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/conv_conv_Pipeline_VITIS_LOOP_85_13_VITIS_LOOP_87_14.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/verilog/conv_fadd_32ns_32ns_32_5_full_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
@@ -3949,17 +3928,47 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/conv_local_input_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:name>hdl/verilog/conv_Loop_VITIS_LOOP_24_1_proc1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/conv_local_output_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:name>hdl/verilog/conv_Loop_VITIS_LOOP_24_1_proc1_local_input_RAM_AUTO_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/conv_local_weights_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:name>hdl/verilog/conv_Loop_VITIS_LOOP_24_1_proc1_local_output_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/conv_Loop_VITIS_LOOP_24_1_proc1_local_weights_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/conv_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_29_2_VITIS_LOOP_31_3.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/conv_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_41_5_VITIS_LOOP_43_6.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/conv_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_51_7_VITIS_LOOP_53_8.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/conv_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_66_11_VITIS_LOOP_68_12.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/conv_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_85_13_VITIS_LOOP_87_14.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -3984,7 +3993,7 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/conv_mux_2278_32_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/conv_mux_2008_32_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -4043,26 +4052,6 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/conv_conv_Pipeline_VITIS_LOOP_28_2_VITIS_LOOP_30_3.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/conv_conv_Pipeline_VITIS_LOOP_40_5_VITIS_LOOP_42_6.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/conv_conv_Pipeline_VITIS_LOOP_50_7_VITIS_LOOP_52_8.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/conv_conv_Pipeline_VITIS_LOOP_65_11_VITIS_LOOP_67_12.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/conv_conv_Pipeline_VITIS_LOOP_85_13_VITIS_LOOP_87_14.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/vhdl/conv_fadd_32ns_32ns_32_5_full_dsp_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
@@ -4079,15 +4068,39 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/conv_local_input_RAM_AUTO_1R1W.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/conv_Loop_VITIS_LOOP_24_1_proc1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/conv_local_output_RAM_AUTO_1R1W.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/conv_Loop_VITIS_LOOP_24_1_proc1_local_input_RAM_AUTO_1R1W.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/conv_local_weights_RAM_AUTO_1R1W.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/conv_Loop_VITIS_LOOP_24_1_proc1_local_output_RAM_AUTO_1R1W.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/conv_Loop_VITIS_LOOP_24_1_proc1_local_weights_RAM_AUTO_1R1W.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/conv_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_29_2_VITIS_LOOP_31_3.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/conv_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_41_5_VITIS_LOOP_43_6.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/conv_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_51_7_VITIS_LOOP_53_8.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/conv_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_66_11_VITIS_LOOP_68_12.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/conv_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_85_13_VITIS_LOOP_87_14.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -4107,13 +4120,13 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/conv_mux_2278_32_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/conv_mux_2008_32_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/vhdl/conv.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_01057385</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_4af14e9d</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -4134,31 +4147,6 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/conv_conv_Pipeline_VITIS_LOOP_28_2_VITIS_LOOP_30_3.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/conv_conv_Pipeline_VITIS_LOOP_40_5_VITIS_LOOP_42_6.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/conv_conv_Pipeline_VITIS_LOOP_50_7_VITIS_LOOP_52_8.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/conv_conv_Pipeline_VITIS_LOOP_65_11_VITIS_LOOP_67_12.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/conv_conv_Pipeline_VITIS_LOOP_85_13_VITIS_LOOP_87_14.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/vhdl/conv_fadd_32ns_32ns_32_5_full_dsp_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
@@ -4179,17 +4167,47 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/conv_local_input_RAM_AUTO_1R1W.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/conv_Loop_VITIS_LOOP_24_1_proc1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/conv_local_output_RAM_AUTO_1R1W.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/conv_Loop_VITIS_LOOP_24_1_proc1_local_input_RAM_AUTO_1R1W.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/conv_local_weights_RAM_AUTO_1R1W.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/conv_Loop_VITIS_LOOP_24_1_proc1_local_output_RAM_AUTO_1R1W.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/conv_Loop_VITIS_LOOP_24_1_proc1_local_weights_RAM_AUTO_1R1W.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/conv_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_29_2_VITIS_LOOP_31_3.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/conv_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_41_5_VITIS_LOOP_43_6.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/conv_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_51_7_VITIS_LOOP_53_8.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/conv_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_66_11_VITIS_LOOP_68_12.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/conv_Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_85_13_VITIS_LOOP_87_14.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -4214,7 +4232,7 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/conv_mux_2278_32_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/conv_mux_2008_32_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -4554,7 +4572,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>latency</spirit:name>
-      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="29">298483142</spirit:value>
+      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="29">298483141</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>II</spirit:name>
@@ -4571,8 +4589,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>Conv</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2114819106</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2026-10-08T01:06:41Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>2114819182</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2026-10-08T02:22:59Z</xilinx:coreCreationDateTime>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>
@@ -4583,10 +4601,10 @@
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="5b87af73"/>
       <xilinx:checksum xilinx:scope="addressSpaces" xilinx:value="b88cfd48"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="5085f7e1"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="a9c0b672"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="48a713f2"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="66537cd7"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="e1ebb20a"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="865eff21"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="f2804053"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

@@ -179,7 +179,8 @@ __attribute__((sdx_kernel("conv", 0))) void conv(
 #pragma HLSDIRECTIVE TOP name=conv
 # 8 "conv.cpp"
 
-    const int stride = 4;
+#pragma HLS DATAFLOW
+ const int stride = 4;
 #pragma HLS INTERFACE mode=m_axi port=input_fm offset=slave bundle=mem1
 #pragma HLS INTERFACE mode=m_axi port=weights offset=slave bundle=mem2
 #pragma HLS INTERFACE mode=m_axi port=biases offset=slave bundle=mem2
@@ -189,30 +190,30 @@ __attribute__((sdx_kernel("conv", 0))) void conv(
  fm_t local_input[228][228];
     wt_t local_weights[11][11];
     fm_t local_output[55][55];
-#pragma HLS ARRAY_PARTITION variable=local_input complete dim=2
+#pragma HLS ARRAY_PARTITION variable=local_input cyclic factor=200 dim=2
 #pragma HLS ARRAY_PARTITION variable=local_weights complete dim=2
 #pragma HLS ARRAY_PARTITION variable=local_output complete dim=2
 
- VITIS_LOOP_23_1: for (int n = 0; n < 64; n++)
+ VITIS_LOOP_24_1: for (int n = 0; n < 64; n++)
     {
 
         wt_t bias = biases[n];
 
-        VITIS_LOOP_28_2: for (int out_r = 0; out_r < 55; out_r++)
+        VITIS_LOOP_29_2: for (int out_r = 0; out_r < 55; out_r++)
         {
-            VITIS_LOOP_30_3: for (int out_c = 0; out_c < 55; out_c++)
+            VITIS_LOOP_31_3: for (int out_c = 0; out_c < 55; out_c++)
             {
 #pragma HLS PIPELINE II=1
  local_output[out_r][out_c] = bias;
             }
         }
 
-        VITIS_LOOP_37_4: for (int m = 0; m < 3; m++)
+        VITIS_LOOP_38_4: for (int m = 0; m < 3; m++)
         {
 
-            VITIS_LOOP_40_5: for (int r = 0; r < 228; r++)
+            VITIS_LOOP_41_5: for (int r = 0; r < 228; r++)
             {
-                VITIS_LOOP_42_6: for (int c = 0; c < 228; c++)
+                VITIS_LOOP_43_6: for (int c = 0; c < 228; c++)
                 {
 #pragma HLS PIPELINE II=1
  local_input[r][c] = input_fm[m][r][c];
@@ -220,24 +221,24 @@ __attribute__((sdx_kernel("conv", 0))) void conv(
             }
 
 
-            VITIS_LOOP_50_7: for (int kr = 0; kr < 11; kr++)
+            VITIS_LOOP_51_7: for (int kr = 0; kr < 11; kr++)
             {
-                VITIS_LOOP_52_8: for (int kc = 0; kc < 11; kc++)
+                VITIS_LOOP_53_8: for (int kc = 0; kc < 11; kc++)
                 {
 #pragma HLS PIPELINE II=1
  local_weights[kr][kc] = weights[n][m][kr][kc];
                 }
             }
 
-            VITIS_LOOP_59_9: for (int out_r = 0; out_r < 55; out_r++)
+            VITIS_LOOP_60_9: for (int out_r = 0; out_r < 55; out_r++)
             {
-                VITIS_LOOP_61_10: for (int out_c = 0; out_c < 55; out_c++)
+                VITIS_LOOP_62_10: for (int out_c = 0; out_c < 55; out_c++)
                 {
                     fm_t sum = local_output[out_r][out_c];
 
-                    VITIS_LOOP_65_11: for (int kr = 0; kr < 11; kr++)
+                    VITIS_LOOP_66_11: for (int kr = 0; kr < 11; kr++)
                     {
-                        VITIS_LOOP_67_12: for (int kc = 0; kc < 11; kc++)
+                        VITIS_LOOP_68_12: for (int kc = 0; kc < 11; kc++)
                         {
 #pragma HLS PIPELINE II=1
 
@@ -253,7 +254,6 @@ __attribute__((sdx_kernel("conv", 0))) void conv(
                 }
             }
         }
-
 
         VITIS_LOOP_85_13: for (int out_r = 0; out_r < 55; out_r++)
         {

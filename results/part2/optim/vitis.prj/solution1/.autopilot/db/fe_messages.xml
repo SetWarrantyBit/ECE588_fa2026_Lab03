@@ -1,24 +1,58 @@
 <xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-114" msg_severity="WARNING" msg_loc="conv.cpp:9:9" msg_body="Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region"/>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/ykim131_588fa26/Desktop/ECE588/ECE588_fa2026_Lab03/part2/vitis_hls.tcl:25:9" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="directive" ARG_PragmaFunction="conv" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=conv" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="conv.cpp:9:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="conv" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=input_fm offset=slave bundle=mem1" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="conv.cpp:10:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="conv" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=weights offset=slave bundle=mem2" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+        <args ARG_PragmaFunction="conv" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="conv.cpp:11:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="conv" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=biases offset=slave bundle=mem2" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+        <args ARG_PragmaFunction="conv" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=input_fm offset=slave bundle=mem1" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="conv.cpp:12:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="conv" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=output_fm offset=slave bundle=mem1" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+        <args ARG_PragmaFunction="conv" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=weights offset=slave bundle=mem2" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="conv.cpp:13:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=biases offset=slave bundle=mem2" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="conv.cpp:14:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=output_fm offset=slave bundle=mem1" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="conv.cpp:15:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="conv" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="conv.cpp:29:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="conv.cpp:20:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=local_input cyclic factor=200 dim=2" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="conv.cpp:21:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=local_weights complete dim=2" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="conv.cpp:22:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=local_output complete dim=2" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="conv.cpp:33:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="conv" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="conv.cpp:45:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="conv.cpp:55:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="conv.cpp:70:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="conv.cpp:89:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="conv.cpp:17:7" msg_body="Applying array_partition to 'local_input': Cyclic partitioning with factor 200 on dimension 2.">
+        <args Dim="2" Factor="200" Mode="Cyclic" UOName="local_input"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="conv.cpp:18:10" msg_body="Applying array_partition to 'local_weights': Complete partitioning on dimension 2.">
+        <args Dim="2" Mode="Complete" UOName="local_weights"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="conv.cpp:19:10" msg_body="Applying array_partition to 'local_output': Complete partitioning on dimension 2.">
+        <args Dim="2" Mode="Complete" UOName="local_output"/>
     </msg>
 </xilinx:hls_fe_msgs>
 

@@ -1,8 +1,16 @@
 <pragmas>
-<pragma file="conv.cpp" line="29" pragmaType="pipeline" parentfunction="conv" off="0" ii="1" rewind="0" style=""/>
-<pragma file="conv.cpp" line="9" pragmaType="interface" parentfunction="conv" mode="m_axi" port="input_fm" bundle="mem1" offset="slave" name="" depth="-1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
-<pragma file="conv.cpp" line="10" pragmaType="interface" parentfunction="conv" mode="m_axi" port="weights" bundle="mem2" offset="slave" name="" depth="-1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
-<pragma file="conv.cpp" line="11" pragmaType="interface" parentfunction="conv" mode="m_axi" port="biases" bundle="mem2" offset="slave" name="" depth="-1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
-<pragma file="conv.cpp" line="12" pragmaType="interface" parentfunction="conv" mode="m_axi" port="output_fm" bundle="mem1" offset="slave" name="" depth="-1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
-<pragma file="conv.cpp" line="13" pragmaType="interface" parentfunction="conv" mode="s_axilite" port="" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="conv.cpp" line="9" pragmaType="dataflow" parentfunction="conv" disable_start_propagation="0"/>
+<pragma file="conv.cpp" line="33" pragmaType="pipeline" parentfunction="conv" off="0" ii="1" rewind="0" style=""/>
+<pragma file="conv.cpp" line="89" pragmaType="pipeline" parentfunction="conv" off="0" ii="1" rewind="0" style=""/>
+<pragma file="conv.cpp" line="45" pragmaType="pipeline" parentfunction="conv" off="0" ii="1" rewind="0" style=""/>
+<pragma file="conv.cpp" line="55" pragmaType="pipeline" parentfunction="conv" off="0" ii="1" rewind="0" style=""/>
+<pragma file="conv.cpp" line="70" pragmaType="pipeline" parentfunction="conv" off="0" ii="1" rewind="0" style=""/>
+<pragma file="conv.cpp" line="11" pragmaType="interface" parentfunction="conv" mode="m_axi" port="input_fm" bundle="mem1" offset="slave" name="" depth="-1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="conv.cpp" line="12" pragmaType="interface" parentfunction="conv" mode="m_axi" port="weights" bundle="mem2" offset="slave" name="" depth="-1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="conv.cpp" line="13" pragmaType="interface" parentfunction="conv" mode="m_axi" port="biases" bundle="mem2" offset="slave" name="" depth="-1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="conv.cpp" line="14" pragmaType="interface" parentfunction="conv" mode="m_axi" port="output_fm" bundle="mem1" offset="slave" name="" depth="-1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="conv.cpp" line="15" pragmaType="interface" parentfunction="conv" mode="s_axilite" port="" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="conv.cpp" line="20" pragmaType="array_partition" parentfunction="conv" dim="2" factor="200" mode="cyclic" dynamic="0" variable="local_input"/>
+<pragma file="conv.cpp" line="21" pragmaType="array_partition" parentfunction="conv" dim="2" factor="0" mode="complete" dynamic="0" variable="local_weights"/>
+<pragma file="conv.cpp" line="22" pragmaType="array_partition" parentfunction="conv" dim="2" factor="0" mode="complete" dynamic="0" variable="local_output"/>
 </pragmas>

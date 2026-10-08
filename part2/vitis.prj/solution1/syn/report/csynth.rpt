@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'conv'
 ================================================================
 + General Information: 
-    * Date:           Wed Oct  7 20:06:08 2026
+    * Date:           Wed Oct  7 21:22:30 2026
     * Version:        2022.2 (Build 3670227 on Oct 13 2022)
     * Project:        vitis.prj
     * Solution:       solution1 (Vivado IP Flow Target)
@@ -15,26 +15,27 @@
 + Performance & Resource Estimates: 
     
     PS: '+' for module; 'o' for loop; '*' for dataflow
-    +--------------------------------------------------------+--------+-------+-----------+-----------+----------+-----------+-------+----------+------------+--------+-----------+-------------+-----+
-    |                         Modules                        |  Issue |       |  Latency  |  Latency  | Iteration|           |  Trip |          |            |        |           |             |     |
-    |                         & Loops                        |  Type  | Slack |  (cycles) |    (ns)   |  Latency |  Interval | Count | Pipelined|    BRAM    |   DSP  |     FF    |     LUT     | URAM|
-    +--------------------------------------------------------+--------+-------+-----------+-----------+----------+-----------+-------+----------+------------+--------+-----------+-------------+-----+
-    |+ conv                                                  |  Timing|  -1.54|  298483142|  2.985e+09|         -|  298483143|      -|        no|  282 (100%)|  5 (2%)|  5833 (5%)|  22078 (41%)|    -|
-    | o VITIS_LOOP_23_1                                      |       -|   7.30|  298483072|  2.985e+09|   4663798|          -|     64|        no|           -|       -|          -|            -|    -|
-    |  + conv_Pipeline_VITIS_LOOP_28_2_VITIS_LOOP_30_3       |       -|   0.45|       3027|  3.027e+04|         -|       3027|      -|        no|           -|       -|   26 (~0%)|    137 (~0%)|    -|
-    |   o VITIS_LOOP_28_2_VITIS_LOOP_30_3                    |       -|   7.30|       3025|  3.025e+04|         1|          1|   3025|       yes|           -|       -|          -|            -|    -|
-    |  + conv_Pipeline_VITIS_LOOP_85_13_VITIS_LOOP_87_14     |       -|   0.00|       3030|  3.030e+04|         -|       3030|      -|        no|           -|       -|  200 (~0%)|    490 (~0%)|    -|
-    |   o VITIS_LOOP_85_13_VITIS_LOOP_87_14                  |       -|   7.30|       3028|  3.028e+04|         5|          1|   3025|       yes|           -|       -|          -|            -|    -|
-    |  o VITIS_LOOP_37_4                                     |       -|   7.30|    4657665|  4.658e+07|   1552555|          -|      3|        no|           -|       -|          -|            -|    -|
-    |   + conv_Pipeline_VITIS_LOOP_40_5_VITIS_LOOP_42_6      |       -|   0.00|      51987|  5.199e+05|         -|      51987|      -|        no|           -|       -|   70 (~0%)|    162 (~0%)|    -|
-    |    o VITIS_LOOP_40_5_VITIS_LOOP_42_6                   |       -|   7.30|      51985|  5.198e+05|         3|          1|  51984|       yes|           -|       -|          -|            -|    -|
-    |   + conv_Pipeline_VITIS_LOOP_50_7_VITIS_LOOP_52_8      |       -|   0.00|        124|  1.240e+03|         -|        124|      -|        no|           -|       -|   53 (~0%)|    136 (~0%)|    -|
-    |    o VITIS_LOOP_50_7_VITIS_LOOP_52_8                   |       -|   7.30|        122|  1.220e+03|         3|          1|    121|       yes|           -|       -|          -|            -|    -|
-    |   o VITIS_LOOP_59_9                                    |       -|   7.30|    1500565|  1.501e+07|     27283|          -|     55|        no|           -|       -|          -|            -|    -|
-    |    o VITIS_LOOP_61_10                                  |       -|   7.30|      27280|  2.728e+05|       496|          -|     55|        no|           -|       -|          -|            -|    -|
-    |     + conv_Pipeline_VITIS_LOOP_65_11_VITIS_LOOP_67_12  |  Timing|  -1.54|        492|  4.920e+03|         -|        492|      -|        no|           -|  5 (2%)|  506 (~0%)|    2219 (4%)|    -|
-    |      o VITIS_LOOP_65_11_VITIS_LOOP_67_12               |      II|   7.30|        490|  4.900e+03|        11|          4|    121|       yes|           -|       -|          -|            -|    -|
-    +--------------------------------------------------------+--------+-------+-----------+-----------+----------+-----------+-------+----------+------------+--------+-----------+-------------+-----+
+    +-------------------------------------------------------------------------------+--------+-------+-----------+-----------+----------+-----------+-------+----------+-----------+--------+-----------+-------------+-----+
+    |                                    Modules                                    |  Issue |       |  Latency  |  Latency  | Iteration|           |  Trip |          |           |        |           |             |     |
+    |                                    & Loops                                    |  Type  | Slack |  (cycles) |    (ns)   |  Latency |  Interval | Count | Pipelined|   BRAM    |   DSP  |     FF    |     LUT     | URAM|
+    +-------------------------------------------------------------------------------+--------+-------+-----------+-----------+----------+-----------+-------+----------+-----------+--------+-----------+-------------+-----+
+    |+ conv*                                                                        |  Timing|  -1.54|  298483141|  2.985e+09|         -|  298483142|      -|  dataflow|  255 (91%)|  5 (2%)|  5726 (5%)|  21251 (39%)|    -|
+    | + Loop_VITIS_LOOP_24_1_proc1                                                  |  Timing|  -1.54|  298483141|  2.985e+09|         -|  298483141|      -|        no|  255 (91%)|  5 (2%)|  3974 (3%)|  18063 (33%)|    -|
+    |  o VITIS_LOOP_24_1                                                            |       -|   7.30|  298483072|  2.985e+09|   4663798|          -|     64|        no|          -|       -|          -|            -|    -|
+    |   + Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_29_2_VITIS_LOOP_31_3       |       -|   0.45|       3027|  3.027e+04|         -|       3027|      -|        no|          -|       -|   26 (~0%)|    137 (~0%)|    -|
+    |    o VITIS_LOOP_29_2_VITIS_LOOP_31_3                                          |       -|   7.30|       3025|  3.025e+04|         1|          1|   3025|       yes|          -|       -|          -|            -|    -|
+    |   + Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_85_13_VITIS_LOOP_87_14     |       -|   0.00|       3030|  3.030e+04|         -|       3030|      -|        no|          -|       -|  200 (~0%)|    490 (~0%)|    -|
+    |    o VITIS_LOOP_85_13_VITIS_LOOP_87_14                                        |       -|   7.30|       3028|  3.028e+04|         5|          1|   3025|       yes|          -|       -|          -|            -|    -|
+    |   o VITIS_LOOP_38_4                                                           |       -|   7.30|    4657665|  4.658e+07|   1552555|          -|      3|        no|          -|       -|          -|            -|    -|
+    |    + Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_41_5_VITIS_LOOP_43_6      |       -|   0.00|      51987|  5.199e+05|         -|      51987|      -|        no|          -|       -|   80 (~0%)|    207 (~0%)|    -|
+    |     o VITIS_LOOP_41_5_VITIS_LOOP_43_6                                         |       -|   7.30|      51985|  5.198e+05|         3|          1|  51984|       yes|          -|       -|          -|            -|    -|
+    |    + Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_51_7_VITIS_LOOP_53_8      |       -|   0.00|        124|  1.240e+03|         -|        124|      -|        no|          -|       -|   53 (~0%)|    136 (~0%)|    -|
+    |     o VITIS_LOOP_51_7_VITIS_LOOP_53_8                                         |       -|   7.30|        122|  1.220e+03|         3|          1|    121|       yes|          -|       -|          -|            -|    -|
+    |    o VITIS_LOOP_60_9                                                          |       -|   7.30|    1500565|  1.501e+07|     27283|          -|     55|        no|          -|       -|          -|            -|    -|
+    |     o VITIS_LOOP_62_10                                                        |       -|   7.30|      27280|  2.728e+05|       496|          -|     55|        no|          -|       -|          -|            -|    -|
+    |      + Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_66_11_VITIS_LOOP_68_12  |  Timing|  -1.54|        493|  4.930e+03|         -|        493|      -|        no|          -|  5 (2%)|  518 (~0%)|    2103 (3%)|    -|
+    |       o VITIS_LOOP_66_11_VITIS_LOOP_68_12                                     |      II|   7.30|        491|  4.910e+03|        12|          4|    121|       yes|          -|       -|          -|            -|    -|
+    +-------------------------------------------------------------------------------+--------+-------+-----------+-----------+----------+-----------+-------+----------+-----------+--------+-----------+-------------+-----+
 
 
 ================================================================
@@ -126,21 +127,21 @@
 +--------------+-----------------+-----------+--------+-------+----------------+
 | HW Interface | Loop            | Direction | Length | Width | Location       |
 +--------------+-----------------+-----------+--------+-------+----------------+
-| m_axi_mem1   | VITIS_LOOP_23_1 | write     | 193600 | 32    | conv.cpp:23:19 |
-| m_axi_mem1   | VITIS_LOOP_37_4 | read      | 155952 | 32    | conv.cpp:37:26 |
-| m_axi_mem2   | VITIS_LOOP_37_4 | read      | 363    | 32    | conv.cpp:37:26 |
+| m_axi_mem1   | VITIS_LOOP_24_1 | write     | 193600 | 32    | conv.cpp:24:19 |
+| m_axi_mem1   | VITIS_LOOP_38_4 | read      | 155952 | 32    | conv.cpp:38:26 |
+| m_axi_mem2   | VITIS_LOOP_38_4 | read      | 363    | 32    | conv.cpp:38:26 |
 +--------------+-----------------+-----------+--------+-------+----------------+
 
 * Inferred Bursts and Widening Missed
 +--------------+-----------+------------------+---------------------------------------------------------------------------------------------------------+------------+----------------+
 | HW Interface | Variable  | Loop             | Problem                                                                                                 | Resolution | Location       |
 +--------------+-----------+------------------+---------------------------------------------------------------------------------------------------------+------------+----------------+
-| m_axi_mem2   | biases    |                  | Access is clobbered by load                                                                             | 214-231    | conv.cpp:26:21 |
-| m_axi_mem1   | input_fm  | VITIS_LOOP_23_1  | Could not analyze pattern                                                                               | 214-229    | conv.cpp:23:19 |
-| m_axi_mem2   | weights   |                  | Access is clobbered by bias                                                                             | 214-231    | conv.cpp:37:26 |
+| m_axi_mem2   | biases    |                  | Access is clobbered by load                                                                             | 214-231    | conv.cpp:27:21 |
+| m_axi_mem1   | input_fm  | VITIS_LOOP_24_1  | Could not analyze pattern                                                                               | 214-229    | conv.cpp:24:19 |
+| m_axi_mem2   | weights   |                  | Access is clobbered by bias                                                                             | 214-231    | conv.cpp:38:26 |
 | m_axi_mem1   | output_fm | VITIS_LOOP_87_14 | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | conv.cpp:87:31 |
-| m_axi_mem2   | weights   | VITIS_LOOP_52_8  | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | conv.cpp:52:34 |
-| m_axi_mem1   | input_fm  | VITIS_LOOP_42_6  | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | conv.cpp:42:34 |
+| m_axi_mem2   | weights   | VITIS_LOOP_53_8  | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | conv.cpp:53:34 |
+| m_axi_mem1   | input_fm  | VITIS_LOOP_43_6  | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | conv.cpp:43:34 |
 +--------------+-----------+------------------+---------------------------------------------------------------------------------------------------------+------------+----------------+
 
     * Resolution URL: www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=XXX-YYY.html (replace XXX-YYY with column value)
@@ -148,366 +149,350 @@
 ================================================================
 == Bind Op Report
 ================================================================
-+----------------------------------------------------+-----+--------+------------+------+---------+---------+
-| Name                                               | DSP | Pragma | Variable   | Op   | Impl    | Latency |
-+----------------------------------------------------+-----+--------+------------+------+---------+---------+
-| + conv                                             | 5   |        |            |      |         |         |
-|   add_ln23_1_fu_12864_p2                           | -   |        | add_ln23_1 | add  | fabric  | 0       |
-|   add_ln23_fu_12876_p2                             | -   |        | add_ln23   | add  | fabric  | 0       |
-|   add_ln26_fu_12898_p2                             | -   |        | add_ln26   | add  | fabric  | 0       |
-|   add_ln26_1_fu_12927_p2                           | -   |        | add_ln26_1 | add  | fabric  | 0       |
-|   add_ln37_fu_12962_p2                             | -   |        | add_ln37   | add  | fabric  | 0       |
-|   add_ln59_fu_12982_p2                             | -   |        | add_ln59   | add  | fabric  | 0       |
-|   add_ln61_fu_13061_p2                             | -   |        | add_ln61   | add  | fabric  | 0       |
-|  + conv_Pipeline_VITIS_LOOP_28_2_VITIS_LOOP_30_3   | 0   |        |            |      |         |         |
-|    add_ln28_fu_1062_p2                             | -   |        | add_ln28   | add  | fabric  | 0       |
-|    add_ln28_1_fu_1088_p2                           | -   |        | add_ln28_1 | add  | fabric  | 0       |
-|    add_ln30_fu_1161_p2                             | -   |        | add_ln30   | add  | fabric  | 0       |
-|  + conv_Pipeline_VITIS_LOOP_40_5_VITIS_LOOP_42_6   | 0   |        |            |      |         |         |
-|    add_ln40_fu_3962_p2                             | -   |        | add_ln40   | add  | fabric  | 0       |
-|    add_ln40_1_fu_3999_p2                           | -   |        | add_ln40_1 | add  | fabric  | 0       |
-|    add_ln42_fu_4474_p2                             | -   |        | add_ln42   | add  | fabric  | 0       |
-|  + conv_Pipeline_VITIS_LOOP_50_7_VITIS_LOOP_52_8   | 0   |        |            |      |         |         |
-|    add_ln50_fu_288_p2                              | -   |        | add_ln50   | add  | fabric  | 0       |
-|    add_ln50_1_fu_325_p2                            | -   |        | add_ln50_1 | add  | fabric  | 0       |
-|    add_ln52_fu_368_p2                              | -   |        | add_ln52   | add  | fabric  | 0       |
-|  + conv_Pipeline_VITIS_LOOP_85_13_VITIS_LOOP_87_14 | 0   |        |            |      |         |         |
-|    add_ln85_fu_956_p2                              | -   |        | add_ln85   | add  | fabric  | 0       |
-|    add_ln85_1_fu_982_p2                            | -   |        | add_ln85_1 | add  | fabric  | 0       |
-|    add_ln87_fu_1055_p2                             | -   |        | add_ln87   | add  | fabric  | 0       |
-|  + conv_Pipeline_VITIS_LOOP_65_11_VITIS_LOOP_67_12 | 5   |        |            |      |         |         |
-|    add_ln65_fu_3698_p2                             | -   |        | add_ln65   | add  | fabric  | 0       |
-|    add_ln65_1_fu_3724_p2                           | -   |        | add_ln65_1 | add  | fabric  | 0       |
-|    add_ln65_2_fu_3742_p2                           | -   |        | add_ln65_2 | add  | fabric  | 0       |
-|    tmp_fu_4023_p228                                | -   |        | add_ln74   | add  | fabric  | 0       |
-|    fmul_32ns_32ns_32_4_max_dsp_1_U300              | 3   |        | mul        | fmul | maxdsp  | 3       |
-|    fadd_32ns_32ns_32_5_full_dsp_1_U299             | 2   |        | sum_1      | fadd | fulldsp | 4       |
-|    add_ln67_fu_3994_p2                             | -   |        | add_ln67   | add  | fabric  | 0       |
-+----------------------------------------------------+-----+--------+------------+------+---------+---------+
++---------------------------------------------------------------------------+-----+--------+------------+------+---------+---------+
+| Name                                                                      | DSP | Pragma | Variable   | Op   | Impl    | Latency |
++---------------------------------------------------------------------------+-----+--------+------------+------+---------+---------+
+| + conv                                                                    | 5   |        |            |      |         |         |
+|  + Loop_VITIS_LOOP_24_1_proc1                                             | 5   |        |            |      |         |         |
+|    add_ln24_2_fu_12682_p2                                                 | -   |        | add_ln24_2 | add  | fabric  | 0       |
+|    add_ln24_1_fu_12694_p2                                                 | -   |        | add_ln24_1 | add  | fabric  | 0       |
+|    add_ln24_fu_12704_p2                                                   | -   |        | add_ln24   | add  | fabric  | 0       |
+|    add_ln27_fu_12725_p2                                                   | -   |        | add_ln27   | add  | fabric  | 0       |
+|    add_ln38_fu_12780_p2                                                   | -   |        | add_ln38   | add  | fabric  | 0       |
+|    add_ln60_fu_12800_p2                                                   | -   |        | add_ln60   | add  | fabric  | 0       |
+|    add_ln62_fu_12879_p2                                                   | -   |        | add_ln62   | add  | fabric  | 0       |
+|   + Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_29_2_VITIS_LOOP_31_3   | 0   |        |            |      |         |         |
+|     add_ln29_1_fu_1062_p2                                                 | -   |        | add_ln29_1 | add  | fabric  | 0       |
+|     add_ln29_fu_1074_p2                                                   | -   |        | add_ln29   | add  | fabric  | 0       |
+|     add_ln31_fu_1161_p2                                                   | -   |        | add_ln31   | add  | fabric  | 0       |
+|   + Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_41_5_VITIS_LOOP_43_6   | 0   |        |            |      |         |         |
+|     add_ln41_1_fu_3505_p2                                                 | -   |        | add_ln41_1 | add  | fabric  | 0       |
+|     add_ln41_fu_3583_p2                                                   | -   |        | add_ln41   | add  | fabric  | 0       |
+|     add_ln46_fu_3549_p2                                                   | -   |        | add_ln46   | add  | fabric  | 0       |
+|     add_ln43_fu_3569_p2                                                   | -   |        | add_ln43   | add  | fabric  | 0       |
+|   + Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_51_7_VITIS_LOOP_53_8   | 0   |        |            |      |         |         |
+|     add_ln51_1_fu_286_p2                                                  | -   |        | add_ln51_1 | add  | fabric  | 0       |
+|     add_ln51_fu_309_p2                                                    | -   |        | add_ln51   | add  | fabric  | 0       |
+|     add_ln53_fu_366_p2                                                    | -   |        | add_ln53   | add  | fabric  | 0       |
+|   + Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_85_13_VITIS_LOOP_87_14 | 0   |        |            |      |         |         |
+|     add_ln85_1_fu_954_p2                                                  | -   |        | add_ln85_1 | add  | fabric  | 0       |
+|     add_ln85_fu_966_p2                                                    | -   |        | add_ln85   | add  | fabric  | 0       |
+|     add_ln87_fu_1053_p2                                                   | -   |        | add_ln87   | add  | fabric  | 0       |
+|   + Loop_VITIS_LOOP_24_1_proc1_Pipeline_VITIS_LOOP_66_11_VITIS_LOOP_68_12 | 5   |        |            |      |         |         |
+|     add_ln66_2_fu_3301_p2                                                 | -   |        | add_ln66_2 | add  | fabric  | 0       |
+|     add_ln66_fu_3313_p2                                                   | -   |        | add_ln66   | add  | fabric  | 0       |
+|     add_ln66_1_fu_3380_p2                                                 | -   |        | add_ln66_1 | add  | fabric  | 0       |
+|     add_ln73_fu_3388_p2                                                   | -   |        | add_ln73   | add  | fabric  | 0       |
+|     add_ln75_fu_3399_p2                                                   | -   |        | add_ln75   | add  | fabric  | 0       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U273                                    | 3   |        | mul        | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U272                                   | 2   |        | sum_1      | fadd | fulldsp | 4       |
+|     add_ln68_fu_3356_p2                                                   | -   |        | add_ln68   | add  | fabric  | 0       |
++---------------------------------------------------------------------------+-----+--------+------------+------+---------+---------+
 
 
 ================================================================
 == Bind Storage Report
 ================================================================
-+----------------------+------+------+--------+------------------+---------+------+---------+
-| Name                 | BRAM | URAM | Pragma | Variable         | Storage | Impl | Latency |
-+----------------------+------+------+--------+------------------+---------+------+---------+
-| + conv               | 282  | 0    |        |                  |         |      |         |
-|   local_input_U      | 2    | -    |        | local_input      | ram_1p  | auto | 1       |
-|   local_input_1_U    | 2    | -    |        | local_input_1    | ram_1p  | auto | 1       |
-|   local_input_2_U    | 2    | -    |        | local_input_2    | ram_1p  | auto | 1       |
-|   local_input_3_U    | 2    | -    |        | local_input_3    | ram_1p  | auto | 1       |
-|   local_input_4_U    | 2    | -    |        | local_input_4    | ram_1p  | auto | 1       |
-|   local_input_5_U    | 2    | -    |        | local_input_5    | ram_1p  | auto | 1       |
-|   local_input_6_U    | 2    | -    |        | local_input_6    | ram_1p  | auto | 1       |
-|   local_input_7_U    | 2    | -    |        | local_input_7    | ram_1p  | auto | 1       |
-|   local_input_8_U    | 2    | -    |        | local_input_8    | ram_1p  | auto | 1       |
-|   local_input_9_U    | 2    | -    |        | local_input_9    | ram_1p  | auto | 1       |
-|   local_input_10_U   | 2    | -    |        | local_input_10   | ram_1p  | auto | 1       |
-|   local_input_11_U   | 2    | -    |        | local_input_11   | ram_1p  | auto | 1       |
-|   local_input_12_U   | 2    | -    |        | local_input_12   | ram_1p  | auto | 1       |
-|   local_input_13_U   | 2    | -    |        | local_input_13   | ram_1p  | auto | 1       |
-|   local_input_14_U   | 2    | -    |        | local_input_14   | ram_1p  | auto | 1       |
-|   local_input_15_U   | 2    | -    |        | local_input_15   | ram_1p  | auto | 1       |
-|   local_input_16_U   | 2    | -    |        | local_input_16   | ram_1p  | auto | 1       |
-|   local_input_17_U   | 2    | -    |        | local_input_17   | ram_1p  | auto | 1       |
-|   local_input_18_U   | 2    | -    |        | local_input_18   | ram_1p  | auto | 1       |
-|   local_input_19_U   | 2    | -    |        | local_input_19   | ram_1p  | auto | 1       |
-|   local_input_20_U   | 2    | -    |        | local_input_20   | ram_1p  | auto | 1       |
-|   local_input_21_U   | 2    | -    |        | local_input_21   | ram_1p  | auto | 1       |
-|   local_input_22_U   | 2    | -    |        | local_input_22   | ram_1p  | auto | 1       |
-|   local_input_23_U   | 2    | -    |        | local_input_23   | ram_1p  | auto | 1       |
-|   local_input_24_U   | 2    | -    |        | local_input_24   | ram_1p  | auto | 1       |
-|   local_input_25_U   | 2    | -    |        | local_input_25   | ram_1p  | auto | 1       |
-|   local_input_26_U   | 2    | -    |        | local_input_26   | ram_1p  | auto | 1       |
-|   local_input_27_U   | 2    | -    |        | local_input_27   | ram_1p  | auto | 1       |
-|   local_input_28_U   | 2    | -    |        | local_input_28   | ram_1p  | auto | 1       |
-|   local_input_29_U   | 2    | -    |        | local_input_29   | ram_1p  | auto | 1       |
-|   local_input_30_U   | 2    | -    |        | local_input_30   | ram_1p  | auto | 1       |
-|   local_input_31_U   | 2    | -    |        | local_input_31   | ram_1p  | auto | 1       |
-|   local_input_32_U   | 2    | -    |        | local_input_32   | ram_1p  | auto | 1       |
-|   local_input_33_U   | 2    | -    |        | local_input_33   | ram_1p  | auto | 1       |
-|   local_input_34_U   | 2    | -    |        | local_input_34   | ram_1p  | auto | 1       |
-|   local_input_35_U   | 2    | -    |        | local_input_35   | ram_1p  | auto | 1       |
-|   local_input_36_U   | 2    | -    |        | local_input_36   | ram_1p  | auto | 1       |
-|   local_input_37_U   | 2    | -    |        | local_input_37   | ram_1p  | auto | 1       |
-|   local_input_38_U   | 2    | -    |        | local_input_38   | ram_1p  | auto | 1       |
-|   local_input_39_U   | 2    | -    |        | local_input_39   | ram_1p  | auto | 1       |
-|   local_input_40_U   | 2    | -    |        | local_input_40   | ram_1p  | auto | 1       |
-|   local_input_41_U   | 2    | -    |        | local_input_41   | ram_1p  | auto | 1       |
-|   local_input_42_U   | 2    | -    |        | local_input_42   | ram_1p  | auto | 1       |
-|   local_input_43_U   | 2    | -    |        | local_input_43   | ram_1p  | auto | 1       |
-|   local_input_44_U   | 2    | -    |        | local_input_44   | ram_1p  | auto | 1       |
-|   local_input_45_U   | 2    | -    |        | local_input_45   | ram_1p  | auto | 1       |
-|   local_input_46_U   | 2    | -    |        | local_input_46   | ram_1p  | auto | 1       |
-|   local_input_47_U   | 2    | -    |        | local_input_47   | ram_1p  | auto | 1       |
-|   local_input_48_U   | 2    | -    |        | local_input_48   | ram_1p  | auto | 1       |
-|   local_input_49_U   | 2    | -    |        | local_input_49   | ram_1p  | auto | 1       |
-|   local_input_50_U   | 2    | -    |        | local_input_50   | ram_1p  | auto | 1       |
-|   local_input_51_U   | 2    | -    |        | local_input_51   | ram_1p  | auto | 1       |
-|   local_input_52_U   | 2    | -    |        | local_input_52   | ram_1p  | auto | 1       |
-|   local_input_53_U   | 2    | -    |        | local_input_53   | ram_1p  | auto | 1       |
-|   local_input_54_U   | 2    | -    |        | local_input_54   | ram_1p  | auto | 1       |
-|   local_input_55_U   | 2    | -    |        | local_input_55   | ram_1p  | auto | 1       |
-|   local_input_56_U   | 2    | -    |        | local_input_56   | ram_1p  | auto | 1       |
-|   local_input_57_U   | 2    | -    |        | local_input_57   | ram_1p  | auto | 1       |
-|   local_input_58_U   | 2    | -    |        | local_input_58   | ram_1p  | auto | 1       |
-|   local_input_59_U   | 2    | -    |        | local_input_59   | ram_1p  | auto | 1       |
-|   local_input_60_U   | 2    | -    |        | local_input_60   | ram_1p  | auto | 1       |
-|   local_input_61_U   | 2    | -    |        | local_input_61   | ram_1p  | auto | 1       |
-|   local_input_62_U   | 2    | -    |        | local_input_62   | ram_1p  | auto | 1       |
-|   local_input_63_U   | 2    | -    |        | local_input_63   | ram_1p  | auto | 1       |
-|   local_input_64_U   | 2    | -    |        | local_input_64   | ram_1p  | auto | 1       |
-|   local_input_65_U   | 2    | -    |        | local_input_65   | ram_1p  | auto | 1       |
-|   local_input_66_U   | 2    | -    |        | local_input_66   | ram_1p  | auto | 1       |
-|   local_input_67_U   | 2    | -    |        | local_input_67   | ram_1p  | auto | 1       |
-|   local_input_68_U   | 2    | -    |        | local_input_68   | ram_1p  | auto | 1       |
-|   local_input_69_U   | 2    | -    |        | local_input_69   | ram_1p  | auto | 1       |
-|   local_input_70_U   | 2    | -    |        | local_input_70   | ram_1p  | auto | 1       |
-|   local_input_71_U   | 2    | -    |        | local_input_71   | ram_1p  | auto | 1       |
-|   local_input_72_U   | 2    | -    |        | local_input_72   | ram_1p  | auto | 1       |
-|   local_input_73_U   | 2    | -    |        | local_input_73   | ram_1p  | auto | 1       |
-|   local_input_74_U   | 2    | -    |        | local_input_74   | ram_1p  | auto | 1       |
-|   local_input_75_U   | 2    | -    |        | local_input_75   | ram_1p  | auto | 1       |
-|   local_input_76_U   | 2    | -    |        | local_input_76   | ram_1p  | auto | 1       |
-|   local_input_77_U   | 2    | -    |        | local_input_77   | ram_1p  | auto | 1       |
-|   local_input_78_U   | 2    | -    |        | local_input_78   | ram_1p  | auto | 1       |
-|   local_input_79_U   | 2    | -    |        | local_input_79   | ram_1p  | auto | 1       |
-|   local_input_80_U   | 2    | -    |        | local_input_80   | ram_1p  | auto | 1       |
-|   local_input_81_U   | 2    | -    |        | local_input_81   | ram_1p  | auto | 1       |
-|   local_input_82_U   | 2    | -    |        | local_input_82   | ram_1p  | auto | 1       |
-|   local_input_83_U   | 2    | -    |        | local_input_83   | ram_1p  | auto | 1       |
-|   local_input_84_U   | 2    | -    |        | local_input_84   | ram_1p  | auto | 1       |
-|   local_input_85_U   | 2    | -    |        | local_input_85   | ram_1p  | auto | 1       |
-|   local_input_86_U   | 2    | -    |        | local_input_86   | ram_1p  | auto | 1       |
-|   local_input_87_U   | 2    | -    |        | local_input_87   | ram_1p  | auto | 1       |
-|   local_input_88_U   | 2    | -    |        | local_input_88   | ram_1p  | auto | 1       |
-|   local_input_89_U   | 2    | -    |        | local_input_89   | ram_1p  | auto | 1       |
-|   local_input_90_U   | 2    | -    |        | local_input_90   | ram_1p  | auto | 1       |
-|   local_input_91_U   | 2    | -    |        | local_input_91   | ram_1p  | auto | 1       |
-|   local_input_92_U   | 2    | -    |        | local_input_92   | ram_1p  | auto | 1       |
-|   local_input_93_U   | 2    | -    |        | local_input_93   | ram_1p  | auto | 1       |
-|   local_input_94_U   | 2    | -    |        | local_input_94   | ram_1p  | auto | 1       |
-|   local_input_95_U   | 2    | -    |        | local_input_95   | ram_1p  | auto | 1       |
-|   local_input_96_U   | 2    | -    |        | local_input_96   | ram_1p  | auto | 1       |
-|   local_input_97_U   | 2    | -    |        | local_input_97   | ram_1p  | auto | 1       |
-|   local_input_98_U   | 2    | -    |        | local_input_98   | ram_1p  | auto | 1       |
-|   local_input_99_U   | 2    | -    |        | local_input_99   | ram_1p  | auto | 1       |
-|   local_input_100_U  | 2    | -    |        | local_input_100  | ram_1p  | auto | 1       |
-|   local_input_101_U  | 2    | -    |        | local_input_101  | ram_1p  | auto | 1       |
-|   local_input_102_U  | 2    | -    |        | local_input_102  | ram_1p  | auto | 1       |
-|   local_input_103_U  | 2    | -    |        | local_input_103  | ram_1p  | auto | 1       |
-|   local_input_104_U  | 2    | -    |        | local_input_104  | ram_1p  | auto | 1       |
-|   local_input_105_U  | 2    | -    |        | local_input_105  | ram_1p  | auto | 1       |
-|   local_input_106_U  | 2    | -    |        | local_input_106  | ram_1p  | auto | 1       |
-|   local_input_107_U  | 2    | -    |        | local_input_107  | ram_1p  | auto | 1       |
-|   local_input_108_U  | 2    | -    |        | local_input_108  | ram_1p  | auto | 1       |
-|   local_input_109_U  | 2    | -    |        | local_input_109  | ram_1p  | auto | 1       |
-|   local_input_110_U  | 2    | -    |        | local_input_110  | ram_1p  | auto | 1       |
-|   local_input_111_U  | 2    | -    |        | local_input_111  | ram_1p  | auto | 1       |
-|   local_input_112_U  | 2    | -    |        | local_input_112  | ram_1p  | auto | 1       |
-|   local_input_113_U  | 2    | -    |        | local_input_113  | ram_1p  | auto | 1       |
-|   local_input_114_U  | 2    | -    |        | local_input_114  | ram_1p  | auto | 1       |
-|   local_input_115_U  | 2    | -    |        | local_input_115  | ram_1p  | auto | 1       |
-|   local_input_116_U  | 2    | -    |        | local_input_116  | ram_1p  | auto | 1       |
-|   local_input_117_U  | 2    | -    |        | local_input_117  | ram_1p  | auto | 1       |
-|   local_input_118_U  | 2    | -    |        | local_input_118  | ram_1p  | auto | 1       |
-|   local_input_119_U  | 2    | -    |        | local_input_119  | ram_1p  | auto | 1       |
-|   local_input_120_U  | 2    | -    |        | local_input_120  | ram_1p  | auto | 1       |
-|   local_input_121_U  | 2    | -    |        | local_input_121  | ram_1p  | auto | 1       |
-|   local_input_122_U  | 2    | -    |        | local_input_122  | ram_1p  | auto | 1       |
-|   local_input_123_U  | 2    | -    |        | local_input_123  | ram_1p  | auto | 1       |
-|   local_input_124_U  | 2    | -    |        | local_input_124  | ram_1p  | auto | 1       |
-|   local_input_125_U  | 2    | -    |        | local_input_125  | ram_1p  | auto | 1       |
-|   local_input_126_U  | 2    | -    |        | local_input_126  | ram_1p  | auto | 1       |
-|   local_input_127_U  | 2    | -    |        | local_input_127  | ram_1p  | auto | 1       |
-|   local_input_128_U  | 2    | -    |        | local_input_128  | ram_1p  | auto | 1       |
-|   local_input_129_U  | 2    | -    |        | local_input_129  | ram_1p  | auto | 1       |
-|   local_input_130_U  | 2    | -    |        | local_input_130  | ram_1p  | auto | 1       |
-|   local_input_131_U  | 2    | -    |        | local_input_131  | ram_1p  | auto | 1       |
-|   local_input_132_U  | 2    | -    |        | local_input_132  | ram_1p  | auto | 1       |
-|   local_input_133_U  | 2    | -    |        | local_input_133  | ram_1p  | auto | 1       |
-|   local_input_134_U  | 2    | -    |        | local_input_134  | ram_1p  | auto | 1       |
-|   local_input_135_U  | 2    | -    |        | local_input_135  | ram_1p  | auto | 1       |
-|   local_input_136_U  | 2    | -    |        | local_input_136  | ram_1p  | auto | 1       |
-|   local_input_137_U  | 2    | -    |        | local_input_137  | ram_1p  | auto | 1       |
-|   local_input_138_U  | 2    | -    |        | local_input_138  | ram_1p  | auto | 1       |
-|   local_input_139_U  | 2    | -    |        | local_input_139  | ram_1p  | auto | 1       |
-|   local_input_140_U  | 2    | -    |        | local_input_140  | ram_1p  | auto | 1       |
-|   local_input_141_U  | 2    | -    |        | local_input_141  | ram_1p  | auto | 1       |
-|   local_input_142_U  | 2    | -    |        | local_input_142  | ram_1p  | auto | 1       |
-|   local_input_143_U  | 2    | -    |        | local_input_143  | ram_1p  | auto | 1       |
-|   local_input_144_U  | 2    | -    |        | local_input_144  | ram_1p  | auto | 1       |
-|   local_input_145_U  | 2    | -    |        | local_input_145  | ram_1p  | auto | 1       |
-|   local_input_146_U  | 2    | -    |        | local_input_146  | ram_1p  | auto | 1       |
-|   local_input_147_U  | 2    | -    |        | local_input_147  | ram_1p  | auto | 1       |
-|   local_input_148_U  | 2    | -    |        | local_input_148  | ram_1p  | auto | 1       |
-|   local_input_149_U  | 2    | -    |        | local_input_149  | ram_1p  | auto | 1       |
-|   local_input_150_U  | 2    | -    |        | local_input_150  | ram_1p  | auto | 1       |
-|   local_input_151_U  | 2    | -    |        | local_input_151  | ram_1p  | auto | 1       |
-|   local_input_152_U  | 2    | -    |        | local_input_152  | ram_1p  | auto | 1       |
-|   local_input_153_U  | 2    | -    |        | local_input_153  | ram_1p  | auto | 1       |
-|   local_input_154_U  | 2    | -    |        | local_input_154  | ram_1p  | auto | 1       |
-|   local_input_155_U  | 2    | -    |        | local_input_155  | ram_1p  | auto | 1       |
-|   local_input_156_U  | 2    | -    |        | local_input_156  | ram_1p  | auto | 1       |
-|   local_input_157_U  | 2    | -    |        | local_input_157  | ram_1p  | auto | 1       |
-|   local_input_158_U  | 2    | -    |        | local_input_158  | ram_1p  | auto | 1       |
-|   local_input_159_U  | 2    | -    |        | local_input_159  | ram_1p  | auto | 1       |
-|   local_input_160_U  | 2    | -    |        | local_input_160  | ram_1p  | auto | 1       |
-|   local_input_161_U  | 2    | -    |        | local_input_161  | ram_1p  | auto | 1       |
-|   local_input_162_U  | 2    | -    |        | local_input_162  | ram_1p  | auto | 1       |
-|   local_input_163_U  | 2    | -    |        | local_input_163  | ram_1p  | auto | 1       |
-|   local_input_164_U  | 2    | -    |        | local_input_164  | ram_1p  | auto | 1       |
-|   local_input_165_U  | 2    | -    |        | local_input_165  | ram_1p  | auto | 1       |
-|   local_input_166_U  | 2    | -    |        | local_input_166  | ram_1p  | auto | 1       |
-|   local_input_167_U  | 2    | -    |        | local_input_167  | ram_1p  | auto | 1       |
-|   local_input_168_U  | 2    | -    |        | local_input_168  | ram_1p  | auto | 1       |
-|   local_input_169_U  | 2    | -    |        | local_input_169  | ram_1p  | auto | 1       |
-|   local_input_170_U  | 2    | -    |        | local_input_170  | ram_1p  | auto | 1       |
-|   local_input_171_U  | 2    | -    |        | local_input_171  | ram_1p  | auto | 1       |
-|   local_input_172_U  | 2    | -    |        | local_input_172  | ram_1p  | auto | 1       |
-|   local_input_173_U  | 2    | -    |        | local_input_173  | ram_1p  | auto | 1       |
-|   local_input_174_U  | 2    | -    |        | local_input_174  | ram_1p  | auto | 1       |
-|   local_input_175_U  | 2    | -    |        | local_input_175  | ram_1p  | auto | 1       |
-|   local_input_176_U  | 2    | -    |        | local_input_176  | ram_1p  | auto | 1       |
-|   local_input_177_U  | 2    | -    |        | local_input_177  | ram_1p  | auto | 1       |
-|   local_input_178_U  | 2    | -    |        | local_input_178  | ram_1p  | auto | 1       |
-|   local_input_179_U  | 2    | -    |        | local_input_179  | ram_1p  | auto | 1       |
-|   local_input_180_U  | 2    | -    |        | local_input_180  | ram_1p  | auto | 1       |
-|   local_input_181_U  | 2    | -    |        | local_input_181  | ram_1p  | auto | 1       |
-|   local_input_182_U  | 2    | -    |        | local_input_182  | ram_1p  | auto | 1       |
-|   local_input_183_U  | 2    | -    |        | local_input_183  | ram_1p  | auto | 1       |
-|   local_input_184_U  | 2    | -    |        | local_input_184  | ram_1p  | auto | 1       |
-|   local_input_185_U  | 2    | -    |        | local_input_185  | ram_1p  | auto | 1       |
-|   local_input_186_U  | 2    | -    |        | local_input_186  | ram_1p  | auto | 1       |
-|   local_input_187_U  | 2    | -    |        | local_input_187  | ram_1p  | auto | 1       |
-|   local_input_188_U  | 2    | -    |        | local_input_188  | ram_1p  | auto | 1       |
-|   local_input_189_U  | 2    | -    |        | local_input_189  | ram_1p  | auto | 1       |
-|   local_input_190_U  | 2    | -    |        | local_input_190  | ram_1p  | auto | 1       |
-|   local_input_191_U  | 2    | -    |        | local_input_191  | ram_1p  | auto | 1       |
-|   local_input_192_U  | 2    | -    |        | local_input_192  | ram_1p  | auto | 1       |
-|   local_input_193_U  | 2    | -    |        | local_input_193  | ram_1p  | auto | 1       |
-|   local_input_194_U  | 2    | -    |        | local_input_194  | ram_1p  | auto | 1       |
-|   local_input_195_U  | 2    | -    |        | local_input_195  | ram_1p  | auto | 1       |
-|   local_input_196_U  | 2    | -    |        | local_input_196  | ram_1p  | auto | 1       |
-|   local_input_197_U  | 2    | -    |        | local_input_197  | ram_1p  | auto | 1       |
-|   local_input_198_U  | 2    | -    |        | local_input_198  | ram_1p  | auto | 1       |
-|   local_input_199_U  | 2    | -    |        | local_input_199  | ram_1p  | auto | 1       |
-|   local_input_200_U  | 2    | -    |        | local_input_200  | ram_1p  | auto | 1       |
-|   local_input_201_U  | 2    | -    |        | local_input_201  | ram_1p  | auto | 1       |
-|   local_input_202_U  | 2    | -    |        | local_input_202  | ram_1p  | auto | 1       |
-|   local_input_203_U  | 2    | -    |        | local_input_203  | ram_1p  | auto | 1       |
-|   local_input_204_U  | 2    | -    |        | local_input_204  | ram_1p  | auto | 1       |
-|   local_input_205_U  | 2    | -    |        | local_input_205  | ram_1p  | auto | 1       |
-|   local_input_206_U  | 2    | -    |        | local_input_206  | ram_1p  | auto | 1       |
-|   local_input_207_U  | 2    | -    |        | local_input_207  | ram_1p  | auto | 1       |
-|   local_input_208_U  | 2    | -    |        | local_input_208  | ram_1p  | auto | 1       |
-|   local_input_209_U  | 2    | -    |        | local_input_209  | ram_1p  | auto | 1       |
-|   local_input_210_U  | 2    | -    |        | local_input_210  | ram_1p  | auto | 1       |
-|   local_input_211_U  | 2    | -    |        | local_input_211  | ram_1p  | auto | 1       |
-|   local_input_212_U  | 2    | -    |        | local_input_212  | ram_1p  | auto | 1       |
-|   local_input_213_U  | 2    | -    |        | local_input_213  | ram_1p  | auto | 1       |
-|   local_input_214_U  | 2    | -    |        | local_input_214  | ram_1p  | auto | 1       |
-|   local_input_215_U  | 2    | -    |        | local_input_215  | ram_1p  | auto | 1       |
-|   local_input_216_U  | 2    | -    |        | local_input_216  | ram_1p  | auto | 1       |
-|   local_input_217_U  | 2    | -    |        | local_input_217  | ram_1p  | auto | 1       |
-|   local_input_218_U  | 2    | -    |        | local_input_218  | ram_1p  | auto | 1       |
-|   local_input_219_U  | 2    | -    |        | local_input_219  | ram_1p  | auto | 1       |
-|   local_input_220_U  | 2    | -    |        | local_input_220  | ram_1p  | auto | 1       |
-|   local_input_221_U  | 2    | -    |        | local_input_221  | ram_1p  | auto | 1       |
-|   local_input_222_U  | 2    | -    |        | local_input_222  | ram_1p  | auto | 1       |
-|   local_input_223_U  | 2    | -    |        | local_input_223  | ram_1p  | auto | 1       |
-|   local_input_224_U  | 2    | -    |        | local_input_224  | ram_1p  | auto | 1       |
-|   local_input_225_U  | 2    | -    |        | local_input_225  | ram_1p  | auto | 1       |
-|   local_input_226_U  | 2    | -    |        | local_input_226  | ram_1p  | auto | 1       |
-|   local_weights_U    | -    | -    |        | local_weights    | ram_1p  | auto | 1       |
-|   local_weights_1_U  | -    | -    |        | local_weights_1  | ram_1p  | auto | 1       |
-|   local_weights_2_U  | -    | -    |        | local_weights_2  | ram_1p  | auto | 1       |
-|   local_weights_3_U  | -    | -    |        | local_weights_3  | ram_1p  | auto | 1       |
-|   local_weights_4_U  | -    | -    |        | local_weights_4  | ram_1p  | auto | 1       |
-|   local_weights_5_U  | -    | -    |        | local_weights_5  | ram_1p  | auto | 1       |
-|   local_weights_6_U  | -    | -    |        | local_weights_6  | ram_1p  | auto | 1       |
-|   local_weights_7_U  | -    | -    |        | local_weights_7  | ram_1p  | auto | 1       |
-|   local_weights_8_U  | -    | -    |        | local_weights_8  | ram_1p  | auto | 1       |
-|   local_weights_9_U  | -    | -    |        | local_weights_9  | ram_1p  | auto | 1       |
-|   local_weights_10_U | -    | -    |        | local_weights_10 | ram_1p  | auto | 1       |
-|   local_output_U     | 1    | -    |        | local_output     | ram_1p  | auto | 1       |
-|   local_output_1_U   | 1    | -    |        | local_output_1   | ram_1p  | auto | 1       |
-|   local_output_2_U   | 1    | -    |        | local_output_2   | ram_1p  | auto | 1       |
-|   local_output_3_U   | 1    | -    |        | local_output_3   | ram_1p  | auto | 1       |
-|   local_output_4_U   | 1    | -    |        | local_output_4   | ram_1p  | auto | 1       |
-|   local_output_5_U   | 1    | -    |        | local_output_5   | ram_1p  | auto | 1       |
-|   local_output_6_U   | 1    | -    |        | local_output_6   | ram_1p  | auto | 1       |
-|   local_output_7_U   | 1    | -    |        | local_output_7   | ram_1p  | auto | 1       |
-|   local_output_8_U   | 1    | -    |        | local_output_8   | ram_1p  | auto | 1       |
-|   local_output_9_U   | 1    | -    |        | local_output_9   | ram_1p  | auto | 1       |
-|   local_output_10_U  | 1    | -    |        | local_output_10  | ram_1p  | auto | 1       |
-|   local_output_11_U  | 1    | -    |        | local_output_11  | ram_1p  | auto | 1       |
-|   local_output_12_U  | 1    | -    |        | local_output_12  | ram_1p  | auto | 1       |
-|   local_output_13_U  | 1    | -    |        | local_output_13  | ram_1p  | auto | 1       |
-|   local_output_14_U  | 1    | -    |        | local_output_14  | ram_1p  | auto | 1       |
-|   local_output_15_U  | 1    | -    |        | local_output_15  | ram_1p  | auto | 1       |
-|   local_output_16_U  | 1    | -    |        | local_output_16  | ram_1p  | auto | 1       |
-|   local_output_17_U  | 1    | -    |        | local_output_17  | ram_1p  | auto | 1       |
-|   local_output_18_U  | 1    | -    |        | local_output_18  | ram_1p  | auto | 1       |
-|   local_output_19_U  | 1    | -    |        | local_output_19  | ram_1p  | auto | 1       |
-|   local_output_20_U  | 1    | -    |        | local_output_20  | ram_1p  | auto | 1       |
-|   local_output_21_U  | 1    | -    |        | local_output_21  | ram_1p  | auto | 1       |
-|   local_output_22_U  | 1    | -    |        | local_output_22  | ram_1p  | auto | 1       |
-|   local_output_23_U  | 1    | -    |        | local_output_23  | ram_1p  | auto | 1       |
-|   local_output_24_U  | 1    | -    |        | local_output_24  | ram_1p  | auto | 1       |
-|   local_output_25_U  | 1    | -    |        | local_output_25  | ram_1p  | auto | 1       |
-|   local_output_26_U  | 1    | -    |        | local_output_26  | ram_1p  | auto | 1       |
-|   local_output_27_U  | 1    | -    |        | local_output_27  | ram_1p  | auto | 1       |
-|   local_output_28_U  | 1    | -    |        | local_output_28  | ram_1p  | auto | 1       |
-|   local_output_29_U  | 1    | -    |        | local_output_29  | ram_1p  | auto | 1       |
-|   local_output_30_U  | 1    | -    |        | local_output_30  | ram_1p  | auto | 1       |
-|   local_output_31_U  | 1    | -    |        | local_output_31  | ram_1p  | auto | 1       |
-|   local_output_32_U  | 1    | -    |        | local_output_32  | ram_1p  | auto | 1       |
-|   local_output_33_U  | 1    | -    |        | local_output_33  | ram_1p  | auto | 1       |
-|   local_output_34_U  | 1    | -    |        | local_output_34  | ram_1p  | auto | 1       |
-|   local_output_35_U  | 1    | -    |        | local_output_35  | ram_1p  | auto | 1       |
-|   local_output_36_U  | 1    | -    |        | local_output_36  | ram_1p  | auto | 1       |
-|   local_output_37_U  | 1    | -    |        | local_output_37  | ram_1p  | auto | 1       |
-|   local_output_38_U  | 1    | -    |        | local_output_38  | ram_1p  | auto | 1       |
-|   local_output_39_U  | 1    | -    |        | local_output_39  | ram_1p  | auto | 1       |
-|   local_output_40_U  | 1    | -    |        | local_output_40  | ram_1p  | auto | 1       |
-|   local_output_41_U  | 1    | -    |        | local_output_41  | ram_1p  | auto | 1       |
-|   local_output_42_U  | 1    | -    |        | local_output_42  | ram_1p  | auto | 1       |
-|   local_output_43_U  | 1    | -    |        | local_output_43  | ram_1p  | auto | 1       |
-|   local_output_44_U  | 1    | -    |        | local_output_44  | ram_1p  | auto | 1       |
-|   local_output_45_U  | 1    | -    |        | local_output_45  | ram_1p  | auto | 1       |
-|   local_output_46_U  | 1    | -    |        | local_output_46  | ram_1p  | auto | 1       |
-|   local_output_47_U  | 1    | -    |        | local_output_47  | ram_1p  | auto | 1       |
-|   local_output_48_U  | 1    | -    |        | local_output_48  | ram_1p  | auto | 1       |
-|   local_output_49_U  | 1    | -    |        | local_output_49  | ram_1p  | auto | 1       |
-|   local_output_50_U  | 1    | -    |        | local_output_50  | ram_1p  | auto | 1       |
-|   local_output_51_U  | 1    | -    |        | local_output_51  | ram_1p  | auto | 1       |
-|   local_output_52_U  | 1    | -    |        | local_output_52  | ram_1p  | auto | 1       |
-|   local_output_53_U  | 1    | -    |        | local_output_53  | ram_1p  | auto | 1       |
-|   local_output_54_U  | 1    | -    |        | local_output_54  | ram_1p  | auto | 1       |
-+----------------------+------+------+--------+------------------+---------+------+---------+
++-------------------------------+------+------+--------+------------------+---------+------+---------+
+| Name                          | BRAM | URAM | Pragma | Variable         | Storage | Impl | Latency |
++-------------------------------+------+------+--------+------------------+---------+------+---------+
+| + conv                        | 255  | 0    |        |                  |         |      |         |
+|  + Loop_VITIS_LOOP_24_1_proc1 | 255  | 0    |        |                  |         |      |         |
+|    local_output_U             | 1    | -    |        | local_output     | ram_1p  | auto | 1       |
+|    local_output_1_U           | 1    | -    |        | local_output_1   | ram_1p  | auto | 1       |
+|    local_output_2_U           | 1    | -    |        | local_output_2   | ram_1p  | auto | 1       |
+|    local_output_3_U           | 1    | -    |        | local_output_3   | ram_1p  | auto | 1       |
+|    local_output_4_U           | 1    | -    |        | local_output_4   | ram_1p  | auto | 1       |
+|    local_output_5_U           | 1    | -    |        | local_output_5   | ram_1p  | auto | 1       |
+|    local_output_6_U           | 1    | -    |        | local_output_6   | ram_1p  | auto | 1       |
+|    local_output_7_U           | 1    | -    |        | local_output_7   | ram_1p  | auto | 1       |
+|    local_output_8_U           | 1    | -    |        | local_output_8   | ram_1p  | auto | 1       |
+|    local_output_9_U           | 1    | -    |        | local_output_9   | ram_1p  | auto | 1       |
+|    local_output_10_U          | 1    | -    |        | local_output_10  | ram_1p  | auto | 1       |
+|    local_output_11_U          | 1    | -    |        | local_output_11  | ram_1p  | auto | 1       |
+|    local_output_12_U          | 1    | -    |        | local_output_12  | ram_1p  | auto | 1       |
+|    local_output_13_U          | 1    | -    |        | local_output_13  | ram_1p  | auto | 1       |
+|    local_output_14_U          | 1    | -    |        | local_output_14  | ram_1p  | auto | 1       |
+|    local_output_15_U          | 1    | -    |        | local_output_15  | ram_1p  | auto | 1       |
+|    local_output_16_U          | 1    | -    |        | local_output_16  | ram_1p  | auto | 1       |
+|    local_output_17_U          | 1    | -    |        | local_output_17  | ram_1p  | auto | 1       |
+|    local_output_18_U          | 1    | -    |        | local_output_18  | ram_1p  | auto | 1       |
+|    local_output_19_U          | 1    | -    |        | local_output_19  | ram_1p  | auto | 1       |
+|    local_output_20_U          | 1    | -    |        | local_output_20  | ram_1p  | auto | 1       |
+|    local_output_21_U          | 1    | -    |        | local_output_21  | ram_1p  | auto | 1       |
+|    local_output_22_U          | 1    | -    |        | local_output_22  | ram_1p  | auto | 1       |
+|    local_output_23_U          | 1    | -    |        | local_output_23  | ram_1p  | auto | 1       |
+|    local_output_24_U          | 1    | -    |        | local_output_24  | ram_1p  | auto | 1       |
+|    local_output_25_U          | 1    | -    |        | local_output_25  | ram_1p  | auto | 1       |
+|    local_output_26_U          | 1    | -    |        | local_output_26  | ram_1p  | auto | 1       |
+|    local_output_27_U          | 1    | -    |        | local_output_27  | ram_1p  | auto | 1       |
+|    local_output_28_U          | 1    | -    |        | local_output_28  | ram_1p  | auto | 1       |
+|    local_output_29_U          | 1    | -    |        | local_output_29  | ram_1p  | auto | 1       |
+|    local_output_30_U          | 1    | -    |        | local_output_30  | ram_1p  | auto | 1       |
+|    local_output_31_U          | 1    | -    |        | local_output_31  | ram_1p  | auto | 1       |
+|    local_output_32_U          | 1    | -    |        | local_output_32  | ram_1p  | auto | 1       |
+|    local_output_33_U          | 1    | -    |        | local_output_33  | ram_1p  | auto | 1       |
+|    local_output_34_U          | 1    | -    |        | local_output_34  | ram_1p  | auto | 1       |
+|    local_output_35_U          | 1    | -    |        | local_output_35  | ram_1p  | auto | 1       |
+|    local_output_36_U          | 1    | -    |        | local_output_36  | ram_1p  | auto | 1       |
+|    local_output_37_U          | 1    | -    |        | local_output_37  | ram_1p  | auto | 1       |
+|    local_output_38_U          | 1    | -    |        | local_output_38  | ram_1p  | auto | 1       |
+|    local_output_39_U          | 1    | -    |        | local_output_39  | ram_1p  | auto | 1       |
+|    local_output_40_U          | 1    | -    |        | local_output_40  | ram_1p  | auto | 1       |
+|    local_output_41_U          | 1    | -    |        | local_output_41  | ram_1p  | auto | 1       |
+|    local_output_42_U          | 1    | -    |        | local_output_42  | ram_1p  | auto | 1       |
+|    local_output_43_U          | 1    | -    |        | local_output_43  | ram_1p  | auto | 1       |
+|    local_output_44_U          | 1    | -    |        | local_output_44  | ram_1p  | auto | 1       |
+|    local_output_45_U          | 1    | -    |        | local_output_45  | ram_1p  | auto | 1       |
+|    local_output_46_U          | 1    | -    |        | local_output_46  | ram_1p  | auto | 1       |
+|    local_output_47_U          | 1    | -    |        | local_output_47  | ram_1p  | auto | 1       |
+|    local_output_48_U          | 1    | -    |        | local_output_48  | ram_1p  | auto | 1       |
+|    local_output_49_U          | 1    | -    |        | local_output_49  | ram_1p  | auto | 1       |
+|    local_output_50_U          | 1    | -    |        | local_output_50  | ram_1p  | auto | 1       |
+|    local_output_51_U          | 1    | -    |        | local_output_51  | ram_1p  | auto | 1       |
+|    local_output_52_U          | 1    | -    |        | local_output_52  | ram_1p  | auto | 1       |
+|    local_output_53_U          | 1    | -    |        | local_output_53  | ram_1p  | auto | 1       |
+|    local_output_54_U          | 1    | -    |        | local_output_54  | ram_1p  | auto | 1       |
+|    local_weights_U            | -    | -    |        | local_weights    | ram_1p  | auto | 1       |
+|    local_weights_1_U          | -    | -    |        | local_weights_1  | ram_1p  | auto | 1       |
+|    local_weights_2_U          | -    | -    |        | local_weights_2  | ram_1p  | auto | 1       |
+|    local_weights_3_U          | -    | -    |        | local_weights_3  | ram_1p  | auto | 1       |
+|    local_weights_4_U          | -    | -    |        | local_weights_4  | ram_1p  | auto | 1       |
+|    local_weights_5_U          | -    | -    |        | local_weights_5  | ram_1p  | auto | 1       |
+|    local_weights_6_U          | -    | -    |        | local_weights_6  | ram_1p  | auto | 1       |
+|    local_weights_7_U          | -    | -    |        | local_weights_7  | ram_1p  | auto | 1       |
+|    local_weights_8_U          | -    | -    |        | local_weights_8  | ram_1p  | auto | 1       |
+|    local_weights_9_U          | -    | -    |        | local_weights_9  | ram_1p  | auto | 1       |
+|    local_weights_10_U         | -    | -    |        | local_weights_10 | ram_1p  | auto | 1       |
+|    local_input_U              | 1    | -    |        | local_input      | ram_1p  | auto | 1       |
+|    local_input_1_U            | 1    | -    |        | local_input_1    | ram_1p  | auto | 1       |
+|    local_input_2_U            | 1    | -    |        | local_input_2    | ram_1p  | auto | 1       |
+|    local_input_3_U            | 1    | -    |        | local_input_3    | ram_1p  | auto | 1       |
+|    local_input_4_U            | 1    | -    |        | local_input_4    | ram_1p  | auto | 1       |
+|    local_input_5_U            | 1    | -    |        | local_input_5    | ram_1p  | auto | 1       |
+|    local_input_6_U            | 1    | -    |        | local_input_6    | ram_1p  | auto | 1       |
+|    local_input_7_U            | 1    | -    |        | local_input_7    | ram_1p  | auto | 1       |
+|    local_input_8_U            | 1    | -    |        | local_input_8    | ram_1p  | auto | 1       |
+|    local_input_9_U            | 1    | -    |        | local_input_9    | ram_1p  | auto | 1       |
+|    local_input_10_U           | 1    | -    |        | local_input_10   | ram_1p  | auto | 1       |
+|    local_input_11_U           | 1    | -    |        | local_input_11   | ram_1p  | auto | 1       |
+|    local_input_12_U           | 1    | -    |        | local_input_12   | ram_1p  | auto | 1       |
+|    local_input_13_U           | 1    | -    |        | local_input_13   | ram_1p  | auto | 1       |
+|    local_input_14_U           | 1    | -    |        | local_input_14   | ram_1p  | auto | 1       |
+|    local_input_15_U           | 1    | -    |        | local_input_15   | ram_1p  | auto | 1       |
+|    local_input_16_U           | 1    | -    |        | local_input_16   | ram_1p  | auto | 1       |
+|    local_input_17_U           | 1    | -    |        | local_input_17   | ram_1p  | auto | 1       |
+|    local_input_18_U           | 1    | -    |        | local_input_18   | ram_1p  | auto | 1       |
+|    local_input_19_U           | 1    | -    |        | local_input_19   | ram_1p  | auto | 1       |
+|    local_input_20_U           | 1    | -    |        | local_input_20   | ram_1p  | auto | 1       |
+|    local_input_21_U           | 1    | -    |        | local_input_21   | ram_1p  | auto | 1       |
+|    local_input_22_U           | 1    | -    |        | local_input_22   | ram_1p  | auto | 1       |
+|    local_input_23_U           | 1    | -    |        | local_input_23   | ram_1p  | auto | 1       |
+|    local_input_24_U           | 1    | -    |        | local_input_24   | ram_1p  | auto | 1       |
+|    local_input_25_U           | 1    | -    |        | local_input_25   | ram_1p  | auto | 1       |
+|    local_input_26_U           | 1    | -    |        | local_input_26   | ram_1p  | auto | 1       |
+|    local_input_27_U           | 1    | -    |        | local_input_27   | ram_1p  | auto | 1       |
+|    local_input_28_U           | 1    | -    |        | local_input_28   | ram_1p  | auto | 1       |
+|    local_input_29_U           | 1    | -    |        | local_input_29   | ram_1p  | auto | 1       |
+|    local_input_30_U           | 1    | -    |        | local_input_30   | ram_1p  | auto | 1       |
+|    local_input_31_U           | 1    | -    |        | local_input_31   | ram_1p  | auto | 1       |
+|    local_input_32_U           | 1    | -    |        | local_input_32   | ram_1p  | auto | 1       |
+|    local_input_33_U           | 1    | -    |        | local_input_33   | ram_1p  | auto | 1       |
+|    local_input_34_U           | 1    | -    |        | local_input_34   | ram_1p  | auto | 1       |
+|    local_input_35_U           | 1    | -    |        | local_input_35   | ram_1p  | auto | 1       |
+|    local_input_36_U           | 1    | -    |        | local_input_36   | ram_1p  | auto | 1       |
+|    local_input_37_U           | 1    | -    |        | local_input_37   | ram_1p  | auto | 1       |
+|    local_input_38_U           | 1    | -    |        | local_input_38   | ram_1p  | auto | 1       |
+|    local_input_39_U           | 1    | -    |        | local_input_39   | ram_1p  | auto | 1       |
+|    local_input_40_U           | 1    | -    |        | local_input_40   | ram_1p  | auto | 1       |
+|    local_input_41_U           | 1    | -    |        | local_input_41   | ram_1p  | auto | 1       |
+|    local_input_42_U           | 1    | -    |        | local_input_42   | ram_1p  | auto | 1       |
+|    local_input_43_U           | 1    | -    |        | local_input_43   | ram_1p  | auto | 1       |
+|    local_input_44_U           | 1    | -    |        | local_input_44   | ram_1p  | auto | 1       |
+|    local_input_45_U           | 1    | -    |        | local_input_45   | ram_1p  | auto | 1       |
+|    local_input_46_U           | 1    | -    |        | local_input_46   | ram_1p  | auto | 1       |
+|    local_input_47_U           | 1    | -    |        | local_input_47   | ram_1p  | auto | 1       |
+|    local_input_48_U           | 1    | -    |        | local_input_48   | ram_1p  | auto | 1       |
+|    local_input_49_U           | 1    | -    |        | local_input_49   | ram_1p  | auto | 1       |
+|    local_input_50_U           | 1    | -    |        | local_input_50   | ram_1p  | auto | 1       |
+|    local_input_51_U           | 1    | -    |        | local_input_51   | ram_1p  | auto | 1       |
+|    local_input_52_U           | 1    | -    |        | local_input_52   | ram_1p  | auto | 1       |
+|    local_input_53_U           | 1    | -    |        | local_input_53   | ram_1p  | auto | 1       |
+|    local_input_54_U           | 1    | -    |        | local_input_54   | ram_1p  | auto | 1       |
+|    local_input_55_U           | 1    | -    |        | local_input_55   | ram_1p  | auto | 1       |
+|    local_input_56_U           | 1    | -    |        | local_input_56   | ram_1p  | auto | 1       |
+|    local_input_57_U           | 1    | -    |        | local_input_57   | ram_1p  | auto | 1       |
+|    local_input_58_U           | 1    | -    |        | local_input_58   | ram_1p  | auto | 1       |
+|    local_input_59_U           | 1    | -    |        | local_input_59   | ram_1p  | auto | 1       |
+|    local_input_60_U           | 1    | -    |        | local_input_60   | ram_1p  | auto | 1       |
+|    local_input_61_U           | 1    | -    |        | local_input_61   | ram_1p  | auto | 1       |
+|    local_input_62_U           | 1    | -    |        | local_input_62   | ram_1p  | auto | 1       |
+|    local_input_63_U           | 1    | -    |        | local_input_63   | ram_1p  | auto | 1       |
+|    local_input_64_U           | 1    | -    |        | local_input_64   | ram_1p  | auto | 1       |
+|    local_input_65_U           | 1    | -    |        | local_input_65   | ram_1p  | auto | 1       |
+|    local_input_66_U           | 1    | -    |        | local_input_66   | ram_1p  | auto | 1       |
+|    local_input_67_U           | 1    | -    |        | local_input_67   | ram_1p  | auto | 1       |
+|    local_input_68_U           | 1    | -    |        | local_input_68   | ram_1p  | auto | 1       |
+|    local_input_69_U           | 1    | -    |        | local_input_69   | ram_1p  | auto | 1       |
+|    local_input_70_U           | 1    | -    |        | local_input_70   | ram_1p  | auto | 1       |
+|    local_input_71_U           | 1    | -    |        | local_input_71   | ram_1p  | auto | 1       |
+|    local_input_72_U           | 1    | -    |        | local_input_72   | ram_1p  | auto | 1       |
+|    local_input_73_U           | 1    | -    |        | local_input_73   | ram_1p  | auto | 1       |
+|    local_input_74_U           | 1    | -    |        | local_input_74   | ram_1p  | auto | 1       |
+|    local_input_75_U           | 1    | -    |        | local_input_75   | ram_1p  | auto | 1       |
+|    local_input_76_U           | 1    | -    |        | local_input_76   | ram_1p  | auto | 1       |
+|    local_input_77_U           | 1    | -    |        | local_input_77   | ram_1p  | auto | 1       |
+|    local_input_78_U           | 1    | -    |        | local_input_78   | ram_1p  | auto | 1       |
+|    local_input_79_U           | 1    | -    |        | local_input_79   | ram_1p  | auto | 1       |
+|    local_input_80_U           | 1    | -    |        | local_input_80   | ram_1p  | auto | 1       |
+|    local_input_81_U           | 1    | -    |        | local_input_81   | ram_1p  | auto | 1       |
+|    local_input_82_U           | 1    | -    |        | local_input_82   | ram_1p  | auto | 1       |
+|    local_input_83_U           | 1    | -    |        | local_input_83   | ram_1p  | auto | 1       |
+|    local_input_84_U           | 1    | -    |        | local_input_84   | ram_1p  | auto | 1       |
+|    local_input_85_U           | 1    | -    |        | local_input_85   | ram_1p  | auto | 1       |
+|    local_input_86_U           | 1    | -    |        | local_input_86   | ram_1p  | auto | 1       |
+|    local_input_87_U           | 1    | -    |        | local_input_87   | ram_1p  | auto | 1       |
+|    local_input_88_U           | 1    | -    |        | local_input_88   | ram_1p  | auto | 1       |
+|    local_input_89_U           | 1    | -    |        | local_input_89   | ram_1p  | auto | 1       |
+|    local_input_90_U           | 1    | -    |        | local_input_90   | ram_1p  | auto | 1       |
+|    local_input_91_U           | 1    | -    |        | local_input_91   | ram_1p  | auto | 1       |
+|    local_input_92_U           | 1    | -    |        | local_input_92   | ram_1p  | auto | 1       |
+|    local_input_93_U           | 1    | -    |        | local_input_93   | ram_1p  | auto | 1       |
+|    local_input_94_U           | 1    | -    |        | local_input_94   | ram_1p  | auto | 1       |
+|    local_input_95_U           | 1    | -    |        | local_input_95   | ram_1p  | auto | 1       |
+|    local_input_96_U           | 1    | -    |        | local_input_96   | ram_1p  | auto | 1       |
+|    local_input_97_U           | 1    | -    |        | local_input_97   | ram_1p  | auto | 1       |
+|    local_input_98_U           | 1    | -    |        | local_input_98   | ram_1p  | auto | 1       |
+|    local_input_99_U           | 1    | -    |        | local_input_99   | ram_1p  | auto | 1       |
+|    local_input_100_U          | 1    | -    |        | local_input_100  | ram_1p  | auto | 1       |
+|    local_input_101_U          | 1    | -    |        | local_input_101  | ram_1p  | auto | 1       |
+|    local_input_102_U          | 1    | -    |        | local_input_102  | ram_1p  | auto | 1       |
+|    local_input_103_U          | 1    | -    |        | local_input_103  | ram_1p  | auto | 1       |
+|    local_input_104_U          | 1    | -    |        | local_input_104  | ram_1p  | auto | 1       |
+|    local_input_105_U          | 1    | -    |        | local_input_105  | ram_1p  | auto | 1       |
+|    local_input_106_U          | 1    | -    |        | local_input_106  | ram_1p  | auto | 1       |
+|    local_input_107_U          | 1    | -    |        | local_input_107  | ram_1p  | auto | 1       |
+|    local_input_108_U          | 1    | -    |        | local_input_108  | ram_1p  | auto | 1       |
+|    local_input_109_U          | 1    | -    |        | local_input_109  | ram_1p  | auto | 1       |
+|    local_input_110_U          | 1    | -    |        | local_input_110  | ram_1p  | auto | 1       |
+|    local_input_111_U          | 1    | -    |        | local_input_111  | ram_1p  | auto | 1       |
+|    local_input_112_U          | 1    | -    |        | local_input_112  | ram_1p  | auto | 1       |
+|    local_input_113_U          | 1    | -    |        | local_input_113  | ram_1p  | auto | 1       |
+|    local_input_114_U          | 1    | -    |        | local_input_114  | ram_1p  | auto | 1       |
+|    local_input_115_U          | 1    | -    |        | local_input_115  | ram_1p  | auto | 1       |
+|    local_input_116_U          | 1    | -    |        | local_input_116  | ram_1p  | auto | 1       |
+|    local_input_117_U          | 1    | -    |        | local_input_117  | ram_1p  | auto | 1       |
+|    local_input_118_U          | 1    | -    |        | local_input_118  | ram_1p  | auto | 1       |
+|    local_input_119_U          | 1    | -    |        | local_input_119  | ram_1p  | auto | 1       |
+|    local_input_120_U          | 1    | -    |        | local_input_120  | ram_1p  | auto | 1       |
+|    local_input_121_U          | 1    | -    |        | local_input_121  | ram_1p  | auto | 1       |
+|    local_input_122_U          | 1    | -    |        | local_input_122  | ram_1p  | auto | 1       |
+|    local_input_123_U          | 1    | -    |        | local_input_123  | ram_1p  | auto | 1       |
+|    local_input_124_U          | 1    | -    |        | local_input_124  | ram_1p  | auto | 1       |
+|    local_input_125_U          | 1    | -    |        | local_input_125  | ram_1p  | auto | 1       |
+|    local_input_126_U          | 1    | -    |        | local_input_126  | ram_1p  | auto | 1       |
+|    local_input_127_U          | 1    | -    |        | local_input_127  | ram_1p  | auto | 1       |
+|    local_input_128_U          | 1    | -    |        | local_input_128  | ram_1p  | auto | 1       |
+|    local_input_129_U          | 1    | -    |        | local_input_129  | ram_1p  | auto | 1       |
+|    local_input_130_U          | 1    | -    |        | local_input_130  | ram_1p  | auto | 1       |
+|    local_input_131_U          | 1    | -    |        | local_input_131  | ram_1p  | auto | 1       |
+|    local_input_132_U          | 1    | -    |        | local_input_132  | ram_1p  | auto | 1       |
+|    local_input_133_U          | 1    | -    |        | local_input_133  | ram_1p  | auto | 1       |
+|    local_input_134_U          | 1    | -    |        | local_input_134  | ram_1p  | auto | 1       |
+|    local_input_135_U          | 1    | -    |        | local_input_135  | ram_1p  | auto | 1       |
+|    local_input_136_U          | 1    | -    |        | local_input_136  | ram_1p  | auto | 1       |
+|    local_input_137_U          | 1    | -    |        | local_input_137  | ram_1p  | auto | 1       |
+|    local_input_138_U          | 1    | -    |        | local_input_138  | ram_1p  | auto | 1       |
+|    local_input_139_U          | 1    | -    |        | local_input_139  | ram_1p  | auto | 1       |
+|    local_input_140_U          | 1    | -    |        | local_input_140  | ram_1p  | auto | 1       |
+|    local_input_141_U          | 1    | -    |        | local_input_141  | ram_1p  | auto | 1       |
+|    local_input_142_U          | 1    | -    |        | local_input_142  | ram_1p  | auto | 1       |
+|    local_input_143_U          | 1    | -    |        | local_input_143  | ram_1p  | auto | 1       |
+|    local_input_144_U          | 1    | -    |        | local_input_144  | ram_1p  | auto | 1       |
+|    local_input_145_U          | 1    | -    |        | local_input_145  | ram_1p  | auto | 1       |
+|    local_input_146_U          | 1    | -    |        | local_input_146  | ram_1p  | auto | 1       |
+|    local_input_147_U          | 1    | -    |        | local_input_147  | ram_1p  | auto | 1       |
+|    local_input_148_U          | 1    | -    |        | local_input_148  | ram_1p  | auto | 1       |
+|    local_input_149_U          | 1    | -    |        | local_input_149  | ram_1p  | auto | 1       |
+|    local_input_150_U          | 1    | -    |        | local_input_150  | ram_1p  | auto | 1       |
+|    local_input_151_U          | 1    | -    |        | local_input_151  | ram_1p  | auto | 1       |
+|    local_input_152_U          | 1    | -    |        | local_input_152  | ram_1p  | auto | 1       |
+|    local_input_153_U          | 1    | -    |        | local_input_153  | ram_1p  | auto | 1       |
+|    local_input_154_U          | 1    | -    |        | local_input_154  | ram_1p  | auto | 1       |
+|    local_input_155_U          | 1    | -    |        | local_input_155  | ram_1p  | auto | 1       |
+|    local_input_156_U          | 1    | -    |        | local_input_156  | ram_1p  | auto | 1       |
+|    local_input_157_U          | 1    | -    |        | local_input_157  | ram_1p  | auto | 1       |
+|    local_input_158_U          | 1    | -    |        | local_input_158  | ram_1p  | auto | 1       |
+|    local_input_159_U          | 1    | -    |        | local_input_159  | ram_1p  | auto | 1       |
+|    local_input_160_U          | 1    | -    |        | local_input_160  | ram_1p  | auto | 1       |
+|    local_input_161_U          | 1    | -    |        | local_input_161  | ram_1p  | auto | 1       |
+|    local_input_162_U          | 1    | -    |        | local_input_162  | ram_1p  | auto | 1       |
+|    local_input_163_U          | 1    | -    |        | local_input_163  | ram_1p  | auto | 1       |
+|    local_input_164_U          | 1    | -    |        | local_input_164  | ram_1p  | auto | 1       |
+|    local_input_165_U          | 1    | -    |        | local_input_165  | ram_1p  | auto | 1       |
+|    local_input_166_U          | 1    | -    |        | local_input_166  | ram_1p  | auto | 1       |
+|    local_input_167_U          | 1    | -    |        | local_input_167  | ram_1p  | auto | 1       |
+|    local_input_168_U          | 1    | -    |        | local_input_168  | ram_1p  | auto | 1       |
+|    local_input_169_U          | 1    | -    |        | local_input_169  | ram_1p  | auto | 1       |
+|    local_input_170_U          | 1    | -    |        | local_input_170  | ram_1p  | auto | 1       |
+|    local_input_171_U          | 1    | -    |        | local_input_171  | ram_1p  | auto | 1       |
+|    local_input_172_U          | 1    | -    |        | local_input_172  | ram_1p  | auto | 1       |
+|    local_input_173_U          | 1    | -    |        | local_input_173  | ram_1p  | auto | 1       |
+|    local_input_174_U          | 1    | -    |        | local_input_174  | ram_1p  | auto | 1       |
+|    local_input_175_U          | 1    | -    |        | local_input_175  | ram_1p  | auto | 1       |
+|    local_input_176_U          | 1    | -    |        | local_input_176  | ram_1p  | auto | 1       |
+|    local_input_177_U          | 1    | -    |        | local_input_177  | ram_1p  | auto | 1       |
+|    local_input_178_U          | 1    | -    |        | local_input_178  | ram_1p  | auto | 1       |
+|    local_input_179_U          | 1    | -    |        | local_input_179  | ram_1p  | auto | 1       |
+|    local_input_180_U          | 1    | -    |        | local_input_180  | ram_1p  | auto | 1       |
+|    local_input_181_U          | 1    | -    |        | local_input_181  | ram_1p  | auto | 1       |
+|    local_input_182_U          | 1    | -    |        | local_input_182  | ram_1p  | auto | 1       |
+|    local_input_183_U          | 1    | -    |        | local_input_183  | ram_1p  | auto | 1       |
+|    local_input_184_U          | 1    | -    |        | local_input_184  | ram_1p  | auto | 1       |
+|    local_input_185_U          | 1    | -    |        | local_input_185  | ram_1p  | auto | 1       |
+|    local_input_186_U          | 1    | -    |        | local_input_186  | ram_1p  | auto | 1       |
+|    local_input_187_U          | 1    | -    |        | local_input_187  | ram_1p  | auto | 1       |
+|    local_input_188_U          | 1    | -    |        | local_input_188  | ram_1p  | auto | 1       |
+|    local_input_189_U          | 1    | -    |        | local_input_189  | ram_1p  | auto | 1       |
+|    local_input_190_U          | 1    | -    |        | local_input_190  | ram_1p  | auto | 1       |
+|    local_input_191_U          | 1    | -    |        | local_input_191  | ram_1p  | auto | 1       |
+|    local_input_192_U          | 1    | -    |        | local_input_192  | ram_1p  | auto | 1       |
+|    local_input_193_U          | 1    | -    |        | local_input_193  | ram_1p  | auto | 1       |
+|    local_input_194_U          | 1    | -    |        | local_input_194  | ram_1p  | auto | 1       |
+|    local_input_195_U          | 1    | -    |        | local_input_195  | ram_1p  | auto | 1       |
+|    local_input_196_U          | 1    | -    |        | local_input_196  | ram_1p  | auto | 1       |
+|    local_input_197_U          | 1    | -    |        | local_input_197  | ram_1p  | auto | 1       |
+|    local_input_198_U          | 1    | -    |        | local_input_198  | ram_1p  | auto | 1       |
+|    local_input_199_U          | 1    | -    |        | local_input_199  | ram_1p  | auto | 1       |
++-------------------------------+------+------+--------+------------------+---------+------+---------+
 
 
 ================================================================
 == Pragma Report
 ================================================================
+* Pragmas with Warnings
++----------+---------+--------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Type     | Options | Location           | Messages                                                                                                                                                                           |
++----------+---------+--------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| dataflow |         | conv.cpp:9 in conv | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
++----------+---------+--------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
 * Valid Pragma Syntax
 +-----------------+----------------------------------------------------+------------------------------------+
 | Type            | Options                                            | Location                           |
 +-----------------+----------------------------------------------------+------------------------------------+
-| interface       | mode=m_axi port=input_fm offset=slave bundle=mem1  | conv.cpp:10 in conv, input_fm      |
-| interface       | mode=m_axi port=weights offset=slave bundle=mem2   | conv.cpp:11 in conv, weights       |
-| interface       | mode=m_axi port=biases offset=slave bundle=mem2    | conv.cpp:12 in conv, biases        |
-| interface       | mode=m_axi port=output_fm offset=slave bundle=mem1 | conv.cpp:13 in conv, output_fm     |
-| interface       | mode=s_axilite port=return                         | conv.cpp:14 in conv, return        |
-| array_partition | variable=local_input complete dim=2                | conv.cpp:19 in conv, local_input   |
-| array_partition | variable=local_weights complete dim=2              | conv.cpp:20 in conv, local_weights |
-| array_partition | variable=local_output complete dim=2               | conv.cpp:21 in conv, local_output  |
-| pipeline        | II=1                                               | conv.cpp:32 in conv                |
-| pipeline        | II=1                                               | conv.cpp:44 in conv                |
-| pipeline        | II=1                                               | conv.cpp:54 in conv                |
-| pipeline        | II=1                                               | conv.cpp:69 in conv                |
+| interface       | mode=m_axi port=input_fm offset=slave bundle=mem1  | conv.cpp:11 in conv, input_fm      |
+| interface       | mode=m_axi port=weights offset=slave bundle=mem2   | conv.cpp:12 in conv, weights       |
+| interface       | mode=m_axi port=biases offset=slave bundle=mem2    | conv.cpp:13 in conv, biases        |
+| interface       | mode=m_axi port=output_fm offset=slave bundle=mem1 | conv.cpp:14 in conv, output_fm     |
+| interface       | mode=s_axilite port=return                         | conv.cpp:15 in conv, return        |
+| array_partition | variable=local_input cyclic factor=200 dim=2       | conv.cpp:20 in conv, local_input   |
+| array_partition | variable=local_weights complete dim=2              | conv.cpp:21 in conv, local_weights |
+| array_partition | variable=local_output complete dim=2               | conv.cpp:22 in conv, local_output  |
+| pipeline        | II=1                                               | conv.cpp:33 in conv                |
+| pipeline        | II=1                                               | conv.cpp:45 in conv                |
+| pipeline        | II=1                                               | conv.cpp:55 in conv                |
+| pipeline        | II=1                                               | conv.cpp:70 in conv                |
 | pipeline        | II=1                                               | conv.cpp:89 in conv                |
 +-----------------+----------------------------------------------------+------------------------------------+
 

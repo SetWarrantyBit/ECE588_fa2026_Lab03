@@ -1,7 +1,7 @@
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: conv.cpp, Line: 16, Column: 7 }
+DebugLoc:        { File: conv.cpp, Line: 17, Column: 7 }
 Function:        _Z4convPA228_A228_fPA3_A11_A11_fPfPA55_A55_f
 Args:            
   - String:          'Applying '
@@ -10,8 +10,10 @@ Args:
   - UOName:          local_input
   - String:          ''':'
   - String:          ' '
-  - Mode:            Complete
+  - Mode:            Cyclic
   - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '200'
   - String:          ' on dimension '
   - Dim:             '2'
   - String:          .
@@ -19,7 +21,7 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: conv.cpp, Line: 17, Column: 10 }
+DebugLoc:        { File: conv.cpp, Line: 18, Column: 10 }
 Function:        _Z4convPA228_A228_fPA3_A11_A11_fPfPA55_A55_f
 Args:            
   - String:          'Applying '
@@ -37,7 +39,7 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: conv.cpp, Line: 18, Column: 10 }
+DebugLoc:        { File: conv.cpp, Line: 19, Column: 10 }
 Function:        _Z4convPA228_A228_fPA3_A11_A11_fPfPA55_A55_f
 Args:            
   - String:          'Applying '
@@ -55,7 +57,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: conv.cpp, Line: 37, Column: 26 }
+DebugLoc:        { File: conv.cpp, Line: 38, Column: 26 }
 Function:        _Z4convPA228_A228_fPA3_A11_A11_fPfPA55_A55_f
 Args:            
   - String:          'Sequential '
@@ -64,18 +66,18 @@ Args:
   - Length:          '155952'
   - String:          ' has been inferred'
   - String:          ' _XLX_SEP_ OldID='
-  - String:          for.inc38.load.233
+  - String:          for.inc38.load.205
   - String:          ', '
   - String:          ' _XLX_SEP_ '
-  - AccessID:        input_fm197seq
+  - AccessID:        input_fm196seq
   - String:          ' '
   - ArrayName:       input_fm
   - String:          ' '
   - BundleName:      mem1
   - String:          ' '
-  - LoopName:        VITIS_LOOP_37_4
+  - LoopName:        VITIS_LOOP_38_4
   - String:          ' '
-  - LoopLoc:         'conv.cpp:37:26'
+  - LoopLoc:         'conv.cpp:38:26'
   - String:          ' '
   - Function:        'conv(float (*) [228][228], float (*) [3][11][11], float*, float (*) [55][55])'
     DebugLoc:        { File: conv.cpp, Line: 8, Column: 0 }
@@ -84,7 +86,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: conv.cpp, Line: 37, Column: 26 }
+DebugLoc:        { File: conv.cpp, Line: 38, Column: 26 }
 Function:        _Z4convPA228_A228_fPA3_A11_A11_fPfPA55_A55_f
 Args:            
   - String:          'Sequential '
@@ -102,9 +104,9 @@ Args:
   - String:          ' '
   - BundleName:      mem2
   - String:          ' '
-  - LoopName:        VITIS_LOOP_37_4
+  - LoopName:        VITIS_LOOP_38_4
   - String:          ' '
-  - LoopLoc:         'conv.cpp:37:26'
+  - LoopLoc:         'conv.cpp:38:26'
   - String:          ' '
   - Function:        'conv(float (*) [228][228], float (*) [3][11][11], float*, float (*) [55][55])'
     DebugLoc:        { File: conv.cpp, Line: 8, Column: 0 }
@@ -113,7 +115,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: conv.cpp, Line: 23, Column: 19 }
+DebugLoc:        { File: conv.cpp, Line: 24, Column: 24 }
 Function:        _Z4convPA228_A228_fPA3_A11_A11_fPfPA55_A55_f
 Args:            
   - String:          'Sequential '
@@ -125,15 +127,15 @@ Args:
   - String:          for.body134.store.120
   - String:          ', '
   - String:          ' _XLX_SEP_ '
-  - AccessID:        output_fm198seq
+  - AccessID:        output_fm197seq
   - String:          ' '
   - ArrayName:       output_fm
   - String:          ' '
   - BundleName:      mem1
   - String:          ' '
-  - LoopName:        VITIS_LOOP_23_1
+  - LoopName:        VITIS_LOOP_24_1
   - String:          ' '
-  - LoopLoc:         'conv.cpp:23:19'
+  - LoopLoc:         'conv.cpp:24:19'
   - String:          ' '
   - Function:        'conv(float (*) [228][228], float (*) [3][11][11], float*, float (*) [55][55])'
     DebugLoc:        { File: conv.cpp, Line: 8, Column: 0 }
@@ -142,14 +144,14 @@ Args:
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            AccessClobbered
-DebugLoc:        { File: conv.cpp, Line: 26, Column: 21 }
+DebugLoc:        { File: conv.cpp, Line: 27, Column: 21 }
 Function:        _Z4convPA228_A228_fPA3_A11_A11_fPfPA55_A55_f
 Args:            
   - String:          'Access is clobbered by '
   - ClobberedBy:     load
-    DebugLoc:        { File: conv.cpp, Line: 55, Column: 26 }
+    DebugLoc:        { File: conv.cpp, Line: 56, Column: 26 }
   - String:          ' _XLX_SEP_ '
-  - AccessID:        VITIS_LOOP_28_2.load.5
+  - AccessID:        VITIS_LOOP_29_2.load.1
   - String:          ' '
   - ArrayName:       biases
   - String:          ' '
@@ -162,20 +164,20 @@ Args:
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            CouldNotAnalyzePattern
-DebugLoc:        { File: conv.cpp, Line: 37, Column: 26 }
+DebugLoc:        { File: conv.cpp, Line: 38, Column: 26 }
 Function:        _Z4convPA228_A228_fPA3_A11_A11_fPfPA55_A55_f
 Args:            
   - String:          Could not analyze pattern
   - String:          ' _XLX_SEP_ '
-  - AccessID:        input_fm197seq
+  - AccessID:        input_fm196seq
   - String:          ' '
   - ArrayName:       input_fm
   - String:          ' '
   - BundleName:      mem1
   - String:          ' '
-  - LoopName:        VITIS_LOOP_23_1
+  - LoopName:        VITIS_LOOP_24_1
   - String:          ' '
-  - LoopLoc:         'conv.cpp:23:19'
+  - LoopLoc:         'conv.cpp:24:19'
   - String:          ' '
   - Function:        'conv(float (*) [228][228], float (*) [3][11][11], float*, float (*) [55][55])'
     DebugLoc:        { File: conv.cpp, Line: 8, Column: 0 }
@@ -184,12 +186,12 @@ Args:
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            AccessClobbered
-DebugLoc:        { File: conv.cpp, Line: 37, Column: 26 }
+DebugLoc:        { File: conv.cpp, Line: 38, Column: 26 }
 Function:        _Z4convPA228_A228_fPA3_A11_A11_fPfPA55_A55_f
 Args:            
   - String:          'Access is clobbered by '
   - ClobberedBy:     bias
-    DebugLoc:        { File: conv.cpp, Line: 26, Column: 21 }
+    DebugLoc:        { File: conv.cpp, Line: 27, Column: 21 }
   - String:          ' _XLX_SEP_ '
   - AccessID:        scevgepseq
   - String:          ' '
@@ -204,7 +206,7 @@ Args:
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualThreshold
-DebugLoc:        { File: conv.cpp, Line: 23, Column: 19 }
+DebugLoc:        { File: conv.cpp, Line: 24, Column: 24 }
 Function:        _Z4convPA228_A228_fPA3_A11_A11_fPfPA55_A55_f
 Args:            
   - String:          'Could not widen since type '
@@ -212,7 +214,7 @@ Args:
   - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
   - Threshold:       '0'
   - String:          ' _XLX_SEP_ '
-  - AccessID:        output_fm198seq
+  - AccessID:        output_fm197seq
   - String:          ' '
   - ArrayName:       output_fm
   - String:          ' '
@@ -229,7 +231,7 @@ Args:
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualThreshold
-DebugLoc:        { File: conv.cpp, Line: 37, Column: 26 }
+DebugLoc:        { File: conv.cpp, Line: 38, Column: 26 }
 Function:        _Z4convPA228_A228_fPA3_A11_A11_fPfPA55_A55_f
 Args:            
   - String:          'Could not widen since type '
@@ -243,9 +245,9 @@ Args:
   - String:          ' '
   - BundleName:      mem2
   - String:          ' '
-  - LoopName:        VITIS_LOOP_52_8
+  - LoopName:        VITIS_LOOP_53_8
   - String:          ' '
-  - LoopLoc:         'conv.cpp:52:34'
+  - LoopLoc:         'conv.cpp:53:34'
   - String:          ' '
   - Function:        'conv(float (*) [228][228], float (*) [3][11][11], float*, float (*) [55][55])'
     DebugLoc:        { File: conv.cpp, Line: 8, Column: 0 }
@@ -254,7 +256,7 @@ Args:
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualThreshold
-DebugLoc:        { File: conv.cpp, Line: 37, Column: 26 }
+DebugLoc:        { File: conv.cpp, Line: 38, Column: 26 }
 Function:        _Z4convPA228_A228_fPA3_A11_A11_fPfPA55_A55_f
 Args:            
   - String:          'Could not widen since type '
@@ -262,15 +264,15 @@ Args:
   - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
   - Threshold:       '0'
   - String:          ' _XLX_SEP_ '
-  - AccessID:        input_fm197seq
+  - AccessID:        input_fm196seq
   - String:          ' '
   - ArrayName:       input_fm
   - String:          ' '
   - BundleName:      mem1
   - String:          ' '
-  - LoopName:        VITIS_LOOP_42_6
+  - LoopName:        VITIS_LOOP_43_6
   - String:          ' '
-  - LoopLoc:         'conv.cpp:42:34'
+  - LoopLoc:         'conv.cpp:43:34'
   - String:          ' '
   - Function:        'conv(float (*) [228][228], float (*) [3][11][11], float*, float (*) [55][55])'
     DebugLoc:        { File: conv.cpp, Line: 8, Column: 0 }
@@ -279,7 +281,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: conv.cpp, Line: 23, Column: 19 }
+DebugLoc:        { File: conv.cpp, Line: 24, Column: 24 }
 Function:        _Z4convPA228_A228_fPA3_A11_A11_fPfPA55_A55_f
 Args:            
   - String:          'Multiple burst '
@@ -297,9 +299,9 @@ Args:
   - String:          ' '
   - BundleName:      mem1
   - String:          ' '
-  - LoopName:        VITIS_LOOP_23_1
+  - LoopName:        VITIS_LOOP_24_1
   - String:          ' '
-  - LoopLoc:         'conv.cpp:23:19'
+  - LoopLoc:         'conv.cpp:24:19'
   - String:          ' '
   - Function:        'conv(float (*) [228][228], float (*) [3][11][11], float*, float (*) [55][55])'
     DebugLoc:        { File: conv.cpp, Line: 8, Column: 0 }
@@ -308,7 +310,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: conv.cpp, Line: 23, Column: 19 }
+DebugLoc:        { File: conv.cpp, Line: 24, Column: 24 }
 Function:        _Z4convPA228_A228_fPA3_A11_A11_fPfPA55_A55_f
 Args:            
   - String:          'Multiple burst '
@@ -318,9 +320,9 @@ Args:
   - String:          ' and bit width '
   - Width:           '32'
   - String:          ' in loop '''
-  - LoopName:        VITIS_LOOP_23_1
+  - LoopName:        VITIS_LOOP_24_1
   - String:          '''('
-  - LoopLoc:         'conv.cpp:23:19'
+  - LoopLoc:         'conv.cpp:24:19'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      mem1
@@ -330,7 +332,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: conv.cpp, Line: 37, Column: 26 }
+DebugLoc:        { File: conv.cpp, Line: 38, Column: 26 }
 Function:        _Z4convPA228_A228_fPA3_A11_A11_fPfPA55_A55_f
 Args:            
   - String:          'Multiple burst '
@@ -348,9 +350,9 @@ Args:
   - String:          ' '
   - BundleName:      mem1
   - String:          ' '
-  - LoopName:        VITIS_LOOP_37_4
+  - LoopName:        VITIS_LOOP_38_4
   - String:          ' '
-  - LoopLoc:         'conv.cpp:37:26'
+  - LoopLoc:         'conv.cpp:38:26'
   - String:          ' '
   - Function:        'conv(float (*) [228][228], float (*) [3][11][11], float*, float (*) [55][55])'
     DebugLoc:        { File: conv.cpp, Line: 8, Column: 0 }
@@ -359,7 +361,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: conv.cpp, Line: 37, Column: 26 }
+DebugLoc:        { File: conv.cpp, Line: 38, Column: 26 }
 Function:        _Z4convPA228_A228_fPA3_A11_A11_fPfPA55_A55_f
 Args:            
   - String:          'Multiple burst '
@@ -369,9 +371,9 @@ Args:
   - String:          ' and bit width '
   - Width:           '32'
   - String:          ' in loop '''
-  - LoopName:        VITIS_LOOP_37_4
+  - LoopName:        VITIS_LOOP_38_4
   - String:          '''('
-  - LoopLoc:         'conv.cpp:37:26'
+  - LoopLoc:         'conv.cpp:38:26'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      mem1
@@ -381,7 +383,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: conv.cpp, Line: 37, Column: 26 }
+DebugLoc:        { File: conv.cpp, Line: 38, Column: 26 }
 Function:        _Z4convPA228_A228_fPA3_A11_A11_fPfPA55_A55_f
 Args:            
   - String:          'Multiple burst '
@@ -399,9 +401,9 @@ Args:
   - String:          ' '
   - BundleName:      mem2
   - String:          ' '
-  - LoopName:        VITIS_LOOP_37_4
+  - LoopName:        VITIS_LOOP_38_4
   - String:          ' '
-  - LoopLoc:         'conv.cpp:37:26'
+  - LoopLoc:         'conv.cpp:38:26'
   - String:          ' '
   - Function:        'conv(float (*) [228][228], float (*) [3][11][11], float*, float (*) [55][55])'
     DebugLoc:        { File: conv.cpp, Line: 8, Column: 0 }
@@ -410,7 +412,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: conv.cpp, Line: 37, Column: 26 }
+DebugLoc:        { File: conv.cpp, Line: 38, Column: 26 }
 Function:        _Z4convPA228_A228_fPA3_A11_A11_fPfPA55_A55_f
 Args:            
   - String:          'Multiple burst '
@@ -420,9 +422,9 @@ Args:
   - String:          ' and bit width '
   - Width:           '32'
   - String:          ' in loop '''
-  - LoopName:        VITIS_LOOP_37_4
+  - LoopName:        VITIS_LOOP_38_4
   - String:          '''('
-  - LoopLoc:         'conv.cpp:37:26'
+  - LoopLoc:         'conv.cpp:38:26'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      mem2
